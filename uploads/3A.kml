@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="3A" id="3A">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEn" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHand" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>3A</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#3A">
+		<SimpleData name="Layer">AMB_LAP_AREA_ALAGAVEL_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">1FF</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.695215613927516,-23.513994879762176 -46.695191867523903,-23.514062389398184 -46.69518477517564,-23.514082426406286 -46.695210105871759,-23.514086392164923 -46.695434584457445,-23.514120686446212 -46.695703108058517,-23.514163629162521 -46.696017302977822,-23.51421153829229 -46.696086589828639,-23.514222101672612 -46.69620189208937,-23.513616256293922 -46.696128595857523,-23.513605147857987 -46.695891901955569,-23.513567896627478 -46.695661580079175,-23.513531472059753 -46.695481651302671,-23.513502743178201 -46.695400377621297,-23.513490191666236 -46.695345583995298,-23.513481639716677 -46.695327223815042,-23.513557001438187 -46.695315385713386,-23.513612468957501 -46.695295499236842,-23.513694809477201 -46.695292537329536,-23.513707660102945 -46.695277061854405,-23.513774687406492 -46.695258976511965,-23.51385405146624 -46.695236289072788,-23.513927919799496 -46.695215613927516,-23.513994879762176</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

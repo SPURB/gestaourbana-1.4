@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="9C" id="9C">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEn" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHand" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>9C</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">20F</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.626623517716595,-23.53018541342918 -46.62654548589083,-23.530336250601568 -46.626900408497967,-23.530235105640362 -46.62692910466042,-23.530178902270812 -46.626978293687436,-23.530083158589594 -46.626623517716595,-23.53018541342918</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">210</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.633335956685315,-23.522540394251862 -46.63360458146574,-23.522868525322359 -46.633684448601528,-23.522817393988781 -46.633411991862125,-23.522487069976318 -46.633335956685315,-23.522540394251862</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">211</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.636739238332886,-23.520485524868246 -46.637010079998952,-23.520810891249866 -46.637082372194996,-23.520775877489505 -46.637122860512832,-23.520741340063424 -46.636770769059595,-23.5203240828845 -46.636723146585304,-23.520339155596705 -46.636648067806703,-23.520377112395412 -46.636739238332886,-23.520485524868246</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">212</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.641188493607714,-23.519026382322373 -46.640586205673273,-23.519019106624878 -46.639975747386231,-23.51901172984703 -46.6398793181055,-23.519049509148292 -46.639783157228642,-23.519087200496237 -46.63970916509701,-23.519111444220222 -46.639976934056989,-23.519102049279503 -46.640585439755476,-23.519109402433141 -46.640967264252751,-23.519114015165531 -46.641076224592162,-23.51907017879838 -46.641135562071199,-23.519046306403506 -46.641188493607714,-23.519026382322373</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_LAP_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">216</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.6978061884843,-23.506547880323989 -46.697290386756102,-23.509343236995022 -46.6973855026962,-23.509361775306047 -46.697900405919597,-23.506562342915799 -46.6978061884843,-23.506547880323989</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_LAP_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">217</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.701363317668132,-23.506877184479851 -46.701083853654517,-23.509700982806944 -46.701180241031253,-23.509712671106737 -46.701458466851463,-23.506884873496549 -46.701363317668132,-23.506877184479851</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">218</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.633003593574244,-23.519783276560755 -46.633100781868905,-23.519785818240916 -46.633076298461354,-23.517933115064665 -46.632980780420198,-23.517934117074574 -46.633003593574244,-23.519783276560755</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">219</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.612812898949592,-23.520458398137656 -46.61272839775603,-23.520504986277594 -46.613832815554673,-23.522694916929876 -46.613921610739183,-23.52265684062122 -46.612812898949592,-23.520458398137656</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">21A</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.607861477520068,-23.521927328228205 -46.607764807671643,-23.521910120659303 -46.607005079316401,-23.5242214364836 -46.607098797617866,-23.524247628762513 -46.607861477520068,-23.521927328228205</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">21B</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.599404780947147,-23.52386751337249 -46.59933347886637,-23.52393011818226 -46.600933860973015,-23.52584201019539 -46.601011384172232,-23.525786836341918 -46.599404780947147,-23.52386751337249</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#9C">
+		<SimpleData name="Layer">URB_CTL_TRAVESSIA_PL</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">21C</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.619275655586904,-23.517521163121007 -46.619185816374177,-23.517485237359267 -46.617862957802778,-23.520298120342837 -46.617952798665385,-23.52033404677033 -46.619275655586904,-23.517521163121007</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

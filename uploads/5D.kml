@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="5D" id="5D">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEn" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHand" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>5D</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#5D">
+		<SimpleData name="Layer">d</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">205</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.732799632238532,-23.497491973703458 -46.732799632238532,-23.497491973703458 -46.732831473610844,-23.497625790536187 -46.732856227997246,-23.497760876106437 -46.732856227997246,-23.497760876106437 -46.73380885679272,-23.497658406400678 -46.733772571493333,-23.497383993125965 -46.732799632238532,-23.497491973703458</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#5D">
+		<SimpleData name="Layer">d</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">206</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.740696872998882,-23.495800069646116 -46.74059070249826,-23.49611602573346 -46.741506378359226,-23.495852515667337 -46.741418460420256,-23.495592664481034 -46.740696872998882,-23.495800069646116</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#5D">
+		<SimpleData name="Layer">d</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">207</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.730644867264232,-23.497731095783934 -46.730644867264232,-23.497731095783934 -46.730592272581241,-23.497822203594232 -46.730546665011744,-23.497916459986488 -46.73050826478206,-23.498013409854945 -46.73050826478206,-23.498013409854945 -46.732698557347575,-23.497777835407867 -46.732673350547309,-23.49764304731557 -46.732640834603124,-23.497509597092346 -46.732640834603124,-23.497509597092346 -46.730644867264232,-23.497731095783934</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#5D">
+		<SimpleData name="Layer">d</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">208</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.740137902400875,-23.496246328659595 -46.740302566469481,-23.49619894322597 -46.74042049991381,-23.49616500535393 -46.740526692898023,-23.495848983773627 -46.739528953434821,-23.496135755303197 -46.739416261124354,-23.496168144996918 -46.738546924854582,-23.496418003862612 -46.738635044130667,-23.49667879723231 -46.740137902400875,-23.496246328659595</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

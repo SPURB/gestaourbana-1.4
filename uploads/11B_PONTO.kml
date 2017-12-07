@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="11B_PONTO" id="11B_PONTO">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEntity" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHandle" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>11B_PONTO</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11B_PONTO">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">207</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.705863382190032,-23.516280256919188,-6.78327155020088</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11B_PONTO">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">216</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.694170761618189,-23.5102593019102,-6.797637926414609</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

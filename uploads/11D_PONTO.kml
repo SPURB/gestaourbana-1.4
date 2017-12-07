@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="11C" id="11C">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEntity" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHandle" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>11C</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11C">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">205</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.636467606143569,-23.523194422098559,-6.82818547077477</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11C">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">206</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.624416266098464,-23.524123652914273,-6.836234752088785</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11C">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">207</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.620258054081326,-23.52314754705823,-6.840238203294575</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11C">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">208</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.623270095318993,-23.513318831513271,-6.847303646616638</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11C">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">209</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.622208078483347,-23.511121955703704,-6.850168218836188</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11C">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">20A</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.619306231991899,-23.511152161319664,-6.852289293892682</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#11C">
+		<SimpleData name="Layer">0</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPoint</SimpleData>
+		<SimpleData name="EntityHandle">20B</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.607720110578285,-23.530976687252647,-6.842117581516504</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

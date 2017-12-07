@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="1A" id="1A">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEntity" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHandle" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>1A</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#1A">
+		<SimpleData name="Layer">AMB_LAP_CORREGO A ABRIR_PL_LF</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHandle">401</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.696468127495464,-23.515142581334516 -46.6967821030685,-23.513492795618973 -46.696808657768848,-23.513356029948714 -46.69690125441582,-23.512866705422255 -46.696933674910539,-23.512696348503109 -46.697203214213651,-23.511280011470067 -46.697228609083446,-23.511146568786206 -46.697274023013556,-23.510907931176853 -46.697616737318405,-23.508983740046297</coordinates></LineString>
+  </Placemark>
+</Folder>
+</Document></kml>

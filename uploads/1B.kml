@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="1B" id="1B">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEntity" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHandle" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>1B</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#1B">
+		<SimpleData name="Layer">AMB_LAP_CORREGO A ABRIR_PL_LF</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHandle">402</SimpleData>
+	</SchemaData></ExtendedData>
+      <LineString><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.670893198254895,-23.513526553550388 -46.67074549918572,-23.511298414794776 -46.670661347527684,-23.510013989058624 -46.670583948316477,-23.508852019526937 -46.670512504404236,-23.507727872181231 -46.670490157126871,-23.507502765023279 -46.670455792996563,-23.50734159453069 -46.670385815736239,-23.507172374075324 -46.670280027184106,-23.506922675720517 -46.670175587392002,-23.506781967820274 -46.670075443473443,-23.506674792416401 -46.669820460699285,-23.506471355665674 -46.669065922457584,-23.505889690116675 -46.668818100106435,-23.505689590040124 -46.668688878242904,-23.50555741838264 -46.668583759550899,-23.505393925530196 -46.668346044529081,-23.504944153341452 -46.667970637012168,-23.504220803407527 -46.667788054736221,-23.503900345340035 -46.667664333073532,-23.503741598231535 -46.667468196866345,-23.503531051068961 -46.666768586864137,-23.502740792882001 -46.666399211161277,-23.502284414209331 -46.666032595814372,-23.50189101213704 -46.665826951670368,-23.501663726363809 -46.66528520857652,-23.50098303440928 -46.664671285639145,-23.500190080662602</coordinates></LineString>
+  </Placemark>
+</Folder>
+</Document></kml>

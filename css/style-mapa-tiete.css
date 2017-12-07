@@ -1,0 +1,251 @@
+ div.topo {
+	display:inline-block;
+	padding: 0;
+    margin-left: 0px;	
+	margin-top: 0px;
+	float:left;
+}
+div.topcontainer {
+	background-color:#E00815;
+	display:inline-block;
+	width:100%;
+	min-height: 35px;
+	margin-bottom: 0;
+}
+
+div.perimetercontainer {
+	background-color:#FFFFFF;
+	display:inline-block;
+	width:80%;
+	height:80px;
+	margin-bottom: 0;
+}
+
+div.perimeterinfo {
+	width: 100%;
+	padding-top: 1.5em;
+	padding-left: 0.1em;
+	display: inline-block;
+}
+
+div.perimeterinfo > p {	
+	text-align:justify;
+	font-family: sans-serif;	
+	font-size: 12px;
+	color: #808080;
+}
+
+div#mapa {
+	width: 945px;
+	height: 550px;
+	float: left;
+}
+
+div#nonmapContainer {
+	display: inline-block;
+	margin: 20px 0px;
+	width: 945px;
+}
+
+#acoesIlustradas > div {
+	width: 460px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0px;
+}
+
+#acoesIlustradas > div > p {
+	width: 260px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin: 0;
+    vertical-align: inherit;
+}
+
+#acoesIlustradas > div > img {
+	max-width: 100%;
+	vertical-align: inherit;
+	padding: 16px;
+	cursor: pointer;
+}
+
+#aius > div {
+	width: 940px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 0px;
+}
+
+#aius > div > p {
+	width: 720px;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1.5em;
+	margin: 0;
+	vertical-align: inherit;
+}
+
+#aius > div > img {
+	max-width: 100%;
+	vertical-align: inherit;
+	padding: 16px;
+	cursor: pointer;
+}
+
+#layersMenu {
+	width: 160px;
+	position: absolute;
+	margin: 5px;
+	padding: 10px;
+	z-index: 1;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+#layersMenu span {
+    font-family: sans-serif;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#layersMenu h5 {
+	font-family: sans-serif;
+	font-size: 10px;
+	display: block;
+	margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.layerToggleBt {
+    background-color: #eee;
+    font-family: sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    width: 160px;
+    height: 21px;
+    text-align: left;
+}
+
+.inactiveBt {
+    background-color: #ddd;
+	color: #aaa;
+}
+
+div#infoContainer {
+	position: absolute;
+	float: left;
+    width: 25%;
+    height: 470px;
+    background-color: white;
+    padding: 20px;
+    padding-top: 10px;
+    font-family: sans-serif;
+    overflow-y: hidden;
+    display: none;
+}
+
+div#infoContainer > div > img {
+	width: 100%;
+	cursor: pointer;
+}
+div#lightbox_content > div > img {
+	max-width: 800px;
+}
+
+div.ol-zoom {
+	left: initial;
+	right: 0.5em;
+}
+
+ /* Modal (ou lightbox) [background] */
+ .modal {
+ 	transition: opacity 0.4s ease-out;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	max-height: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+ }
+ .modal_active {
+	 opacity: 1;
+	 max-height: 100%;
+	 overflow: none;
+ }
+
+ /* Modal Content/Box */
+.modal_content {
+	background-color: #fefefe;
+	padding: 20px;
+	border: 1px solid #888;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	max-width: 940px;
+	max-height: calc(95% - 42px);
+	position: absolute;
+	margin: auto;
+	right: 50%;
+	top: 50%;
+	transform: translate(50%, -50%);
+	overflow: auto;
+}
+div.modal_content::-webkit-scrollbar {
+	width: 0.5em;
+	height: 80%;
+}
+
+div.modal_content::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+}
+.modal_left {
+	left: 25%;
+	right: inherit;
+	transform: translate(-50%, -50%);
+}
+.modal_open {
+	overflow: hidden;
+}
+
+ /* The Close Button */
+.close {
+	color: #fff;
+	background-color: #aaa;
+	border: #fff 2px solid;
+	font-size: 18px;
+	font-weight: bold;
+	position: fixed;
+	display: block;
+	font-family: monospace;
+	z-index: 2;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 16px;
+}
+
+.close:hover,
+.close:focus {
+	background-color: #ddd;
+	text-decoration: none;
+	cursor: pointer;
+}
+#aius h5{
+	margin: 0;
+}
+.inner-text h4{
+	margin: 25px 0 15px !important; 
+}

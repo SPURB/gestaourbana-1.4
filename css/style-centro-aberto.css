@@ -1,0 +1,101 @@
+/*home*/
+.link-proj-urb{
+color:#00ccff;
+}
+.siblingspages{
+padding:  1em 0 0 0;
+margin: 0;
+top: 0;
+left: 0;
+width: 100%;
+}
+.siblingspages li{
+float: left;
+width: 150px;
+padding:7px 42px 10px 0;
+}
+.siblingspages li:last-child{
+padding-right: 0;
+}
+.siblingspages a{
+color:#00ccff;
+}
+#mapa_png{
+position: relative;
+max-width: 100%;
+}
+#links_de_projetos{
+position: absolute;
+padding: 0;
+margin: 0;
+top:0;
+left: 660px;
+z-index: 99
+}
+.mapa_camada{
+position: absolute;
+opacity: 0;
+}
+#png_1{
+z-index: 10;
+}
+#png_2{
+z-index: 20;
+}
+#png_3{
+z-index: 30;
+}
+#png_4{
+z-index: 40;
+}
+#png_5{
+z-index: 50;
+}
+.link_projeto{
+position: relative;
+height: 110px;
+width: 300px;
+}
+.link_projeto>a{
+color: #00ccff;
+position: absolute;
+top: 0px;
+padding-left: 25px;
+padding-top: 55px;
+height: 50%;
+width: 100%
+}
+.link_projeto>a:hover{
+background-color: #F2F0F0
+}
+#centroAbertoLivretos li{
+float: left;
+padding-right: 22px; 
+}
+/*plantas*/
+#plantaPanZoom{
+position: relative;
+margin: 3.5em 0 0 0; 
+}
+#plantaPanZoom>div{
+position: absolute;
+top: 0;
+left: 28.5%;
+}
+img#plantaLegenda{
+width: 28%;
+max-width: 256px !important; 
+position: absolute;
+top: 0;
+left: 0px;
+}
+#plantainstrucoes{
+position: absolute;
+max-width: 241px;
+right: 0;
+margin: 0;
+}
+#planta{
+border: solid 1px #EAE4E4; 
+background-color: #CCCCCC;
+}

@@ -1,0 +1,187 @@
+#container{
+max-width: 960px;
+margin:0 auto;
+}
+
+#map{
+width: 100%;
+height:525px;
+margin:18px auto;
+background-color:rgb(220, 220, 220);
+}
+
+#conteudo_botoes_ficha, #conteudo_pos_clique{
+margin-top: 10px;
+width: 100%;
+margin: auto;
+font-family: sans-serif;
+line-height: 1.5em
+}
+
+div#apresentacao_terminais{
+padding-bottom: 20px; 
+}
+
+div#apresentacao_terminais>h3{
+font-size: 21px
+}
+
+.ol-attribution, .ol-zoom{
+display:none;
+width: 268px
+}
+
+
+li.btn_terminais{
+list-style-type: none;
+margin-bottom: 1px
+}
+
+ul.ul_btn_terminais{
+padding: 0;
+margin: 0;
+}
+
+button.btn_btn_terminais:focus{
+color:rgb(180,180,180);
+}
+
+button.btn_btn_terminais:hover{
+color:rgb(80,80,80);
+}
+
+.divisor_setor_consorcio{
+height:8px;
+margin-bottom: 6px
+}
+
+.titulo_setor_consorcio{
+margin: 0;
+padding:0;
+font-size: 16px
+}
+
+.setor_consorcio_container{
+margin-bottom: 16px;
+vertical-align: top;
+}
+
+
+.legenda_coluna{
+width: 31.6%;
+margin-right: 2%;
+display: inline-block;
+vertical-align:top;
+}
+
+.legenda_coluna:last-child{
+margin-right:0
+}
+
+h2#titulo_terminal{
+font-size: 36px;
+margin: 12px 0;
+}
+
+div#minimapa_pmi{
+width: 150px;
+height: 212px;
+margin: 0 auto;
+position:relative;
+}
+
+img.minimapa_overlay{
+position: absolute;
+top:0;
+left: 0;
+}
+
+img.minimap_hover_action{
+opacity: 0.5
+}
+
+img.minimapa_ponto{
+position: absolute;
+}
+
+span.lg_col_endereco{
+font-size: 12px;
+margin: 0;
+padding: 0;
+}
+
+p.lg_col_info{
+line-height: 1.25em;
+margin: 0 0 12px;
+padding: 0;
+}
+
+div#info_resumo>
+p.lg_col_info:first-child{
+margin-top: 6px;
+}
+
+div#info_resumo>
+p.lg_col_info:last-child{
+margin: 0;
+font-weight: bold;
+}
+
+div.fim_container{
+height: 3px;
+margin: 24px 0 10px;
+}
+
+table.tabela_terminal{
+width: 100%;
+border-collapse: collapse;
+margin: 10px 0 0;
+line-height: 1.25em;
+font-size: 12px
+}
+
+table.tabela_terminal>tbody>tr,table#tabela_terminal>tbody>tr>td{
+border-top: 1px solid #000000;
+}
+
+
+table.tabela_terminal>tbody>tr{
+height: 34px;
+}
+
+
+table.tabela_terminal>tbody>tr>td{
+vertical-align: middle;
+}
+
+table.tabela_terminal>tbody>tr>td:first-child{
+width: 45%;
+}
+
+table.tabela_terminal>tbody>tr>td:last-child{
+padding-left: 3%;
+}
+
+table.tabela_terminal>tbody>tr:first-child{
+border-top: 3px solid #000000;
+}
+
+table.tabela_terminal>tbody>tr>td:first-child{
+font-size: 12px
+}
+
+div#ficha_container{
+display: none;
+}
+
+img#minimapa_ponto_preview{
+display: none;
+}
+
+/*div#conteudo_pos_clique{
+display: none;
+}
+*/
+img#img_publicacao {
+margin: 10px 47px
+}

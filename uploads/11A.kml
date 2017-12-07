@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="11A" id="11A">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEn" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHand" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>11A</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#11A">
+		<SimpleData name="Layer">11A</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">201</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.69679689057768,-23.505532153769732 -46.696544299363119,-23.50685945271211 -46.696644764499887,-23.506861549437158 -46.69672575817237,-23.506864596291798 -46.696840557562112,-23.506869787849045 -46.697093093815411,-23.505542761696944 -46.697069960482246,-23.505542358328096 -46.696970383976868,-23.505540303119798 -46.696961909940676,-23.505540145224455 -46.696884608866995,-23.505538799347658 -46.69679689057768,-23.505532153769732</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#11A">
+		<SimpleData name="Layer">11A</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">202</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.63086033489283,-23.522790940239855 -46.630898349896874,-23.522808960138917 -46.630915345015467,-23.522811942048616 -46.630937298407126,-23.522810989728598 -46.630993335381589,-23.522744945613425 -46.631058332304519,-23.522658944796973 -46.63187135953693,-23.521970934957313 -46.632012560601254,-23.521775355090984 -46.631955464484903,-23.521706336552356 -46.630679781306647,-23.52186079085919 -46.630656375876292,-23.521890887831532 -46.630681705778819,-23.522008502354211 -46.630697177069344,-23.522008340267408 -46.63070894387581,-23.522012732164161 -46.630722079872029,-23.522028954686714 -46.630732110080309,-23.522141117734748 -46.630715797979796,-23.522152522387763 -46.630735063497127,-23.522256819731751 -46.630777628071876,-23.522446227806959 -46.630819176205591,-23.522626254949564 -46.630852841022772,-23.522773710938523 -46.630860618097536,-23.522791292809373 -46.63086033489283,-23.522790940239855</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

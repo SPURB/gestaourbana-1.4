@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="11B" id="11B">
+	<SimpleField name="Layer" type="string"></SimpleField>
+	<SimpleField name="SubClasses" type="string"></SimpleField>
+	<SimpleField name="ExtendedEn" type="string"></SimpleField>
+	<SimpleField name="Linetype" type="string"></SimpleField>
+	<SimpleField name="EntityHand" type="string"></SimpleField>
+	<SimpleField name="Text" type="string"></SimpleField>
+</Schema>
+<Folder><name>11B</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#11B">
+		<SimpleData name="Layer">11B</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">200</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.705556972009596,-23.516653825713771 -46.705790913653189,-23.516552740501233 -46.705950975203805,-23.51648339618556 -46.706162909082629,-23.516391729597526 -46.706244540267434,-23.516353825781216 -46.706245893572714,-23.516355722240046 -46.706312778674352,-23.516326740720153 -46.706205952530347,-23.516113659564425 -46.706181930447578,-23.516066704775604 -46.706176930354658,-23.516054661638282 -46.706114915900066,-23.516079717731298 -46.7060559028345,-23.515961732449025 -46.705996955218268,-23.515986664601755 -46.705889911649095,-23.51603270832382 -46.705830792459842,-23.516057492013868 -46.705785910399356,-23.516076732411197 -46.705750897706515,-23.516091741917215 -46.705725913100451,-23.516101675967342 -46.7056639241151,-23.516128717835212 -46.70560095230735,-23.516154687049813 -46.705590923039921,-23.516159672220294 -46.705554941461521,-23.516174692299256 -46.70550490656364,-23.516195734735717 -46.705407890754557,-23.516236702708724 -46.705378907636387,-23.516249659852175 -46.705355956503446,-23.516260745250062 -46.705556972009596,-23.516653825713771</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#11B">
+		<SimpleData name="Layer">11B</SimpleData>
+		<SimpleData name="SubClasses">AcDbEntity:AcDbPolyline</SimpleData>
+		<SimpleData name="EntityHand">211</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-46.693841816200788,-23.510257734367361 -46.693859839888141,-23.51029067236713 -46.69395277043072,-23.510321712054633 -46.693959820497803,-23.510304752328537 -46.694238839520601,-23.510396694873361 -46.69423077921973,-23.51041673524378 -46.69427976636586,-23.510433717216952 -46.6943068185615,-23.510408685157095 -46.694323813414854,-23.510310723137056 -46.694329837429969,-23.510257751422778 -46.694331831459721,-23.510192725564234 -46.694330808082974,-23.51011274546881 -46.694330794222374,-23.510111662216953 -46.694317833111029,-23.510114692326994 -46.693841816200788,-23.510257734367361</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

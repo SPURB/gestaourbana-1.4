@@ -28,7 +28,8 @@ function register_my_menus()
           (
               // 'header-menu-secondary' => __( 'Menu Secundário do Header' ),
               'header-menu-primary' => __( 'Menu Primário do Header' ),
-              'footer-menu' => __( 'Menu do Rodapé' )
+              'footer-menu' => __( 'Menu do Rodapé' ),
+              'home_destaques' => __( 'Menu dos Destaques' ),
           )
       );
   }
@@ -57,6 +58,72 @@ function my_login_redirect( $url, $request, $user )
     return $url;
 }
 */
+
+
+/**
+  ADICIONA IMAGENS AOS DESTAQUES
+  https://stackoverflow.com/questions/26079190/add-featured-image-to-wp-nav-menu-items#26079191
+*/
+
+// Add filter to specific menus 
+add_filter('wp_nav_menu_args', 'add_filter_to_menus');
+function add_filter_to_menus($args) {
+
+    // You can test agasint things like $args['menu'], $args['menu_id'] or $args['theme_location']
+    if( $args['theme_location'] == 'home_destaques') {
+        add_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
+    }
+
+    return $args;
+}
+
+// Filter menu
+function filter_menu_items($item) {
+
+    if( $item->type == 'taxonomy') {
+
+        // For category menu items
+        $cat_base = get_option('category_base');
+        if( empty($cat_base) ) {
+            $cat_base = 'category';
+        }
+
+        // Get the path to the category (excluding the home and category base parts of the URL)
+        $cat_path = str_replace(home_url().'/'.$cat_base, '', $item->url);
+
+        // Get category and image ID
+        $cat = get_category_by_path($cat_path, true);
+        $thumb_id = get_term_meta($cat->term_id, '_term_image_id', true); // I'm using the 'Simple Term Meta' plugin to store an attachment ID as the featured image
+
+    } else {
+        // Get post and image ID
+        $post_id = url_to_postid( $item->url );
+        $thumb_id = get_post_thumbnail_id( $post_id );
+    }
+
+
+    echo "<pre>";
+    var_dump($item);
+    echo "</pre>";
+
+
+
+    if( !empty($thumb_id) ) {
+        // Make the title just be the featured image.
+        $item->title = wp_get_attachment_image( $thumb_id, 'thumb');
+    }
+
+    return $item;
+
+}
+
+// Remove filters
+add_filter('wp_nav_menu_items','remove_filter_from_menus', 10, 2);
+function remove_filter_from_menus( $nav, $args ) {
+    remove_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
+    return $nav;
+}
+
 
 
   /**

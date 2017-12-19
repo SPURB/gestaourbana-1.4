@@ -131,7 +131,7 @@
 }
 
 #wrapper-third-home #titulo_noticias {
-    margin-top: 1.5em;
+    margin-top: 2.35em;
 }
 
 #wrapper-third-home #titulo_noticias #logo_noticias {
@@ -206,19 +206,19 @@
 }
 
 #wrapper-third-home .top-news {
-    width: 100%;
-    margin: 10px 0 10px 0;
+    max-width: 470px;
+    margin-top: 10px;
+    float: left;
 }
 
 #wrapper-third-home .top-news  .image {
     float:left;
-    width: 50%;
 }
 
 #wrapper-third-home .top-news  .image img
 {
     height: auto;
-    width: 100%;
+    width: auto;
 }
 
 #wrapper-third-home .news-date
@@ -226,14 +226,15 @@
     font-size: 12px;
     color: black;
     font-family: 'museoSlab', Arial, sans-serif;
-    margin: 0 0 2px 8px; 
+    margin: 0; 
 }
 
 #wrapper-third-home .top-news .news{
-    right: 0;
-    width: 470px;
     float: left;
-    padding-left: 10px;
+}
+
+.left{
+  margin-right: 20px;
 }
 
 .news-title{
@@ -241,16 +242,12 @@
     font-family: 'museoSlab', Arial, sans-serif;
     line-height: 1.3em;
     color: #000;
-    margin: -5px 0px -5px 8px;
+    margin: 0;
 }
 
 #wrapper-third-home .top-news .news-text {
-    font-family: 'museoSlab', Arial, sans-serif;
-    font-size: 15px;
-    margin-top: 12px;
     color: #000;
     line-height: 1.5;
-    margin-left: 8px;
     word-spacing: 4px;
 }
 
@@ -326,25 +323,24 @@
   padding-left: 5px;
 }
 
-#wrapper-third-home .bottom-news {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 2rem; 
+
+#wrapper-third-home .bottom-news{
+  max-width: 470px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  float: left;
 }
 
-#wrapper-third-home .bottom-news .news {
-    width: 470px;
-    float: left;
-    padding-right: 10px;
-}
-
-h3.section-title{
-  font-size: 16px;
+.section-title{
+  font-size: 27px;
   font-weight: 300;
   line-height: 37px;
 }
 
-div#see-all-news > h3.section-title{
+.section-title-see-all{
   text-align: center;
+  color: #999;
+  font-size: 16px;
 }
 
 /* cor da barra lateral das noticias */
@@ -381,19 +377,11 @@ div#see-all-news > h3.section-title{
     border-left: 5px solid #34BB51;
 }
 
-#wrapper-third-home .bottom-news .news:nth-of-type(2){
-    width: 470px;
-    float: right;
-    padding-right: 0px;
-    padding-left: 10px;
-}
-
 #wrapper-third-home .bottom-news .news-text{
     font-size: 15px;
     margin-top: 18px;
     color: #000;
     line-height: 1.5;
-    margin-left: 8px;
     word-spacing: 4px;
 }
 
@@ -401,7 +389,8 @@ div#see-all-news > h3.section-title{
     font-family: 'museoSlab', Arial, sans-serif;
     color: black;
     font-size: 1.6em;
-    border-bottom: solid 1px #CFCFCF;
+    border-top: solid #999 1px;
+    border-bottom: solid #999 1px;
 }
 
 #wrapper-projetos h3.section-title{
@@ -453,30 +442,38 @@ ul#indice_projetos li a{
     {
         width: 100%;
         float: left;
-        padding: 30px 0;
+        padding: 18px 0 0
     }
     
-    #wrapper-third-home .bottom-news .news:nth-of-type(2)
-    {
-        width: 100%;
-        float: left;
-        padding: 30px 0;
-    }
+}
+
+@media screen and (max-width: 960px)
+{
+  .top-news, .bottom-news{
+    margin-right: 0;
+  }
+  #wrapper-third-home .top-news{
+    max-width: 100%;
+  }
+  #wrapper-third-home .top-news .news{
+    float: none;
+  }
+  #wrapper-third-home .top-news .image{
+    margin-right: 20px;
+  }
+  #wrapper-third-home .bottom-news {
+    max-width: 100%;
+  }
 }
 
 
 @media screen and (max-width: 700px)
 {
-    #wrapper-third-home .top-news  .image
-    {
-        width: 100%;
-    }
     
     #wrapper-third-home .top-news  .image img
     {
         width:100%;
         height:auto;
-        margin-top: 20px;
     }
 }
 
@@ -484,7 +481,7 @@ ul#indice_projetos li a{
   #wrapper-third-home .top-news  .image{
     float: right;
     width:100%;
-    margin:0 0 30px;
+    margin:0;
   }
   #wrapper-third-home .top-news .news     {
       width: 100%;
@@ -494,12 +491,24 @@ ul#indice_projetos li a{
     
   #wrapper-third-home .bottom-news  {
     display:block;
+    margin-bottom: 0;
   }
 
   #wrapper-third-home .bottom-news  .news{
     width:100%;
     display:block;
   }
+
+  ul#indice_projetos {
+    line-height: 3em;
+  }
+
+  ul#indice_projetos > li{
+    max-width: 100%;
+    min-height: 100%;
+    margin-bottom: 20px;
+  }
+
 }
 
 #red-area {
@@ -808,7 +817,7 @@ ul#indice_projetos li a{
   width: 100%;
   min-height:100px;
   border-top: solid 1px;
-  border-color: #E7E7E7;
+  border-color: #999;
 }
 
 

@@ -1,4 +1,19 @@
     <footer>
+        <div id="wrapper-projetos" class="wrapper">
+            <h3 class="section-title">Projetos</h3> 
+            <?php 
+                $args = array(
+                        'menu' => 'Menu Primário do Header',
+                        'depth' => 2,
+                        'menu_id' => 'indice_projetos',
+                        'container_class' => 'wrapper',
+                        'menu_class' => 'menu_index'
+                    )
+            ?>
+            <?php wp_nav_menu($args);?>
+        </div>
+        <div class="clear"></div>
+
         <div class="wrapper">
             <div class="footer-col">
                 <div class="footer-row">

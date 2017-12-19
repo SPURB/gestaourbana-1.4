@@ -98,4 +98,17 @@ margin: 0;
 #planta{
 border: solid 1px #EAE4E4; 
 background-color: #CCCCCC;
+width: 675px;
+}
+body.ie6 div#plantaPanZoom{
+display: none;
+}
+body.ie7 div#plantaPanZoom{
+display: none;
+}
+body.ie8 div#plantaPanZoom{
+display: none;
+}
+body.ie9 div#plantaPanZoom{
+display: none;
 }

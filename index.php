@@ -41,143 +41,119 @@
                 <div class="clear"></div>
             </div>-->
     </div>
-    <?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 3)); ?>
+    <?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 4)); ?>
     <?php $count = 1; ?>
     <?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
     <?php if ($count == 1): ?>
-    <div class="top-news table">
+    <div class="top-news table left">
+        <a href="<?php the_permalink(); ?>">
             <div class="row">
-            <?php if (get_the_post_thumbnail()): ?>
-            <div class="image cell">
-                <?php  the_post_thumbnail('full');//the_post_thumbnail('365x195'); ?>
-            </div>
-            <?php endif; ?>
-        <div class="news cell">
-                    <div class="row">
-                        <div class="cell">
-                        </div>
-                        <div class="cell">
-                            <a href="<?php the_permalink(); ?>">
-                                <p class="news-date"><?php the_time('d/m/Y'); ?></p>
-                            </a>
-                        </div>
-                    </div>
+                <?php if (get_the_post_thumbnail()): ?>
+                <div class="image cell">
+                    <?php  the_post_thumbnail('full');//the_post_thumbnail('365x195'); ?>
+                </div>
+                <?php endif; ?>
+                <div class="news cell">
                         <div class="row">
-                            <?php
-                                $classeCss = "";
-                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
-                            ?>
-                            <div class="cell news<?php echo $classeCss; ?>">
-                            </div>
-                            <div class="cell">
-                                <a href="<?php the_permalink(); ?>">
-                                    <p class="news-title"><?php the_title(); ?></p>
-                                </a>
-                            </div>
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
                         </div>
                         <div class="row">
-                            <div class="cell"></div>
-                            <div class="cell">
-                                <p class="news-text"><?php echo get_the_excerpt(); ?></p>
-                            </div>
+                            <p class="news-title"><?php the_title(); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-text"><?php echo get_the_excerpt(); ?></p>
                         </div>
                 </div>
             </div>
-        <div class="clear"></div>
+        </a>
     </div>
     <?php else : ?>
     <?php if ($count == 2): ?>
-        <div class="bottom-news table">
-            <div class="news cell first">
+    <div class="top-news table">
+        <a href="<?php the_permalink(); ?>">
+            <div class="row">
+                <?php if (get_the_post_thumbnail()): ?>
+                <div class="image cell">
+                    <?php  the_post_thumbnail('full');//the_post_thumbnail('365x195'); ?>
+                </div>
+                <?php endif; ?>
+                <div class="news cell">
                         <div class="row">
-                            <div class="cell">
-                            </div>
-                            <div class="cell">
-                                <a href="<?php the_permalink(); ?>">
-                                    <p class="news-date"><?php the_time('d/m/Y'); ?></p>
-                                </a>
-                            </div>
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
                         </div>
                         <div class="row">
-                            <?php
-                                $classeCss = "";
-                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
-                            ?>
-                            <div class="cell news<?php echo $classeCss; ?>">
-                            </div>
-                            <div class="cell">
-                                <a href="<?php the_permalink(); ?>">
-                                    <p class="news-title"><?php the_title(); ?></p>
-                                </a>
-                            </div>
+                            <p class="news-title"><?php the_title(); ?></p>
                         </div>
                         <div class="row">
-                            <div class="cell">
-                            </div>
-                            <div class="cell">
                             <p class="news-text"><?php echo get_the_excerpt(); ?></p>
-                            </div>
                         </div>
                 </div>
-        <?php endif; ?>
-            <?php if ($count == 3): ?>
-                    <div class="news cell last">
+            </div>
+        </a>
+    </div>
+
+    <?php endif; ?>
+
+
+    <?php if ($count == 3): ?>
+        <div class="bottom-news left">
+        <a href="<?php the_permalink(); ?>">
+            <div class="row">
+                <div class="news cell first">
                         <div class="row">
-                            <div class="cell">
-                            </div>
-                            <div class="cell">
-                                <a href="<?php the_permalink(); ?>">
-                                    <p class="news-date"><?php the_time('d/m/Y'); ?></p>
-                                </a>
-                            </div>
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
                         </div>
                         <div class="row">
-                            <?php
-                                $classeCss = "";
-                                $classeCss = cor_barra_conforme_projeto( get_the_ID() );
-                            ?>
-                            <div class="cell news<?php echo $classeCss; ?>">
-                            </div>
-                            <div class="cell">
-                                <a href="<?php the_permalink(); ?>">
-                                    <p class="news-title"><?php the_title(); ?></p>
-                                </a>
-                            </div>
+                            <p class="news-title"><?php the_title(); ?></p>
                         </div>
                         <div class="row">
-                            <div class="cell"></div>
-                            <div class="cell">
-                                <p class="news-text"><?php echo get_the_excerpt(); ?></p>
-                            </div>
+                            <p class="news-text"><?php echo get_the_excerpt(); ?></p>
                         </div>
-                    </div>
-            <?php endif; ?>
-        <?php endif; ?>
-        <?php $count++; endwhile;?>
+               </div>
+           </div>
+        </a>
         </div>
+    <?php endif; ?>
+    <?php if ($count == 4): ?>
+        <div class="bottom-news">
+        <a href="<?php the_permalink(); ?>">
+            <div class="row">
+                <div class="news cell">
+                        <div class="row">
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-title"><?php the_title(); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-text"><?php echo get_the_excerpt(); ?></p>
+                        </div>
+               </div>
+           </div>
+        </a>
+    </div>
+    <?php endif; ?>
+    <?php endif; ?>
+    <?php $count++; endwhile;?>
 
         <div class="wrapper clear">
             <a href="<?php echo get_bloginfo( 'url' ); ?>/noticia">
                 <div id="see-all-news">
-                    <h3 class="section-title">+ Notícias</h3>
+                    <h3 class="section-title-see-all">+ Notícias</h3>
                 </div>
             </a>
         </div>
     </div>
-        <div id="wrapper-projetos" class="wrapper">
-            <h3 class="section-title">Projetos</h3> 
-            <?php 
-                $args = array(
-                        'menu' => 'Menu Primário do Header',
-                        'depth' => 2,
-                        'menu_id' => 'indice_projetos',
-                        'container_class' => 'wrapper',
-                        'menu_class' => 'menu_index'
-                    )
-            ?>
-            <?php wp_nav_menu($args);?>
-        </div>
-        <div class="clear"></div>
-</div>
+
+    <!-- destaques   -->
+    <nav class="wrapper" id="destaques">
+        <?php
+            $args = array(
+                'theme_location' => 'home_destaques'
+            );
+        ?>
+
+        <?php  wp_nav_menu( $args )?>
+    </nav>
 
 <?php get_footer(); ?>

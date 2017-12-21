@@ -26,7 +26,7 @@
     </div>
 </div>
 <div class="wrapper" id="wrapper-third-home">
-    <div id="titulo_noticias">
+    <div class="titulo-secao">
         <h3 class="section-title">Notícias</h3> 
     <!-- <img id="logo_noticias" src="<?php //echo bloginfo('template_url'); ?>/images/noticias.png" /> -->
     <!--        <div id="newsletter">
@@ -50,7 +50,7 @@
             <div class="row">
                 <?php if (get_the_post_thumbnail()): ?>
                 <div class="image cell">
-                    <?php  the_post_thumbnail('full');//the_post_thumbnail('365x195'); ?>
+                    <?php  the_post_thumbnail('470x270');//the_post_thumbnail('365x195'); ?>
                 </div>
                 <?php endif; ?>
                 <div class="news cell">
@@ -74,7 +74,7 @@
             <div class="row">
                 <?php if (get_the_post_thumbnail()): ?>
                 <div class="image cell">
-                    <?php  the_post_thumbnail('full');//the_post_thumbnail('365x195'); ?>
+                    <?php  the_post_thumbnail('470x270');//the_post_thumbnail('365x195'); ?>
                 </div>
                 <?php endif; ?>
                 <div class="news cell">
@@ -91,10 +91,7 @@
             </div>
         </a>
     </div>
-
     <?php endif; ?>
-
-
     <?php if ($count == 3): ?>
         <div class="bottom-news left">
         <a href="<?php the_permalink(); ?>">
@@ -135,7 +132,6 @@
     <?php endif; ?>
     <?php endif; ?>
     <?php $count++; endwhile;?>
-
         <div class="wrapper clear">
             <a href="<?php echo get_bloginfo( 'url' ); ?>/noticia">
                 <div id="see-all-news">
@@ -143,17 +139,20 @@
                 </div>
             </a>
         </div>
+        <div class="wrapper" id="wrapper-fourth-home">
+            <div class="titulo-secao">
+                <h3 class="section-title">Destaques</h3> 
+            </div>
+                <?php
+                    $args = array(
+                        'theme_location' => 'home_destaques', 
+                        'menu_id' => 'home-destaques', 
+                    );
+                ?>
+                <?php wp_nav_menu( $args )?>
+        </div>
+
+        <div class="wrapper clear"></div>
+
     </div>
-
-    <!-- destaques   -->
-    <nav class="wrapper" id="destaques">
-        <?php
-            $args = array(
-                'theme_location' => 'home_destaques'
-            );
-        ?>
-
-        <?php  wp_nav_menu( $args )?>
-    </nav>
-
 <?php get_footer(); ?>

@@ -14,8 +14,9 @@
     add_image_size( '170xX', 170, 0 );
     add_image_size( '657xX', 657, 0 );
     add_image_size( '510xX', 510, 0 );
-    add_image_size( '365x195', 664, 195, true);
-    add_image_size( '470x270', 470, 270, true);
+    add_image_size( '233x132', 233, 132, true); // destaques home
+    add_image_size( '365x195', 365, 195, true); // largura incosistente. Alterado checar bugs original: ( '365x195', 664, 195, true)
+    add_image_size( '470x270', 470, 270, true); 
   }
 
   /**
@@ -36,37 +37,15 @@ function register_my_menus()
 
   add_action( 'init', 'register_my_menus' );
 
-/*
-add_filter('login_redirect', 'my_login_redirect', 10, 3 );
-function my_login_redirect( $url, $request, $user )
-{
-    if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) )
-    {
-        if( $user->has_cap( 'administrator' ) )
-        {
-            $url = admin_url();
-        }
-        else
-        {
-            $url = home_url('/members-only/');
-        }
-    }
-    if ( current_user_can( 'zoneamento' ) )
-    {
-        wp_die('Você não tem permissão para acessar esta página');
-    }
-    return $url;
-}
-*/
-
 
 /**
-  ADICIONA IMAGENS AOS DESTAQUES
+  adiciona imagens para menu dos destaques
   https://stackoverflow.com/questions/26079190/add-featured-image-to-wp-nav-menu-items#26079191
 */
 
 // Add filter to specific menus 
 add_filter('wp_nav_menu_args', 'add_filter_to_menus');
+
 function add_filter_to_menus($args) {
 
     // You can test agasint things like $args['menu'], $args['menu_id'] or $args['theme_location']
@@ -101,20 +80,15 @@ function filter_menu_items($item) {
         $thumb_id = get_post_thumbnail_id( $post_id );
     }
 
-
-    echo "<pre>";
-    var_dump($item);
-    echo "</pre>";
-
-
-
     if( !empty($thumb_id) ) {
         // Make the title just be the featured image.
-        $item->title = wp_get_attachment_image( $thumb_id, 'thumb');
+        $item->title = wp_get_attachment_image( $thumb_id, '233x132') 
+        . "<p class='news-text'>"
+        . get_the_title( $post_id )
+        . "</p>";
     }
 
     return $item;
-
 }
 
 // Remove filters
@@ -123,7 +97,6 @@ function remove_filter_from_menus( $nav, $args ) {
     remove_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
     return $nav;
 }
-
 
 
   /**
@@ -412,9 +385,6 @@ function remove_filter_from_menus( $nav, $args ) {
           "top");
   }
 
-  /********************************************************************************/
-
-  /*******************************************************************************/
 
   /********************************************************************************/
   /**************** CUSTOM NOTÍCIAS                 *******************************/

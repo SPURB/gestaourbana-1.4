@@ -17,7 +17,7 @@ Template Name: Equipe
 					<p><h5>Direção e Planejamento</h5>	
 					Vinicius Russo</p>
 					<p><h5>Design e Ilustração</h5>
-					Juliana Ciapolletto</p>
+					Juliana Cipolletto</p>
 					<br /><br />
 					<h4 class="tecnology">Tecnologias:</h4>
 					<br />	

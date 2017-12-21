@@ -9,9 +9,8 @@ Template Name: Noticias
 	<div class="wrapper">
             <div class="left">
 			<div class="inner">
-                            <br/>
 			  <?php $paged = get_query_var('paged') ? get_query_var('paged') : 1; ?>
-			  <?php $wp_query = new WP_Query( array('post_type' => 'noticias', 'paged' => $paged, 'posts_per_page' => 5)); ?>
+			  <?php $wp_query = new WP_Query( array('post_type' => 'noticias', 'paged' => $paged, 'posts_per_page' => 10)); ?>
 			  <?php $count = 1; ?>
 			  <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 			    <?php if ($count == 1): ?>
@@ -21,7 +20,7 @@ Template Name: Noticias
   				<?php endif; ?>
     					<a href="<?php the_permalink(); ?>">
     					  <div class="image">
-                  <?php the_post_thumbnail('657xX'); ?>
+                  <?php the_post_thumbnail('470x270'); ?>
                 </div>
     						<p class="news-date"><?php the_time('d/m/Y'); ?></p>
     						<?php if ($count == 1): ?>

@@ -1,6 +1,5 @@
     <footer>
         <div id="wrapper-projetos" class="wrapper">
-            <h3 class="section-title">Projetos</h3> 
             <?php 
                 $args = array(
                         'menu' => 'Menu Primário do Header',

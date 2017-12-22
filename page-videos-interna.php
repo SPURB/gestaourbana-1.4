@@ -50,6 +50,15 @@ Template Name: Vídeos interno
         }
         ?>
         
+    <div class="wrapper clear">
+        <a href="<?php echo get_bloginfo( 'url' ); ?>/videos">
+            <div id="see-all-news">
+                <h3 class="section-title-see-all">+ Vídeos</h3>
+            </div>
+        </a>
+    </div>
+
+
       </div>      
     </div>
     

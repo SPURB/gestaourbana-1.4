@@ -151,12 +151,12 @@ p {
 }
 
 a {
-    color:#999;
+    color: black;
     font-family:'museoSlab', Arial, Helvetica, sans-serif;
 }
 
 a:hover{
-text-decoration: underline;    
+text-decoration: underline;
 }
 
 strong
@@ -1630,3 +1630,15 @@ ul#topicos-menu li ul.topicos-submenu li a
     background-color: #34BB51;
 }
 
+.section-title{
+font-size: 27px;
+font-weight: 300;
+line-height: 37px;
+}
+
+.section-title-see-all{
+text-align: center;
+font-size: 16px;
+border-top: 1px solid #999;
+border-bottom: 1px solid #999;  
+}

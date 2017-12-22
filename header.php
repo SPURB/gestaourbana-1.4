@@ -5,25 +5,6 @@
 	<meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0" />
 	<title>Gestão Urbana SP</title>
 	<meta name="description" content=" Participe do planejamento de uma nova São Paulo">
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>?<?php echo time(); ?>"/>	
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-menu-navbar.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-agenda-interna.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-agenda-sidebar.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-agenda.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-biblioteca.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-contato.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-entenda-etapas.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-entenda-introducao.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-entenda-perguntas.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-equipe.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-home.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-interna.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-noticias-interna.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-noticias-sidebar.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-noticias.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/style-comments.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/glDatePicker.flatwhite.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url'); ?>/css/jquery.fancybox.css"/>
 	<script type="text/javascript">
 	  var template_url = "<?php echo bloginfo('template_url'); ?>";
 	  var slider = 'slider';
@@ -37,9 +18,9 @@ wp_enqueue_script('site-script', get_stylesheet_directory_uri() . '/js/script.js
 wp_enqueue_script('bjqs', get_stylesheet_directory_uri() . '/js/bjqs-1.3.js', array( 'jquery' ));
 wp_enqueue_script('glDatePicker', get_stylesheet_directory_uri() . '/js/glDatePicker.js', array( 'jquery' ));
 wp_enqueue_script('jquery.fancybox', get_stylesheet_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ));
+wp_enqueue_script('header_menu', get_stylesheet_directory_uri() . '/js/header_menu.js', array(), null, true);
 
 wp_head();
-
 ?>
 </head>
 <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
@@ -82,39 +63,3 @@ wp_head();
 			<div id="bcrumbfade" class="noheight">&nbsp;</div>
 		</div>		
 	</div>
-	<script type="text/javascript">
-		jQuery(document).ready(function() {			
-			// Remove menuinterno sobressalente
-			jQuery(".menu-do-projeto").remove();			
-			// Exibe menu
-			jQuery("#project-nav").removeClass("nodisp");
-			// Fixa a navbar
-			var navpos = jQuery('#project-nav').offset();
-			var paddiv = '<div id="inpaddiv" style="height: 130px; background-color: white;"></div>';
-			var isScrolled = false;
-			jQuery(window).bind('scroll', function() {
-				if (jQuery(window).scrollTop() > 45 && jQuery(window).innerWidth() > 915) {
-					jQuery('#project-nav').addClass('fixed_topwrapper');
-					jQuery('#bcrumbfade').removeClass('noheight');
-					if(!isScrolled){
-						// Corrige area branca em paginas sem bcrumb
-						if(jQuery('.fbc-page').length <= 0) {
-							paddiv = '<div id="inpaddiv" style="height: 50px; background-color: white;"></div>';
-							jQuery('#project-nav').addClass('navhtcorrect');
-							jQuery('.menu_container').after('<div id="bcrumbfade" style="margin-top: 0">&nbsp;</div>');
-						}
-						jQuery(paddiv).insertAfter('#project-nav');
-						
-					}				
-					isScrolled = true;
-				}
-				else {
-					jQuery('#project-nav').removeClass('fixed_topwrapper');
-					jQuery('#bcrumbfade').addClass('noheight');
-					jQuery('#inpaddiv').remove();
-					if(jQuery('.fbc-page').length <= 0) {jQuery('#bcrumbfade').remove();}
-					isScrolled = false;
-				}
-			});
-		});
-	</script>

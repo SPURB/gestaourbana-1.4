@@ -5,6 +5,56 @@
   add_editor_style('css/style-entenda-etapas.css');
 
   /**
+   * REGISTER STYLESHEETS
+   */
+  function registerAndLoadStyles(){
+    wp_register_style('style', get_stylesheet_uri());
+    wp_register_style('style-menu-navbar', get_template_directory_uri() . '/css/style-menu-navbar.css', array(), null, 'all');
+    wp_register_style('style-agenda-interna', get_template_directory_uri() . '/css/style-agenda-interna.css', array(), null, 'all');
+    wp_register_style('style-agenda-sidebar', get_template_directory_uri() . '/css/style-agenda-sidebar.css', array(), null, 'all');
+    wp_register_style('style-agenda', get_template_directory_uri() . '/css/style-agenda.css', array(), null, 'all');
+    wp_register_style('style-biblioteca', get_template_directory_uri() . '/css/style-biblioteca.css', array(), null, 'all');
+    wp_register_style('style-contato', get_template_directory_uri() . '/css/style-contato.css', array(), null, 'all');
+    wp_register_style('style-entenda-introducao', get_template_directory_uri() . '/css/style-entenda-introducao.css', array(), null, 'all');
+    wp_register_style('style-entenda-perguntas', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
+    wp_register_style('style-entenda-equipe', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
+    wp_register_style('style-home', get_template_directory_uri() . '/css/style-home.css', array(), null, 'all');
+    wp_register_style('style-interna', get_template_directory_uri() . '/css/style-interna.css', array(), null, 'all');
+    wp_register_style('style-noticias-interna', get_template_directory_uri() . '/css/style-noticias-interna.css', array(), null, 'all');
+    wp_register_style('style-noticias-sidebar', get_template_directory_uri() . '/css/style-noticias-sidebar.css', array(), null, 'all');
+    wp_register_style('style-noticias', get_template_directory_uri() . '/css/style-noticias.css', array(), null, 'all');
+    wp_register_style('style-comments', get_template_directory_uri() . '/css/style-comments.css', array(), null, 'all');
+    wp_register_style('glDatePicker-flatwhite', get_template_directory_uri() . '/css/glDatePicker.flatwhite.css', array(), null, 'all');
+    wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
+
+    wp_enqueue_style('style');
+    wp_enqueue_style('style-menu-navbar');
+    wp_enqueue_style('style-agenda-interna');
+    wp_enqueue_style('style-agenda-sidebar');
+    wp_enqueue_style('style-agenda');
+    wp_enqueue_style('style-biblioteca');
+    wp_enqueue_style('style-contato');
+    wp_enqueue_style('style-entenda-introducao');
+    wp_enqueue_style('style-entenda-perguntas');
+    wp_enqueue_style('style-entenda-equipe');
+    wp_enqueue_style('style-home');
+    wp_enqueue_style('style-interna');
+    wp_enqueue_style('style-noticias-interna');
+    wp_enqueue_style('style-noticias-sidebar');
+    wp_enqueue_style('style-noticias');
+    wp_enqueue_style('style-comments');
+    wp_enqueue_style('glDatePicker-flatwhite');
+    wp_enqueue_style('jquery-fancybox');
+
+    if (is_page( 'videos' )):
+      wp_enqueue_style( 'style-videos', get_template_directory_uri() . '/css/style-videos.css',array(),null,'all');
+    endif;
+
+  }
+  add_action( 'wp_enqueue_scripts', 'registerAndLoadStyles' );
+
+
+  /**
    * SETUP THEME IMAGES SIZES
    */
   if ( function_exists( 'add_theme_support' ) ) {
@@ -15,7 +65,7 @@
     add_image_size( '657xX', 657, 0 );
     add_image_size( '510xX', 510, 0 );
     add_image_size( '233x132', 233, 132, true); // destaques home
-    add_image_size( '365x195', 365, 195, true); // largura incosistente. Alterado checar bugs original: ( '365x195', 664, 195, true)
+    add_image_size( '365x195', 365, 195, true); // largura incosistente. Alterado checar bugs. Original: ( '365x195', 664, 195, true)
     add_image_size( '470x270', 470, 270, true); 
   }
 
@@ -385,7 +435,6 @@ function remove_filter_from_menus( $nav, $args ) {
           "top");
   }
 
-
   /********************************************************************************/
   /**************** CUSTOM NOTÍCIAS                 *******************************/
   /********************************************************************************/
@@ -643,13 +692,10 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
 
   function biblioteca_meta_link () {
     // - grab data -
-
     global $post;
     $custom = get_post_custom($post->ID);
     $meta_value = $custom["library_link"][0];
-
     // - output -
-
     ?>
     <div class="meta">
       <input type="hidden" name="library-nonce" value="<?php echo wp_create_nonce( 'library-nonce' ); ?>" />
@@ -677,8 +723,6 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     update_post_meta($post->ID, "library_link", $_POST['library_link'] );
 
   }
-
-  /********************************************************************************/
 
   /********************************************************************************/
   /**************** CUSTOM PERGUNTAS FREQUENTES     *******************************/
@@ -725,8 +769,6 @@ add_action( 'init', 'create_noticiascategory_taxonomy', 0 );
     );
     return $columns;
   }
-
-  /********************************************************************************/
 
 
 /********************************************************************************/
@@ -4995,7 +5037,7 @@ function shortcode_plataforma_participacao_detalhes_exemplo( $atts )
 }
 
 
-add_filter('popmake_popup_is_loadable', 'mycustom_popup_is_loadable', 10, 2 );
+add_filter('pum_popup_is_loadable', 'mycustom_popup_is_loadable', 10, 2 );
 function mycustom_popup_is_loadable( $is_loadable, $popup_id)
 {
     // minhocao - producao - proposta detalhe

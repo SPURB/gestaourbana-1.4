@@ -1,0 +1,36 @@
+.video-container{
+position: relative;
+max-width: 233px;
+float: left;
+margin: 0 9px 0 0;
+}
+
+.video-container p {
+margin-top: 0;
+color: black;
+padding-right: 10px;
+}
+
+.video-play{
+position: absolute;
+top: 35px;
+left: 81px;
+width: 60px;
+height: 60px;
+background: url('../images/play.png') no-repeat center center;
+}
+
+.video-container:nth-child(4n){
+margin-right: 0;
+}
+
+@media screen and (max-width: 960px){
+    li.video-container:nth-child(4n){
+       margin-right: 9px;
+    }    
+}
+
+
+.text{
+    margin-bottom: 2em;
+}

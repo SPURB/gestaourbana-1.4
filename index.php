@@ -139,6 +139,7 @@
                 </div>
             </a>
         </div>
+
         <div class="wrapper" id="wrapper-fourth-home">
             <div class="titulo-secao">
                 <h3 class="section-title">Destaques</h3> 
@@ -152,6 +153,41 @@
                 <?php wp_nav_menu( $args )?>
         </div>
 
+        <div class="wrapper clear" id="wrapper-fifth-home">
+            <div class="titulo-secao">
+                <h3 class="section-title">Vídeos</h3> 
+            </div>
+            <div class="wrapper clear">
+                <a href="<?php echo get_bloginfo( 'url' ); ?>/videos">
+                    <div id="see-all-news">
+                        <h3 class="section-title-see-all">+ Vídeos</h3>
+
+                        <!-- dois videos -->
+                        <?php
+                        $child_pages = new WP_Query( array(
+                            'post_type'      => 'page', // set the post type to page
+                            'posts_per_page' => 2, // number of posts (pages) to show
+                            'post_parent'    => 26481, // enter the post ID of the parent page
+                            'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+                        ) );
+                        if ( $child_pages->have_posts() ) : 
+                            while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
+                            <a href="<?php the_permalink(); ?>">
+                                <h2><?php the_title();?> </h2>
+                                <?php if (get_the_post_thumbnail()): ?>
+                                <div class="image cell">
+                                    <?php  the_post_thumbnail('470x270');//the_post_thumbnail('365x195'); ?>
+                                </div>
+                                <?php endif; ?>
+                            </a>
+                            <?php endwhile; 
+                        endif;  
+                        wp_reset_postdata();
+                        ?>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="wrapper clear"></div>
 
     </div>

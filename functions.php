@@ -5,11 +5,12 @@
   add_editor_style('css/style-entenda-etapas.css');
 
   /**
-   * REGISTER STYLESHEETS
+   * REGISTER STYLESHEETS AND SCRIPTS
    */
-  function registerAndLoadStyles(){
+  function register_and_load_styles_scripts(){
     wp_register_style('style', get_stylesheet_uri());
     wp_register_style('style-menu-navbar', get_template_directory_uri() . '/css/style-menu-navbar.css', array(), null, 'all');
+    wp_register_style('style-home', get_template_directory_uri() . '/css/style-home.css', array(), null, 'all');
     wp_register_style('style-agenda-interna', get_template_directory_uri() . '/css/style-agenda-interna.css', array(), null, 'all');
     wp_register_style('style-agenda-sidebar', get_template_directory_uri() . '/css/style-agenda-sidebar.css', array(), null, 'all');
     wp_register_style('style-agenda', get_template_directory_uri() . '/css/style-agenda.css', array(), null, 'all');
@@ -18,7 +19,6 @@
     wp_register_style('style-entenda-introducao', get_template_directory_uri() . '/css/style-entenda-introducao.css', array(), null, 'all');
     wp_register_style('style-entenda-perguntas', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
     wp_register_style('style-entenda-equipe', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
-    wp_register_style('style-home', get_template_directory_uri() . '/css/style-home.css', array(), null, 'all');
     wp_register_style('style-interna', get_template_directory_uri() . '/css/style-interna.css', array(), null, 'all');
     wp_register_style('style-noticias-interna', get_template_directory_uri() . '/css/style-noticias-interna.css', array(), null, 'all');
     wp_register_style('style-noticias-sidebar', get_template_directory_uri() . '/css/style-noticias-sidebar.css', array(), null, 'all');
@@ -26,32 +26,74 @@
     wp_register_style('style-comments', get_template_directory_uri() . '/css/style-comments.css', array(), null, 'all');
     wp_register_style('glDatePicker-flatwhite', get_template_directory_uri() . '/css/glDatePicker.flatwhite.css', array(), null, 'all');
     wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
+    wp_register_style('style-videos', get_template_directory_uri() . '/css/style-videos.css', array(), null, 'all');
 
     wp_enqueue_style('style');
     wp_enqueue_style('style-menu-navbar');
-    wp_enqueue_style('style-agenda-interna');
-    wp_enqueue_style('style-agenda-sidebar');
-    wp_enqueue_style('style-agenda');
-    wp_enqueue_style('style-biblioteca');
-    wp_enqueue_style('style-contato');
-    wp_enqueue_style('style-entenda-introducao');
-    wp_enqueue_style('style-entenda-perguntas');
-    wp_enqueue_style('style-entenda-equipe');
-    wp_enqueue_style('style-home');
-    wp_enqueue_style('style-interna');
-    wp_enqueue_style('style-noticias-interna');
-    wp_enqueue_style('style-noticias-sidebar');
-    wp_enqueue_style('style-noticias');
-    wp_enqueue_style('style-comments');
-    wp_enqueue_style('glDatePicker-flatwhite');
-    wp_enqueue_style('jquery-fancybox');
-
-    if (is_page( 'videos' )):
-      wp_enqueue_style( 'style-videos', get_template_directory_uri() . '/css/style-videos.css',array(),null,'all');
+  
+    if (is_front_page()):
+      wp_enqueue_style('style-home');
     endif;
 
+    if (!is_front_page()):
+      wp_enqueue_style('style-agenda-interna');
+      wp_enqueue_style('style-agenda-sidebar');
+      wp_enqueue_style('style-agenda');
+      wp_enqueue_style('style-entenda-introducao');
+      wp_enqueue_style('style-entenda-perguntas');
+      wp_enqueue_style('style-entenda-equipe');
+      wp_enqueue_style('style-comments');
+      wp_enqueue_style('style-interna');
+      wp_enqueue_style('glDatePicker-flatwhite');
+      wp_enqueue_style('jquery-fancybox');
+
+      // isolate unused assets
+      if (is_page( 'biblioteca' )) :
+        wp_enqueue_style('style-biblioteca');
+      endif;
+
+      if (is_page( 'contato' )) :
+        wp_enqueue_style('style-contato');
+      endif;
+
+      if (is_page( 'videos' )) :
+          wp_enqueue_style('style-videos');
+      endif;
+
+      $query_noticias = new WP_Query( array('post_type' => 'noticias'));
+      if (is_page( 'noticia' ) or $query_noticias->have_posts()) :
+          wp_enqueue_style('style-noticias');
+          wp_enqueue_style('style-noticias-interna');
+          wp_enqueue_style('style-noticias-sidebar');
+      endif;
+      wp_reset_postdata();
+
+   endif;
+
+    // scripts handling
+    wp_register_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array('jquery'), $in_footer = true );
+    wp_register_script('vanillaMasker', get_stylesheet_directory_uri() . '/js/vanilla-masker.min.js', array( 'jquery' ),$in_footer = true );
+    wp_register_script('vanillaMaskerValidations', get_stylesheet_directory_uri() . '/js/validationsFields.js', array( 'jquery', 'vanillaMasker' ),$in_footer = true );
+    wp_register_script('site-script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ),$in_footer = true );
+    wp_register_script('bjqs', get_stylesheet_directory_uri() . '/js/bjqs-1.3.js', array( 'jquery' ),$in_footer = true );
+    wp_register_script('glDatePicker', get_stylesheet_directory_uri() . '/js/glDatePicker.js', array( 'jquery' ),$in_footer = true );
+    wp_register_script('jquery.fancybox', get_stylesheet_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ),$in_footer = true );
+    wp_register_script('header_menu', get_stylesheet_directory_uri() . '/js/header_menu.js', array( 'jquery' ),$in_footer = true );
+    wp_register_script('footer', get_stylesheet_directory_uri() . '/js/footer.js',array( 'jquery' ), $in_footer = true );
+
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('respond');
+    wp_enqueue_script('vanillaMasker');
+    wp_enqueue_script('vanillaMaskerValidations');
+    wp_enqueue_script('site-script');
+    wp_enqueue_script('bjqs');
+    wp_enqueue_script('glDatePicker');
+    wp_enqueue_script('jquery.fancybox');
+    wp_enqueue_script('header_menu');
+    wp_enqueue_script('footer');
+
   }
-  add_action( 'wp_enqueue_scripts', 'registerAndLoadStyles' );
+  add_action( 'wp_enqueue_scripts', 'register_and_load_styles_scripts' );
 
 
   /**

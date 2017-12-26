@@ -2,7 +2,12 @@
 <div class="wrapper" id="wrapper-second-home">
     <div id="banner-slide">
         <ul class="bjqs">
-            <?php $slide_query = new WP_Query( array('post_type' => 'slider', 'posts_per_page' => 7, 'orderby'=>'menu_order', 'order' => 'ASC')); ?>
+            <?php $slide_query = new WP_Query( array(
+                'post_type' => 'slider', 
+                'posts_per_page' => 7, 
+                'orderby'=>'menu_order', 
+                'order' => 'ASC')); ?>
+
                 <?php $count = 1; ?>
                 <?php while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
                     <li class="bjqs-slide bjqs-slide-<?php echo $count; ?>" id="slide-first">
@@ -157,38 +162,42 @@
             <div class="titulo-secao">
                 <h3 class="section-title">Vídeos</h3> 
             </div>
+                <?php
+                $child_pages = new WP_Query( array(
+                    'post_type'      => 'page', // set the post type to page
+                    'posts_per_page' => 2, // number of posts (pages) to show
+                    'post_parent'    => 26481, // post ID of 'videos'
+                    'no_found_rows'  => true // no pagination necessary so improve efficiency of loop
+                ) );
+                ?>
+                <?php if  ( $child_pages->have_posts() ) : ?>
+                    <ul id="videos">
+                        <?php while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
+                        <li class="video-home">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php if (get_the_post_thumbnail()): ?>
+                                <div class="image cell">
+                                    <?php  the_post_thumbnail('470x270');?>
+                                    <div class="video-play"></div>
+                                </div>
+                                <p class="news-title-videos clear"><?php the_title();?></p>
+                                <p class="news-text"><?php echo get_the_excerpt(); ?></p>
+                                <?php endif; ?>
+                            </a>
+                        </li>
+                        <?php endwhile; ?> 
+                    </ul>
+                <?php endif; ?>                
+                <?php wp_reset_postdata();
+                ?>
             <div class="wrapper clear">
                 <a href="<?php echo get_bloginfo( 'url' ); ?>/videos">
                     <div id="see-all-news">
                         <h3 class="section-title-see-all">+ Vídeos</h3>
-
-                        <!-- dois videos -->
-                        <?php
-                        $child_pages = new WP_Query( array(
-                            'post_type'      => 'page', // set the post type to page
-                            'posts_per_page' => 2, // number of posts (pages) to show
-                            'post_parent'    => 26481, // enter the post ID of the parent page
-                            'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
-                        ) );
-                        if ( $child_pages->have_posts() ) : 
-                            while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
-                            <a href="<?php the_permalink(); ?>">
-                                <h2><?php the_title();?> </h2>
-                                <?php if (get_the_post_thumbnail()): ?>
-                                <div class="image cell">
-                                    <?php  the_post_thumbnail('470x270');//the_post_thumbnail('365x195'); ?>
-                                </div>
-                                <?php endif; ?>
-                            </a>
-                            <?php endwhile; 
-                        endif;  
-                        wp_reset_postdata();
-                        ?>
                     </div>
                 </a>
             </div>
         </div>
         <div class="wrapper clear"></div>
-
     </div>
 <?php get_footer(); ?>

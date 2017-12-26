@@ -6,22 +6,11 @@
 	<title>Gestão Urbana SP</title>
 	<meta name="description" content=" Participe do planejamento de uma nova São Paulo">
 	<script type="text/javascript">
-	  var template_url = "<?php echo bloginfo('template_url'); ?>";
-	  var slider = 'slider';
+	    var template_url = "<?php echo bloginfo('template_url'); ?>";
+	    var slider = 'slider';
 	</script>
-
-<?php
-wp_enqueue_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js');
-wp_enqueue_script('vanillaMasker', get_stylesheet_directory_uri() . '/js/vanilla-masker.min.js', array( 'jquery' ));
-wp_enqueue_script('vanillaMaskerValidations', get_stylesheet_directory_uri() . '/js/validationsFields.js', array( 'jquery', 'vanillaMasker' ));
-wp_enqueue_script('site-script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ));
-wp_enqueue_script('bjqs', get_stylesheet_directory_uri() . '/js/bjqs-1.3.js', array( 'jquery' ));
-wp_enqueue_script('glDatePicker', get_stylesheet_directory_uri() . '/js/glDatePicker.js', array( 'jquery' ));
-wp_enqueue_script('jquery.fancybox', get_stylesheet_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ));
-wp_enqueue_script('header_menu', get_stylesheet_directory_uri() . '/js/header_menu.js', array(), null, true);
-
-wp_head();
-?>
+	<?php wp_head();
+	?>
 </head>
 <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
 <!--[if IE 7 ]> <body class="ie7"> <![endif]-->

@@ -55,7 +55,7 @@
             <div class="row">
                 <?php if (get_the_post_thumbnail()): ?>
                 <div class="image cell">
-                    <?php  the_post_thumbnail('470x270');//the_post_thumbnail('365x195'); ?>
+                    <?php  the_post_thumbnail('470x267');//the_post_thumbnail('365x195'); ?>
                 </div>
                 <?php endif; ?>
                 <div class="news cell">
@@ -79,7 +79,7 @@
             <div class="row">
                 <?php if (get_the_post_thumbnail()): ?>
                 <div class="image cell">
-                    <?php  the_post_thumbnail('470x270');//the_post_thumbnail('365x195'); ?>
+                    <?php  the_post_thumbnail('470x267');//the_post_thumbnail('365x195'); ?>
                 </div>
                 <?php endif; ?>
                 <div class="news cell">
@@ -177,7 +177,7 @@
                             <a href="<?php the_permalink(); ?>">
                                 <?php if (get_the_post_thumbnail()): ?>
                                 <div class="image cell">
-                                    <?php  the_post_thumbnail('470x270');?>
+                                    <?php  the_post_thumbnail('470x267');?>
                                     <div class="video-play"></div>
                                 </div>
                                 <p class="news-title-videos clear"><?php the_title();?></p>

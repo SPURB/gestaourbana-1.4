@@ -1,97 +1,71 @@
-#news .left
-{
-	/*width:70%;*/
-        width: 100%;
+.noticia{
+padding: 1em 0;
+border-top: 1px solid #CCCCCC;
 }
-
-#news .right
-{
-	/*width:30%;*/
+li.noticia:first-child{
+border-top: 0;
 }
-
-#news .left .inner {
-	margin-right:15px;
+li.noticia a{
+color:black;
 }
-
-#news .right .inner {
-	margin-left:15px;
+.right .tags span a {
+color: #adacac;
 }
-
-#news .news-date {
-	font-family:'museuSlab', Arial, Helvetica, sans-serif;
-	/*color:#d7322f;*/
-        color: #333333;
-	font-size:12px;
+#news .left {
+float: left;
+width: 24.5%;
+margin-bottom: 2em
 }
-
-#news h3, #news h4{
-	/*color:#D7322F;*/
-        color: #333333;
+#news .left img{
+width: 100%;
+max-width:233px;
+height: auto;
+float:left;
+margin-right: 20px;
 }
-
-#news h3 {
-	margin:15px 0 30px;
+#news .right {
+float: right;
+width:73.5%;
+margin-bottom: 2em;
 }
-
-#news h4 {
-	margin:15px 0 30px;
+.noticia p{
+margin: 0;
 }
-
-#news .left .big-text, #news .left .text {
-	border-bottom:1px solid #CCCCCC;
-	margin-bottom:40px;
-	padding-bottom:40px;
+.noticia .news-date {
+font-family:'museuSlab', Helvetica, Arial, sans-serif;
+font-size:12px;
 }
-
-#news .left .big-text img {
-	width: 40%;
-	border-radius:5px;
-        height: 100%
+.noticia h4 {
+margin:0 0 0.5em;
 }
-
-#news .left .big-text span a
-{
-    color: #333333;
+.noticia .tags{
+padding-top:1em;
+line-height: 1.6
 }
-
-#news .left .text img{
-	width:30%;
-	height:auto;
-	float:left;
-	margin:0 20px 20px 0;
-	border-radius:5px;
+.pages{
+border-top: 1px solid #CCCCCC;
 }
-
-#news .left .text span a
-{
-    color: #333333;
+.pages div{
+padding: 3em 0 0;
 }
-
-#news .left .inner-text p {
-	color:#333333;
+.pages .next{
+float: right;
+width: 50%;
+text-align:right;
 }
-
-#news .pages .prev {
-	float:left;
+.pages .prev{
+float: left;
+width: 50%
 }
-#news .pages .next {
-	float:right;
-} 
-#news .pages .prev a,  #news .pages .next a{
-	/*color:#D7322F;*/
-        color: #333333;
-	font-size:15px;
-	font-family:'museuSlam', Arial, Helvetica, sans-serif;
-} 
-
 
 @media screen and (max-width: 560px) {
 	#news .left {
-		float:none;
-		width:100%;
+	width:100%;
 	}
-	
 	#news .left .inner {
-		margin:0;
+	margin:0;
+	}
+	#news .right{
+	width: 100%
 	}
 }

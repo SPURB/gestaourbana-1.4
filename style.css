@@ -151,8 +151,8 @@ p {
 }
 
 a {
-    color: black;
-    font-family:'museoSlab', Arial, Helvetica, sans-serif;
+    color: #adacac;
+    font-family:'museoSlab', Helvetica, Arial, sans-serif;
 }
 
 a:hover{
@@ -161,7 +161,7 @@ text-decoration: underline;
 
 strong
 {
-    font-family: 'museoSlab', Arial, Helvetica, sans-serif;
+    font-family: 'museoSlab', Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -308,6 +308,8 @@ header #newsletter input[type="submit"]{
     #wrapper-second-home,
     #wrapper-third-home,
     #wrapper-projetos,
+    #news-inner .wrapper,
+    #news .wrapper,
     footer .wrapper{
         padding: 0 3%;
         max-width: 94%;
@@ -578,7 +580,7 @@ footer .footer-col:nth-of-type(2) .footer-row:nth-of-type(1) a{
 }
 
 footer .footer-col:nth-of-type(3) {
-    font-family: 'museoSlab', Arial, Helvetica, sans-serif;
+    font-family: 'museoSlab', Helvetica, Arial, sans-serif;
 }
 
 footer .footer-col:nth-of-type(3) .label{
@@ -969,7 +971,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 .btn:hover {color: white;}
 
 #pmsp-header-container a:link {
-    font-family: verdana, arial, helvetica, serif !important;
+    font-family: verdana, helvetica, arial, serif !important;
     font-size: 11px !important;
     line-height: 13px;
 }
@@ -1023,7 +1025,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
     color:#D7322F;
     font-size:15px;
     cursor:pointer;
-    font-family:'museoSlab', Arial, Helvetica, sans-serif;
+    font-family:'museoSlab', Helvetica, Arial, sans-serif;
 }
 
 .form-error h3 {
@@ -1689,8 +1691,9 @@ text-align: center;
 font-size: 16px;
 border-top: 1px solid #999;
 border-bottom: 1px solid #999;  
+color:black;
 }
 
 .section-title-see-all:hover{
-    background-color: #f2f2f2
+background-color: #f2f2f2
 }

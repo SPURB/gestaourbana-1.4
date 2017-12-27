@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <div class="wrapper">
-  <div class="wrapper">
       <ul id="video-list">
         <?php
         // if we are on a parent page set the $parent variable to current post id
@@ -21,9 +20,11 @@
         // show only if there are children
         if ( ! empty($child_pages) ) {
           global $post;
+
           foreach ( $child_pages as $post ) { setup_postdata( $post );
+            $count_list_item++;
           ?>
-            <li class='video-container'>
+            <li class="video-container">
               <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                 <?php the_post_thumbnail('233x132'); ?>
                 <div class="video-play"></div>
@@ -38,7 +39,6 @@
       </ul>
     </div>
   <div class="clear"></div>
-</div>
 </div>
 <?php get_footer(); ?>
 

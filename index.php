@@ -33,20 +33,32 @@
 <div class="wrapper" id="wrapper-third-home">
     <div class="titulo-secao">
         <h3 class="section-title">Notícias</h3> 
-    <!-- <img id="logo_noticias" src="<?php //echo bloginfo('template_url'); ?>/images/noticias.png" /> -->
-    <!--        <div id="newsletter">
+        <div id="newsletter">
+<!--             <div id="register-newsletter-box">
+                    <form id="register-newsletter" class="ajax_submit_form" action="<?php // echo plugins_url( 'newsletter/do/subscribe.php' ); ?>" method="post">
+                        <input type="text" class="defaultText" name="ne" id="register-newsletter-input" /><input type="submit" value="OK" />
+                    </form>
+            </div>
+            <div class="clear"></div>
+ -->     
+            <!-- https://shibulijack.wordpress.com/2012/03/18/create-custom-forms-in-wordpress/ -->
+            <form action="<?php echo get_template_directory_uri(); ?>/cadastro.php" method="post" name="myForm">
                 <div class="label">
-                        Cadastre seu email e<br />receba nossas notícias
+                        Cadastre seu email e<br />receba nossas notícias 
                 </div>
-                <div id="register-newsletter-box">
-                        <form id="register-newsletter" class="ajax_submit_form" action="<?php// echo plugins_url( 'newsletter/do/subscribe.php' ); ?>" method="post">
-                            <input type="text" class="defaultText" name="ne" id="register-newsletter-input" /><input type="submit" value="OK" />
-                        </form>
-                </div>
-                <div class="clear"></div>
-            </div>-->
+                <input id="email" type="text" name="email" />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
     </div>
-    <?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 4)); ?>
+
+    <?php $news_query = new WP_Query( 
+        array(
+            'post_type' => 'noticias', 
+            'posts_per_page' => 4,
+            'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+        )
+    );?>
     <?php $count = 1; ?>
     <?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
     <?php if ($count == 1): ?>
@@ -55,7 +67,7 @@
             <div class="row">
                 <?php if (get_the_post_thumbnail()): ?>
                 <div class="image cell">
-                    <?php  the_post_thumbnail('470x267');//the_post_thumbnail('365x195'); ?>
+                    <?php  the_post_thumbnail('470x267');?>
                 </div>
                 <?php endif; ?>
                 <div class="news cell">
@@ -79,7 +91,7 @@
             <div class="row">
                 <?php if (get_the_post_thumbnail()): ?>
                 <div class="image cell">
-                    <?php  the_post_thumbnail('470x267');//the_post_thumbnail('365x195'); ?>
+                    <?php  the_post_thumbnail('470x267');?>
                 </div>
                 <?php endif; ?>
                 <div class="news cell">
@@ -159,43 +171,109 @@
         </div>
 
         <div class="wrapper clear" id="wrapper-fifth-home">
-            <div class="titulo-secao">
-                <h3 class="section-title">Vídeos</h3> 
+            <div id="section-agenda">
+                <div class="titulo-secao">
+                    <h3 class="section-title">Agenda</h3> 
+                </div>
+                    <?php
+                    $child_pages = new WP_Query( array(
+                        'post_type'      => 'agenda', 
+                        'meta_query' => array(
+                          array( 
+                            'key' => 'agenda_show_date',
+                            'value' => time(),
+                            'compare' => '>=')
+                          ),
+                        'orderby' => 'meta_value_num',
+                        'order' => 'ASC',
+                        'meta_key' => 'agenda_show_date',
+                        'posts_per_page' => 3,
+                        'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+                    ) );
+                    ?>
+                    <?php if  ( $child_pages->have_posts() ) : ?>
+                        <ul id="agenda">
+                            <?php while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
+                            <li class="agenda-home"> 
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-text clear">
+                                        <?php 
+                                        _e(date
+                                            ('d', 
+                                                get_post_meta( 
+                                                    $post->ID, 'agenda_show_date', true 
+                                                )
+                                            )
+                                        ); ?> <?php 
+                                        _e(
+                                            strftime(
+                                                '%b', 
+                                                get_post_meta( $post->ID, 'agenda_show_date', true )
+                                            )
+                                        ); 
+                                        ?> | <?php 
+                                        echo ucfirst(__(date('l', 
+                                            get_post_meta( 
+                                                $post->ID, 
+                                                'agenda_show_date', true 
+                                            )))
+                                        ); ?> | <?php _e(nl2br(get_post_meta( $post->ID, 'agenda_hour', true ))); ?>
+                                    </br><span class="agenda-title"><?php the_title();?></span>
+                                    </br><?php _e(get_post_meta( $post->ID, 'agenda_location', true )); ?>
+                                    </p>
+                                </a>
+                            </li>
+                            <?php endwhile; ?> 
+                        </ul>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata();
+                    ?>
+                <div class="wrapper clear">
+                    <a href="<?php echo get_bloginfo( 'url' ); ?>/evento">
+                        <div id="see-all-news">
+                            <h3 class="section-title-see-all">+ Agenda Completa</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
-                <?php
-                $child_pages = new WP_Query( array(
-                    'post_type'      => 'page', // set the post type to page
-                    'posts_per_page' => 2, // number of posts (pages) to show
-                    'post_parent'    => 26481, // post ID of 'videos'
-                    'no_found_rows'  => true // no pagination necessary so improve efficiency of loop
-                ) );
-                ?>
-                <?php if  ( $child_pages->have_posts() ) : ?>
-                    <ul id="videos">
-                        <?php while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
-                        <li class="video-home">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php if (get_the_post_thumbnail()): ?>
-                                <div class="image cell">
-                                    <?php  the_post_thumbnail('470x267');?>
-                                    <div class="video-play"></div>
-                                </div>
-                                <p class="news-title-videos clear"><?php the_title();?></p>
-                                <p class="news-text"><?php echo get_the_excerpt(); ?></p>
-                                <?php endif; ?>
-                            </a>
-                        </li>
-                        <?php endwhile; ?> 
-                    </ul>
-                <?php endif; ?>                
-                <?php wp_reset_postdata();
-                ?>
-            <div class="wrapper clear">
-                <a href="<?php echo get_bloginfo( 'url' ); ?>/videos">
-                    <div id="see-all-news">
-                        <h3 class="section-title-see-all">+ Vídeos</h3>
-                    </div>
-                </a>
+            <div id="section-videos">
+                <div class="titulo-secao">
+                    <h3 class="section-title">Vídeos</h3> 
+                </div>
+                    <?php
+                    $child_pages = new WP_Query( array(
+                        'post_type'      => 'page', // set the post type to page
+                        'posts_per_page' => 2, // number of posts (pages) to show
+                        'post_parent'    => 26481, // post ID of 'videos' change this in production
+                        'no_found_rows'  => true // no pagination necessary so improve efficiency of loop
+                    ) );
+                    ?>
+                    <?php if  ( $child_pages->have_posts() ) : ?>
+                        <ul id="videos">
+                            <?php while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
+                            <li class="video-home"> 
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if (get_the_post_thumbnail()): ?>
+                                    <div class="image cell">
+                                        <?php  the_post_thumbnail('233x132');?>
+                                        <div class="video-play"></div>
+                                    </div>
+                                    <p class="news-text clear"><?php the_title();?></p>
+                                    <?php endif; ?>
+                                </a>
+                            </li>
+                            <?php endwhile; ?> 
+                        </ul>
+                    <?php endif; ?>                
+                    <?php wp_reset_postdata();
+                    ?>
+                <div class="wrapper clear">
+                    <a href="<?php echo get_bloginfo( 'url' ); ?>/videos">
+                        <div id="see-all-news">
+                            <h3 class="section-title-see-all">+ Vídeos</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="wrapper clear"></div>

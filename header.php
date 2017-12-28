@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, minimumscale=1.0, maximum-scale=1.0" />
@@ -32,7 +32,7 @@
                     </li>
                     <li style="margin-top: 14px; margin-left: 5px;">
                         <a href="http://gestaourbana.prefeitura.sp.gov.br/master-plan/" style="color: black; font-size: 11px;">English</a> | <a href="http://gestaourbana.prefeitura.sp.gov.br/plandirector_es/" style="color: black; font-size: 11px;">Español</a>
-                    </li>					
+                    </li>
 				</ul>
 				<div class="clear"></div>
 			</div>

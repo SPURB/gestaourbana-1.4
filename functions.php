@@ -470,13 +470,13 @@ endif; // twentyeleven_content_nav
 
   add_action( 'style-admin.css', 'events_styles', 1000 );
 
-  add_action( 'init', 'add_agenda_rules' );
-  function add_agenda_rules() {
-      add_rewrite_rule(
-          "([^/]+)/data/?([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})/?$",
-          "index.php?name=$matches[1]&date=$matches[2]",
-          "top");
-  }
+  // add_action( 'init', 'add_agenda_rules' );
+  // function add_agenda_rules() {
+  //     add_rewrite_rule(
+  //         "([^/]+)/data/?([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})/?$",
+  //         "index.php?name=$matches[1]&date=$matches[2]",
+  //         "top");
+  // }
 
   /********************************************************************************/
   /**************** CUSTOM NOTÍCIAS                 *******************************/
@@ -3885,7 +3885,6 @@ function minhocao_status_aprovacao_ajax()
     $value = (string)$_POST['value'];
 
     //echo $id. ':' . $value. ':.:';
-    
 
     global $wpdb;
     $query = "update wp_cf7dbplugin_submits

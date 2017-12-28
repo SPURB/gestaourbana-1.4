@@ -85,7 +85,6 @@ jQuery(function() {
 	jQuery(".defaultText").blur();
 
 	/*jQuery('#register-newsletter').submit(function() {
-
 		var html = jQuery('#newsletter').html();
 
 		jQuery.ajax({
@@ -100,6 +99,7 @@ jQuery(function() {
 		});
 		return false;
 	});*/
+
 
 	jQuery('.ajax_submit_form').submit(function() {
 

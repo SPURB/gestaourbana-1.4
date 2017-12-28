@@ -167,21 +167,23 @@ text-decoration: none;
     float: right;
 }
 
-#wrapper-third-home #newsletter input[type="submit"]
-{
-    width:39px;
-    height:31px;
-    /*background:#d7322f;*/
-    background: #B6B6B4;
-    color:white;
-    border:none;
-    margin:0;
-    cursor:pointer;
-    margin-left: 10px;
+#wrapper-third-home #newsletter input[type="submit"]{
+  height:31px;
+  padding: 0 1em; 
+  background-color: #B6B6B4;
+  color:white;
+  border:none;
+  margin:0;
+  cursor:pointer;
+  margin-left: 10px;
+  transition: background-color ease-in-out;
 }
 
-#wrapper-third-home #newsletter input[type="text"]
-{
+#wrapper-third-home #newsletter input[type="submit"]:hover{
+  background-color: #6B6B6B;
+ }
+
+#wrapper-third-home #newsletter input[type="text"] {
     /*width:134px;*/
     width: 260px;
     height:12px;
@@ -389,6 +391,10 @@ margin-top: 0;
   #wrapper-third-home .bottom-news {
     max-width: 100%;
   }
+  #wrapper-fifth-home #section-agenda,
+  #wrapper-fifth-home #section-videos{
+    float: none;
+  }
 }
 
 @media screen and (max-width: 700px)
@@ -421,9 +427,33 @@ margin-top: 0;
   }
 }
 
+#section-agenda{
+float: left;
+padding-right: 10px;
+max-width: 465px;
+margin-right: 10px;
+}
+
+.agenda-home{
+padding: 1.5em 0 1.25em;
+border-top: 1px solid #999;
+}
+
+.agenda-title{
+font-weight: 700;
+}
+#section-agenda .section-title{
+margin-bottom: 12px;
+}
+
+#section-videos{
+max-width: 475px;
+float: right;
+}
+
 .video-home {
-  max-width: 470px;
-  margin: 10px 20px 20px 0;
+  max-width: 233px;
+  margin: 10px 9px 20px 0;
   float: left;
 }
 
@@ -437,11 +467,10 @@ margin-top: 0;
   height: auto
 }
 
-
 .video-home .video-play{
 position: absolute;
-top: 41%;
-left: 44%;
+top: 29%;
+left: 37%;
 width: 60px;
 height: 60px;
 background: url('../images/play.png') no-repeat center center;
@@ -451,13 +480,7 @@ background: url('../images/play.png') no-repeat center center;
   margin-right: 0;
 }
 
-.news-title-videos{
-  font-weight: 700;
-  padding-right: 10px;
-  color:black;
-}
-
-.video-home .news-text{
+.news-text{
   padding-right: 10px;
   color:black;
 }
@@ -468,7 +491,6 @@ background: url('../images/play.png') no-repeat center center;
   border-top: solid 1px;
   border-color: #999;
 }
-
 
 @media screen and (max-width: 1030px) {
     #wrapper-fifth-home .social-box, #wrapper-fifth-home .social-box:nth-of-type(2){

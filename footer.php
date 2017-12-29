@@ -35,9 +35,9 @@
                              Redes sociais:
                      </div>
                      <div class="left social-buttons">
-                             <a href="https://www.facebook.com/PrefSP.smul" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/images/btn-facebook-27x27.png" /></a>
-                             <a href="https://twitter.com/PrefSP_smul" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/images/btn-twitter-27x27.png" /></a>
-                             <a href="http://www.youtube.com/user/pmspsmdu" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-youtube.png" /></a>
+                             <a href="https://www.facebook.com/PrefSP.smul" target="_blank" rel="noopener"><img src="<?php echo bloginfo('template_url'); ?>/images/btn-facebook-27x27.png" /></a>
+                             <a href="https://twitter.com/PrefSP_smul" target="_blank" rel="noopener"><img src="<?php echo bloginfo('template_url'); ?>/images/btn-twitter-27x27.png" /></a>
+                             <a href="http://www.youtube.com/user/pmspsmdu" target="_blank" rel="noopener"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-youtube.png" /></a>
                      </div>
                      <div class="clear"></div>
                  </div>

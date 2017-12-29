@@ -14,7 +14,7 @@
                         <div class="image">
                           <?php $image = get_field('big_image'); ?>
                             <a href="<?php echo get_field('link_chamada_1'); ?>">
-                                <img src="<?php echo $image['sizes']['large'/*'510xX'*/] ?>" />
+                                <img src="<?php echo $image['sizes']['large'] ?>" />
                             </a>
                         </div>
                         <?php
@@ -42,13 +42,13 @@
             <div class="clear"></div>
  -->     
             <!-- https://shibulijack.wordpress.com/2012/03/18/create-custom-forms-in-wordpress/ -->
-            <form action="<?php echo get_template_directory_uri(); ?>/cadastro.php" method="post" name="myForm">
+<!--             <form action="<?php echo get_template_directory_uri(); ?>/cadastro.php" method="post" name="myForm">
                 <div class="label">
                         Cadastre seu email e<br />receba nossas notícias 
                 </div>
                 <input id="email" type="text" name="email" />
-                <input type="submit" value="Submit" />
-            </form>
+                <input type="submit" value="Cadastre" />
+            </form> -->
         </div>
     </div>
 

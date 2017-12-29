@@ -222,10 +222,10 @@ strong
     line-height: 3em;
   }
 
-  ul#indice_projetos > li{
+  .wrapper ul#indice_projetos > li{
     max-width: 100%;
     min-height: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
   }
 }
 

@@ -7,11 +7,11 @@ function gu_add_editor_styles() {
   add_editor_style('css/style-entenda-etapas.css');
 }
 
-
   /**
    * REGISTER STYLESHEETS AND SCRIPTS
    */
 function gu_register_and_load_styles_scripts(){
+  // CSS
   wp_register_style('style', get_stylesheet_uri());
   wp_register_style('style-menu-navbar', get_template_directory_uri() . '/css/style-menu-navbar.css', array(), null, 'all');
   wp_register_style('style-home', get_template_directory_uri() . '/css/style-home.css', array(), null, 'all');
@@ -32,48 +32,7 @@ function gu_register_and_load_styles_scripts(){
   wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
   wp_register_style('style-videos', get_template_directory_uri() . '/css/style-videos.css', array(), null, 'all');
 
-  wp_enqueue_style('style');
-  wp_enqueue_style('style-menu-navbar');
-  
-  if (is_front_page()):
-    wp_enqueue_style('style-home');
-  endif;
-
-  if (!is_front_page()):
-    wp_enqueue_style('style-agenda-interna');
-    wp_enqueue_style('style-agenda-sidebar');
-    wp_enqueue_style('style-agenda');
-    wp_enqueue_style('style-entenda-introducao');
-    wp_enqueue_style('style-entenda-perguntas');
-    wp_enqueue_style('style-entenda-equipe');
-    wp_enqueue_style('style-comments');
-    wp_enqueue_style('style-interna');
-    wp_enqueue_style('glDatePicker-flatwhite');
-    wp_enqueue_style('jquery-fancybox');
-
-    // isolate unused assets
-    if (is_page( 'biblioteca' )) :
-      wp_enqueue_style('style-biblioteca');
-    endif;
-
-    if (is_page( 'contato' )) :
-      wp_enqueue_style('style-contato');
-    endif;
-
-    if (is_page( 'videos' )) :
-        wp_enqueue_style('style-videos');
-    endif;
-
-    $query_noticias = new WP_Query( array('post_type' => 'noticias'));
-    if (is_page( 'noticia' ) or $query_noticias->have_posts()) :
-        wp_enqueue_style('style-noticias');
-        wp_enqueue_style('style-noticias-interna');
-    endif;
-    wp_reset_postdata();
-
-  endif;
-
-  // scripts handling
+  // JS
   wp_register_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array('jquery'), $in_footer = true );
   wp_register_script('vanillaMasker', get_stylesheet_directory_uri() . '/js/vanilla-masker.min.js', array( 'jquery' ),$in_footer = true );
   wp_register_script('vanillaMaskerValidations', get_stylesheet_directory_uri() . '/js/validationsFields.js', array( 'jquery', 'vanillaMasker' ),$in_footer = true );
@@ -84,17 +43,72 @@ function gu_register_and_load_styles_scripts(){
   wp_register_script('header_menu', get_stylesheet_directory_uri() . '/js/header_menu.js', array( 'jquery' ),$in_footer = true );
   wp_register_script('footer', get_stylesheet_directory_uri() . '/js/footer.js',array( 'jquery' ), $in_footer = true );
 
+  // APPLIED TO ALL PAGES
+  wp_enqueue_style('style');
+  wp_enqueue_style('style-menu-navbar');
+
+  //js
   wp_enqueue_script('jquery');
   wp_enqueue_script('respond');
-  wp_enqueue_script('vanillaMasker');
-  wp_enqueue_script('vanillaMaskerValidations');
   wp_enqueue_script('site-script');
   wp_enqueue_script('bjqs');
-  wp_enqueue_script('glDatePicker');
   wp_enqueue_script('jquery.fancybox');
   wp_enqueue_script('header_menu');
   wp_enqueue_script('footer');
 
+  
+  if (is_front_page()){
+    wp_enqueue_style('style-home');
+
+    //REMOVE ASSETS FROM PLUGINS UNNECESSARY AT FRONTPAGE
+    wp_deregister_style('contact-form-7');
+    wp_deregister_style('flexy-breadcrumb-font-awesome');
+    wp_deregister_style('qppr_frontend_style');
+    wp_deregister_style('wpdmp-front-styles');
+    wp_deregister_style('sdm-styles');
+
+    wp_deregister_script('contact-form-7');
+    wp_deregister_script('popup-maker');
+    wp_deregister_script('qppr_frontend_scripts');
+    wp_deregister_script('wpdmp-front-js3');
+    wp_deregister_script('wpdmp-front-js1');
+    wp_deregister_script('sdm-scripts');
+  }
+  if (!is_front_page()){
+    wp_enqueue_style('style-comments');
+    wp_enqueue_style('style-interna');
+    wp_enqueue_style('glDatePicker-flatwhite');
+    wp_enqueue_style('jquery-fancybox');
+
+    wp_enqueue_script('vanillaMasker');
+    wp_enqueue_script('vanillaMaskerValidations');
+    wp_enqueue_script('glDatePicker');
+
+    switch ($page) {
+      case $page == is_page('biblioteca'):  wp_enqueue_style('style-biblioteca'); break;
+      case $page == is_page('contato'):     wp_enqueue_style('style-contato'); break;
+      case $page == is_page('videos'):      wp_enqueue_style('style-videos'); break;
+      case $page == is_page('entenda'):     wp_enqueue_style('style-entenda-introducao');
+                                            wp_enqueue_style('style-entenda-perguntas');
+                                            wp_enqueue_style('style-entenda-equipe'); break;
+    }
+
+    // load css custom pages
+    $query_noticias = new WP_Query( array('post_type' => 'noticias')); 
+    if (is_page( 'noticia' ) or $query_noticias->have_posts()) { // arrumar segunda condição
+        wp_enqueue_style('style-noticias');
+        wp_enqueue_style('style-noticias-interna');
+    }
+    wp_reset_postdata();
+
+    $query_agenda = new WP_Query( array('post_type' => 'agenda'));  
+    if (is_page( 'agenda' ) or $query_agenda->have_posts()) { // arrumar segunda condição
+    wp_enqueue_style('style-agenda-interna');
+    wp_enqueue_style('style-agenda-sidebar');
+    wp_enqueue_style('style-agenda');
+    }
+    wp_reset_postdata();
+  }
 }
 add_action( 'wp_enqueue_scripts', 'gu_register_and_load_styles_scripts' );
 
@@ -104,14 +118,10 @@ add_action( 'wp_enqueue_scripts', 'gu_register_and_load_styles_scripts' );
    */
   if ( function_exists( 'add_theme_support' ) ) {
   add_theme_support( 'post-thumbnails' );
-    add_image_size( '96xX', 96, 0 );
-    add_image_size( '150xX', 150, 0 );
-    add_image_size( '170xX', 170, 0 );
-    add_image_size( '657xX', 657, 0 );
-    add_image_size( '510xX', 510, 0 );
-    add_image_size( '233x132', 233, 132, true); // destaques home
+    add_image_size( '170xX', 170, 0 );          // agenda
+    add_image_size( '233x132', 233, 132, true); // destaques e filmes
     add_image_size( '365x195', 365, 195, true); // largura incosistente. Alterado checar bugs. Original: ( '365x195', 664, 195, true)
-    add_image_size( '470x267', 470, 267, true); 
+    add_image_size( '470x267', 470, 267, true); // duas colunas
   }
 
 /**

@@ -1,234 +1,283 @@
-<?php
-/*
-Template Name: Index Temp
-*/
-?>
-
 <?php get_header(); ?>
 <div class="wrapper" id="wrapper-second-home">
-	<div id="banner-slide">
-		<ul class="bjqs">
-			<li class="bjqs-slide" id="slide-first">
-				<span class="image">
-					<img src="<?php echo bloginfo('template_url'); ?>/_tmp/1-entenda.jpg" />
-				</span>
-				<span class="text">
-					<a href="/a-revisao-participativa/"><h2>Participe do planejamento de uma nova São Paulo</h2></a>
-					<p>Você se preocupa com a sua cidade, quer espaços públicos bem cuidados, preservar o meio ambiente, se preocupa com moradia adequada para todos, quer poder ir trabalhar, passear, estudar sem enfrentar congestionamentos e longas horas em deslocamentos? Luta por qualidade de vida? <br />
-						A prefeitura quer a sua participação, para avaliar a cidade que temos e planejar a que queremos..</p>
-					<div>
+    <div id="banner-slide">
+        <ul class="bjqs">
+            <?php $slide_query = new WP_Query( array(
+                'post_type' => 'slider', 
+                'posts_per_page' => 7, 
+                'orderby'=>'menu_order', 
+                'order' => 'ASC')); ?>
 
-						<div align="center">
-						  <img id="Image-Maps_8201305031729588" src="<?php echo bloginfo('template_url'); ?>/_tmp/1-entenda-bottom.jpg" usemap="#Image-Maps_8201305031729588" border="0" width="350" height="225" alt="" />
-              <map id="_Image-Maps_8201305031729588" name="Image-Maps_8201305031729588">
-              <area shape="rect" coords="148,0,229,220" href="javascript://" onclick="jQuery('#slider-to-click-2').trigger('click');" alt="Veja as etapas" title="Veja as etapas"    />
-              <area shape="rect" coords="264,0,345,220" href="javascript://" onclick="jQuery('#slider-to-click-3').trigger('click');" alt="Perguntas frequentes" title="Perguntas frequentes"    />
-              </map>
-						</div>
-					</div>
-				</span>
-			</li>
-			<li class="bjqs-slide">
-				<span class="image">
-					<img src="<?php echo bloginfo('template_url'); ?>/_tmp/2-etapas-2.jpg" />
-				</span>
-				<span class="text">
-					<a href="/etapas/"><h2>Conheças as etapas de revisão</h2></a>
-					<p>A Prefeitura não pode definir o planejamento
-						da cidade sozinha. Precisa ter a participação de
-						todos os cidadãos e cidadãs nas etapas de revisão: <br /><br />
-
-						- do Plano Diretor Estratégico<br />
-						- da Lei de Parcelamento, Uso e Ocupação do Solo<br />
-						- dos Planos Regionais Estratégicos<br />
-						- de Leis Urbanísticas Específicas<br />
-						- do Código de Obras e Edificações</p>
-					<div>
-						<div align="center">
-						  <img id="Image-Maps_82013050317295881" src="<?php echo bloginfo('template_url'); ?>/_tmp/2-etapas-bottom.jpg" usemap="#Image-Maps_82013050317295881" border="0" width="350" height="225" alt="" />
-              <map id="_Image-Maps_82013050317295881" name="Image-Maps_82013050317295881">
-              <area shape="rect" coords="0,10,128,220" href="javascript://" onclick="jQuery('#slider-to-click-1').trigger('click');" alt="A revisão participativa" title="A revisão participativa"    />
-              <area shape="rect" coords="252,10,345,220" href="javascript://" onclick="jQuery('#slider-to-click-3').trigger('click');" alt="Perguntas frequentes" title="Perguntas frequentes"    />
-              </map>
-						</div>
-					</div>
-				</span>
-			</li>
-			<li class="bjqs-slide">
-				<span class="image">
-					<img id="Image-Maps_920130426172526212" src="<?php echo bloginfo('template_url'); ?>/_tmp/3-perguntas_frequentes.jpg" />
-				</span>
-				<span class="text">
-					<a href="/perguntas-frequentes/"><h2>A Prefeitura de São Paulo tira todas as suas dúvidas</h2></a>
-					<p>Navegue pelas perguntas frequentes.<br />
-						Se ainda assim precisar de ajuda entre em contato a Secretaria Municipal de Desenvolvimento Urbano (SMDU). Todos os cidadãos precisam estar bem informados.</p>
-					<div>
-						<div align="center">
-							<img id="Image-Maps_82013050317295882" src="<?php echo bloginfo('template_url'); ?>/_tmp/3-perguntas_frequentes-bottom.jpg" usemap="#Image-Maps_82013050317295882" border="0" width="350" height="225" alt="" />
-              <map id="_Image-Maps_82013050317295882" name="Image-Maps_82013050317295882">
-              <area shape="rect" coords="10,10,117,220" href="javascript://" onclick="jQuery('#slider-to-click-1').trigger('click');" alt="A revisão participativa" title="A revisão participativa"    />
-              <area shape="rect" coords="129,10,236,220" href="javascript://" onclick="jQuery('#slider-to-click-2').trigger('click');" alt="Veja as etapas" title="Veja as etapas"    />
-              </map>
-						</div>
-					</div>
-				</span>
-			</li>
-		</ul>
-	</div>
+                <?php $count = 1; ?>
+                <?php while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
+                    <li class="bjqs-slide bjqs-slide-<?php echo $count; ?>" id="slide-first">
+                        <div class="image">
+                          <?php $image = get_field('big_image'); ?>
+                            <a href="<?php echo get_field('link_chamada_1'); ?>">
+                                <img src="<?php echo $image['sizes']['large'] ?>" />
+                            </a>
+                        </div>
+                        <?php
+                            $classeCssSlide = "";
+                            $classeCssSlide = cor_barra_conforme_projeto_slider( get_field('projeto') );
+                        ?>
+                        <div class="text <?php echo $classeCssSlide; ?>">
+                                <a href="<?php echo get_field('link_chamada_1');//the_field('link'); ?>"><h2><?php the_title(); ?></h2></a>
+                                <!--<p><?php //the_content(); ?></p>-->
+                        </div>
+                    </li>
+                <?php $count++; endwhile;wp_reset_query();?>
+        </ul>
+    </div>
 </div>
-<br /><br />
-<br /><br />
-<br /><br />
+
 <div class="wrapper" id="wrapper-third-home">
-	<h1>Notícias</h1>
+    <div class="titulo-secao">
+        <h3 class="section-title">Notícias</h3> 
+        <div id="newsletter">
+<!--             <div id="register-newsletter-box">
+                    <form id="register-newsletter" class="ajax_submit_form" action="<?php // echo plugins_url( 'newsletter/do/subscribe.php' ); ?>" method="post">
+                        <input type="text" class="defaultText" name="ne" id="register-newsletter-input" /><input type="submit" value="OK" />
+                    </form>
+            </div>
+            <div class="clear"></div>
+ -->     
+            <!-- https://shibulijack.wordpress.com/2012/03/18/create-custom-forms-in-wordpress/ -->
+<!--             <form action="<?php echo get_template_directory_uri(); ?>/cadastro.php" method="post" name="myForm">
+                <div class="label">
+                        Cadastre seu email e<br />receba nossas notícias 
+                </div>
+                <input id="email" type="text" name="email" />
+                <input type="submit" value="Cadastre" />
+            </form> -->
+        </div>
+    </div>
 
-
-	<?php $news_query = new WP_Query( array('post_type' => 'noticias', 'posts_per_page' => 4)); ?>
-	<?php $count = 1; ?>
-  <?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
-
+    <?php $news_query = new WP_Query( 
+        array(
+            'post_type' => 'noticias', 
+            'posts_per_page' => 4,
+            'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+        )
+    );?>
+    <?php $count = 1; ?>
+    <?php while ( $news_query->have_posts() ) : $news_query->the_post(); ?>
     <?php if ($count == 1): ?>
-
-  	<div class="top-news">
-  	  <?php if (get_the_post_thumbnail()): ?>
-    		<div class="image">
-    			<?php the_post_thumbnail('365x195'); ?>
-    		</div>
-  		<?php endif; ?>
-  		<div class="news">
-  			<a href="<?php the_permalink(); ?>" />
-  				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-  				<p class="news-title"><?php the_title(); ?></p>
-  			</a>
-  			<p class="news-text"><?php the_excerpt(); ?></p>
-  		</div>
-  		<div class="clear"></div>
-  	</div>
-
-  	<?php else : ?>
-
-  	<?php if ($count == 2): ?>
-    	<div class="bottom-news table">
-    		<div class="news cell first">
-    	 		<a href="<?php the_permalink(); ?>">
-    				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-    				<p class="news-title"><?php the_title(); ?></p>
-    	   </a>
-    	   <p class="news-text"><?php the_excerpt(); ?></p>
-    		</div>
+    <div class="top-news table left">
+        <a href="<?php the_permalink(); ?>">
+            <div class="row">
+                <?php if (get_the_post_thumbnail()): ?>
+                <div class="image cell">
+                    <?php  the_post_thumbnail('470x267');?>
+                </div>
+                <?php endif; ?>
+                <div class="news cell">
+                        <div class="row">
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-title"><?php the_title(); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-text"><?php echo get_the_excerpt(); ?></p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <?php else : ?>
+    <?php if ($count == 2): ?>
+    <div class="top-news table">
+        <a href="<?php the_permalink(); ?>">
+            <div class="row">
+                <?php if (get_the_post_thumbnail()): ?>
+                <div class="image cell">
+                    <?php  the_post_thumbnail('470x267');?>
+                </div>
+                <?php endif; ?>
+                <div class="news cell">
+                        <div class="row">
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-title"><?php the_title(); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-text"><?php echo get_the_excerpt(); ?></p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </div>
     <?php endif; ?>
     <?php if ($count == 3): ?>
-    		<div class="news cell">
-    	 		<a href="<?php the_permalink(); ?>">
-    				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-    				<p class="news-title"><?php the_title(); ?></p>
-    	    </a>
-    	    <p class="news-text"><?php the_excerpt(); ?></p>
-    		</div>
+        <div class="bottom-news left">
+        <a href="<?php the_permalink(); ?>">
+            <div class="row">
+                <div class="news cell first">
+                        <div class="row">
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-title"><?php the_title(); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-text"><?php echo get_the_excerpt(); ?></p>
+                        </div>
+               </div>
+           </div>
+        </a>
+        </div>
     <?php endif; ?>
     <?php if ($count == 4): ?>
-    		<div class="news cell last">
-    	 		<a href="<?php the_permalink(); ?>">
-    				<p class="news-date"><?php the_time('d/m/Y'); ?></p>
-    				<p class="news-title"><?php the_title(); ?></p>
-    	  	</a>
-    	  	<p class="news-text"><?php the_excerpt(); ?></p>
-    		</div>
-    		<div class="clear"></div>
-    	</div>
-  	<?php endif; ?>
-  	<?php endif; ?>
-	<?php $count++; endwhile;?>
-	<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/noticias"><div id="see-all-news">Veja todas as notícias</div></a>
+        <div class="bottom-news">
+        <a href="<?php the_permalink(); ?>">
+            <div class="row">
+                <div class="news cell">
+                        <div class="row">
+                            <p class="news-date"><?php the_time('d/m/Y'); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-title"><?php the_title(); ?></p>
+                        </div>
+                        <div class="row">
+                            <p class="news-text"><?php echo get_the_excerpt(); ?></p>
+                        </div>
+               </div>
+           </div>
+        </a>
+    </div>
+    <?php endif; ?>
+    <?php endif; ?>
+    <?php $count++; endwhile;?>
+        <div class="wrapper clear">
+            <a href="<?php echo get_bloginfo( 'url' ); ?>/noticia">
+                <div id="see-all-news">
+                    <h3 class="section-title-see-all">+ Notícias</h3>
+                </div>
+            </a>
+        </div>
 </div>
-<div id="red-area">
-	<div class="wrapper" id="wrapper-fourth-home">
-		<div class="left">
-			<h1>Agenda</h1>
-			<h3>Confira as próximas pautas discutidas.</h3>
-			<div id="calendar">
-                <?php $event_query = new WP_Query( array('post_type' => 'agenda', 'paged' => $paged, 'posts_per_page' => 2, 'meta_query' => array(array( 'key' => 'agenda_show_date','value' => time(),'compare' => '>='),),'orderby' => 'meta_value_num','order' => 'ASC','meta_key' => 'agenda_show_date')); ?>
-                <?php if ( $event_query->have_posts() ) { ?>
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/agenda">
-				  <?php while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-  					<div class="event">
-  						<div class="event-date">
-  							<div class="number"><?php _e(date('d', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?></div>
-  							<div class="month"><?php _e(date('M', get_post_meta( $post->ID, 'agenda_show_date', true ))); ?></div>
-  						</div>
-  						<div class="event-text">
-  							<?php the_title(); ?>
-  						</div>
-  						<div class="clear"></div>
-  					</div>
-					<?php $count++; endwhile;?>
-				</a>
-                <?php } else { ?>
-                    <p style="display: inline-block; margin: 10px;">Não há eventos no momento. Confira os <a style="color: #000; text-decoration:underline;" href="<?php echo get_bloginfo( 'url' ); ?>/agenda-completa/">eventos já realizados</a>.</p>
-                <?php } ?>
-			</div>
-			<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/agenda" class="see-all-events">Veja a agenda completa</a>
-		</div>
-		<div class="right">
-			<h1>Biblioteca</h1>
-			<h3>Todo material de apoio sobre legislação relativa a cidade.<br />Assista vídeos e leia os artigos. Informe-se!</h3>
-			<div class="library-icons icons-left">
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-videos.png" /></a>
-			</div>
-			<div class="library-icons icons-middle">
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-images.png" /></a>
-			</div>
-			<div class="library-icons icons-right">
-				<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca"><img src="<?php echo bloginfo('template_url'); ?>/images/icon-legislation.png" /></a>
-			</div>
-			<div class="clear"></div>
-			<a href="<?php echo get_bloginfo( 'url' ); ?>/index.php/biblioteca" class="see-all-events">Veja todos os arquivos</a>
-		</div>
-		<div class="clear"></div>
-	</div>
-</div>
-<?php /*<div class="wrapper" id="wrapper-fifth-home">
-	<h1>Redes Sociais</h1>
-	<div class="social-box">
-		<img src="images/title-social-facebook.png" />
-		<div class="social-inner">
-			<div class="fb-like-box" data-href="http://www.facebook.com/amarelloart" data-width="250" data-height="315" data-show-faces="true" data-stream="false" data-border-color="white" data-header="false"></div>
-		</div>
-	</div>
-	<div class="social-box">
-			<img src="images/title-social-twitter.png" />
-		<div class="social-inner">
-			<div class="twitter-row">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor lorem a sapien tempus volutpat. <a href="">dlvr.it/1pj4tc</a>
-				<div class="twitter-links">
-					<a href="#">3hours ago</a> · <a href="#">reply</a> · <a href="#">retweet</a>
-				</div>
-			</div>
-			<div class="twitter-row">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor lorem a sapien tempus volutpat. <a href="">dlvr.it/1pj4tc</a>
-				<div class="twitter-links">
-					<a href="#">3hours ago</a> · <a href="#">reply</a> · <a href="#">retweet</a>
-				</div>
-			</div>
-			<div class="twitter-row">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor lorem a sapien tempus volutpat. <a href="">dlvr.it/1pj4tc</a>
-				<div class="twitter-links">
-					<a href="#">3hours ago</a> · <a href="#">reply</a> · <a href="#">retweet</a>
-				</div>
-			</div>
-		</div>
-		<div class="social-link"><a href="">Siga @gestaourbana</a></div>
-	</div>
-	<div class="social-box">
-			<img src="images/title-social-youtube.png" />
-		<div class="social-inner">
-			<iframe width="250" height="205" src="http://www.youtube.com/embed/NdQoEvIaxfE" frameborder="0" allowfullscreen></iframe>
-			<h3>Prefeitura de São Paulo - São Paulo 459 Anos - Comercial</h3>
 
-		</div>
-		<div class="social-link"><a href="">Veja o canal</a></div>
-	</div>
-	<div class="clear"></div>
-</div>*/?>
+        <div class="wrapper" id="wrapper-fourth-home">
+            <div class="titulo-secao">
+                <h3 class="section-title">Destaques</h3> 
+            </div>
+                <?php
+                    $args = array(
+                        'theme_location' => 'home_destaques', 
+                        'menu_id' => 'home-destaques', 
+                    );
+                ?>
+                <?php wp_nav_menu( $args )?>
+        </div>
 
+        <div class="wrapper clear" id="wrapper-fifth-home">
+            <div id="section-agenda">
+                <div class="titulo-secao">
+                    <h3 class="section-title">Agenda</h3> 
+                </div>
+                    <?php
+                    $child_pages = new WP_Query( array(
+                        'post_type'      => 'agenda', 
+                        'meta_query' => array(
+                          array( 
+                            'key' => 'agenda_show_date',
+                            'value' => time(),
+                            'compare' => '>=')
+                          ),
+                        'orderby' => 'meta_value_num',
+                        'order' => 'ASC',
+                        'meta_key' => 'agenda_show_date',
+                        'posts_per_page' => 3,
+                        'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+                    ) );
+                    ?>
+                    <?php if  ( $child_pages->have_posts() ) : ?>
+                        <ul id="agenda">
+                            <?php while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
+                            <li class="agenda-home"> 
+                                <a href="<?php the_permalink(); ?>">
+                                    <p class="news-text clear">
+                                        <?php 
+                                        _e(date
+                                            ('d', 
+                                                get_post_meta( 
+                                                    $post->ID, 'agenda_show_date', true 
+                                                )
+                                            )
+                                        ); ?> <?php 
+                                        _e(
+                                            strftime(
+                                                '%b', 
+                                                get_post_meta( $post->ID, 'agenda_show_date', true )
+                                            )
+                                        ); 
+                                        ?> | <?php 
+                                        echo ucfirst(__(date('l', 
+                                            get_post_meta( 
+                                                $post->ID, 
+                                                'agenda_show_date', true 
+                                            )))
+                                        ); ?> | <?php _e(nl2br(get_post_meta( $post->ID, 'agenda_hour', true ))); ?>
+                                    </br><span class="agenda-title"><?php the_title();?></span>
+                                    </br><?php _e(get_post_meta( $post->ID, 'agenda_location', true )); ?>
+                                    </p>
+                                </a>
+                            </li>
+                            <?php endwhile; ?> 
+                        </ul>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata();
+                    ?>
+                <div class="wrapper clear">
+                    <a href="<?php echo get_bloginfo( 'url' ); ?>/evento">
+                        <div id="see-all-news">
+                            <h3 class="section-title-see-all">+ Agenda Completa</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="section-videos">
+                <div class="titulo-secao">
+                    <h3 class="section-title">Vídeos</h3> 
+                </div>
+                    <?php
+                    $child_pages = new WP_Query( array(
+                        'post_type'      => 'page', // set the post type to page
+                        'posts_per_page' => 2, // number of posts (pages) to show
+                        'post_parent'    => 26481, // post ID of 'videos' change this in production = 26426
+                        'no_found_rows'  => true // no pagination necessary so improve efficiency of loop
+                    ) );
+                    ?>
+                    <?php if  ( $child_pages->have_posts() ) : ?>
+                        <ul id="videos">
+                            <?php while ( $child_pages->have_posts() ) : $child_pages->the_post();?>
+                            <li class="video-home"> 
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if (get_the_post_thumbnail()): ?>
+                                    <div class="image cell">
+                                        <?php  the_post_thumbnail('233x132');?>
+                                        <div class="video-play"></div>
+                                    </div>
+                                    <p class="news-text clear"><?php the_title();?></p>
+                                    <?php endif; ?>
+                                </a>
+                            </li>
+                            <?php endwhile; ?> 
+                        </ul>
+                    <?php endif; ?>                
+                    <?php wp_reset_postdata();
+                    ?>
+                <div class="wrapper clear">
+                    <a href="<?php echo get_bloginfo( 'url' ); ?>/videos">
+                        <div id="see-all-news">
+                            <h3 class="section-title-see-all">+ Vídeos</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper clear"></div>
+    </div>
 <?php get_footer(); ?>

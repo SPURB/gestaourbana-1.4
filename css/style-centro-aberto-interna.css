@@ -1,7 +1,4 @@
 /*home*/
-.link-proj-urb{
-color:#00ccff;
-}
 .siblingspages{
 padding:  1em 0 0 0;
 margin: 0;
@@ -16,9 +13,6 @@ padding:7px 42px 10px 0;
 }
 .siblingspages li:last-child{
 padding-right: 0;
-}
-.siblingspages a{
-color:#00ccff;
 }
 #mapa_png{
 position: relative;
@@ -57,7 +51,6 @@ height: 110px;
 width: 300px;
 }
 .link_projeto>a{
-color: #00ccff;
 position: absolute;
 top: 0px;
 padding-left: 25px;

@@ -151,7 +151,7 @@ p {
 }
 
 a {
-    color: #adacac;
+    color: #D7322F;
     font-family:'museoSlab', Helvetica, Arial, sans-serif;
 }
 
@@ -286,7 +286,7 @@ header #newsletter input[type="text"]{
     width:134px;
     height:12px;
     border:1px solid #e2e2e2;
-    color:#d7322f;
+    color:#D7322F;
     font-size:13px;
     padding: 9px 12px;
     margin:0;
@@ -295,7 +295,7 @@ header #newsletter input[type="text"]{
 header #newsletter input[type="submit"]{
     width:39px;
     height:31px;
-    background:#d7322f;
+    background:#D7322F;
     color:white;
     border:none;
     margin:0;
@@ -691,7 +691,7 @@ ul#indice_projetos li a{
 .menu-menu-principal-container li ul {
     position: absolute;
     width: 118px;
-    background: #d7322f url('images/bg-main-nav-ul-ul.png') no-repeat top center;
+    background: #D7322F url('images/bg-main-nav-ul-ul.png') no-repeat top center;
     padding-top: 21px;
     top: 27px;
 }
@@ -856,7 +856,6 @@ ul#indice_projetos li a{
     .menu-menu-principal-container #menu-menu-principal > li.menu-item-type-custom:nth-of-type(1),
     .menu-menu-principal-container #menu-menu-principal > li.menu-item-type-custom:nth-of-type(2) {
         padding:5px;
-        /*background:#D7322F;*/
         text-align:center;
         margin:0 0 5px;
         display:block
@@ -866,10 +865,6 @@ ul#indice_projetos li a{
     .menu-menu-principal-container #menu-menu-principal > li.menu-item-type-custom:nth-of-type(1) a,
     .menu-menu-principal-container #menu-menu-principal > li.menu-item-type-custom:nth-of-type(2) a{
         color:white;
-    }
-
-    .menu-menu-principal-container li ul {
-        /*background:#d7322f;*/
     }
     
     header .inner ul #menu-menu-principal li:nth-of-type(1) a
@@ -1305,7 +1300,7 @@ img#wpstats{width:0px;height:0px;overflow:hidden;}
 
 /* setando cor do menu de projetos - menu 1 */
 #menu-menu-mercurio li a, #menu-menu-mercurio .sub-menu li a{
-    /*color: #d7322f;*/
+    /*color: #00ccff;*/
     color: black;
 }
 #menu-menu-mercurio, #menu-menu-mercurio .sub-menu{

@@ -30,6 +30,7 @@
         </ul>
     </div>
 </div>
+
 <div class="wrapper" id="wrapper-third-home">
     <div class="titulo-secao">
         <h3 class="section-title">Notícias</h3> 
@@ -156,6 +157,7 @@
                 </div>
             </a>
         </div>
+</div>
 
         <div class="wrapper" id="wrapper-fourth-home">
             <div class="titulo-secao">

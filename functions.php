@@ -31,6 +31,7 @@ function gu_register_and_load_styles_scripts(){
   wp_register_style('glDatePicker-flatwhite', get_template_directory_uri() . '/css/glDatePicker.flatwhite.css', array(), null, 'all');
   wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
   wp_register_style('style-videos', get_template_directory_uri() . '/css/style-videos.css', array(), null, 'all');
+  wp_register_style('style-piu-pacaembu', get_template_directory_uri() . '/css/style-piu-pacaembu.css', array(), null, 'all');
 
   // JS
   wp_register_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array('jquery'), $in_footer = true );
@@ -85,12 +86,13 @@ function gu_register_and_load_styles_scripts(){
     wp_enqueue_script('glDatePicker');
 
     switch ($page) {
-      case $page == is_page('biblioteca'):  wp_enqueue_style('style-biblioteca'); break;
-      case $page == is_page('contato'):     wp_enqueue_style('style-contato'); break;
-      case $page == is_page('videos'):      wp_enqueue_style('style-videos'); break;
-      case $page == is_page('entenda'):     wp_enqueue_style('style-entenda-introducao');
-                                            wp_enqueue_style('style-entenda-perguntas');
-                                            wp_enqueue_style('style-entenda-equipe'); break;
+      case $page == is_page('biblioteca'):    wp_enqueue_style('style-biblioteca'); break;
+      case $page == is_page('contato'):       wp_enqueue_style('style-contato'); break;
+      case $page == is_page('videos'):        wp_enqueue_style('style-videos'); break;
+      case $page == is_page('piu-pacaembu'):  wp_enqueue_style('style-piu-pacaembu'); break;
+      case $page == is_page('entenda'):       wp_enqueue_style('style-entenda-introducao');
+                                              wp_enqueue_style('style-entenda-perguntas');
+                                              wp_enqueue_style('style-entenda-equipe'); break;
     }
 
     // load css custom pages

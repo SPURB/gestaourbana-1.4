@@ -356,12 +356,8 @@
 
 #news-inner .news-date {
 	font-family:'museuSlab', Arial, Helvetica, sans-serif;
-	color:#d7322f;
+	color:#D7322F;
 	font-size:12px;
-}
-
-#news-inner .text h3, #news-inner .text h4{
-	/*color:#D7322F;*/
 }
 
 #news-inner h3.titulo {

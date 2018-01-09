@@ -1,0 +1,16 @@
+.page_pac_list li{
+line-height: 1.65;
+}
+.wpcf7-form-control-wrap input, 
+.wpcf7-form-control-wrap textarea {
+padding: 0.51em;
+width: 100%;
+font-size: 15px;
+font-family: MuseoSlab, Arial, sans-serif;
+}
+.wpcf7-form-control.wpcf7-submit{
+padding: 0.5em;
+min-width: 140px;
+font-size: 15px;
+font-family: MuseoSlab, Arial, sans-serif;
+}

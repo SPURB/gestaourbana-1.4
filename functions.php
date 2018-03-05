@@ -122,7 +122,7 @@ add_action( 'wp_enqueue_scripts', 'gu_register_and_load_styles_scripts' );
   add_theme_support( 'post-thumbnails' );
     add_image_size( '170xX', 170, 0 );          // agenda
     add_image_size( '233x132', 233, 132, true); // destaques e filmes
-    add_image_size( '365x195', 365, 195, true); // largura incosistente. Alterado checar bugs. Original: ( '365x195', 664, 195, true)
+    add_image_size( '365x195', 365, 195, true); // Checar onde está sendo usado
     add_image_size( '470x267', 470, 267, true); // duas colunas
   }
 
@@ -190,7 +190,7 @@ function filter_menu_items($item) {
         // Make the title just be the featured image.
         $item->title = wp_get_attachment_image( $thumb_id, '233x132') 
         . "<p class='news-text'>"
-        . get_the_title( $post_id )
+        . $item->title
         . "</p>";
     }
 

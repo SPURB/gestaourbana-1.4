@@ -246,7 +246,7 @@
                     $child_pages = new WP_Query( array(
                         'post_type'      => 'page', // set the post type to page
                         'posts_per_page' => 2, // number of posts (pages) to show
-                        'post_parent'    => 26481, // post ID of 'videos' change this in production = 26426
+                        'post_parent'    => 26426, // post ID of 'videos' change this in production = 26426
                         'no_found_rows'  => true // no pagination necessary so improve efficiency of loop
                     ) );
                     ?>

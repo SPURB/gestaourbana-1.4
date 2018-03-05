@@ -128,41 +128,36 @@ text-decoration: none;
 }
 
 #wrapper-third-home .titulo-secao, 
-#wrapper-fourth-home .titulo-secao{
-    margin-top: 2.35em;
+#wrapper-fourth-home .titulo-secao,
+#wrapper-fifth-home .titulo-secao {
+  margin-top: 2.35em;
 }
 
 #wrapper-third-home .titulo-secao #logo_noticias {
-    margin-top: -50px;
-    margin-bottom: 15px;
-    float: left;
+  margin-top: -50px;
+  margin-bottom: 15px;
+  float: left;
 }
 
-#wrapper-third-home #newsletter
-{
-    float: right;
-    font-family: 'museoSlab', Arial, sans-serif;
-    font-size: 12px;
-    margin-top: -40px;
+#wrapper-third-home #newsletter {
+  float: right;
+  font-family: 'museoSlab', Arial, sans-serif;
+  font-size: 12px;
+  margin-top: -40px;
 }
 
-#wrapper-third-home #newsletter .label
-{
-    /*width: 97px;*/
-    /*width: 180px;*/
-    padding: 10px;
-    padding-right: 0px;
-    margin-top: -10px;
-    float: left;
+#wrapper-third-home #newsletter .label {
+  padding: 10px;
+  padding-right: 0px;
+  margin-top: -10px;
+  float: left;
 }
 
-#wrapper-third-home #register-newsletter-box
-{
-    /*width: 199px;*/
-    width: 335px;
-    padding-left: 10px;
-    margin-top: -5px;
-    float: right;
+#wrapper-third-home #register-newsletter-box {
+  width: 335px;
+  padding-left: 10px;
+  margin-top: -5px;
+  float: right;
 }
 
 #wrapper-third-home #newsletter input[type="submit"]{
@@ -182,15 +177,12 @@ text-decoration: none;
  }
 
 #wrapper-third-home #newsletter input[type="text"] {
-    /*width:134px;*/
-    width: 260px;
-    height:12px;
-    /*border:1px solid #e2e2e2;*/
-    border:1px solid #E6E6E6;
-    /*color:#d7322f;*/
-    font-size: 12px;
-    padding: 9px 12px;
-    margin:0;
+  width: 260px;
+  height:12px;
+  border:1px solid #E6E6E6;
+  font-size: 12px;
+  padding: 9px 12px;
+  margin:0;
 }
 
 @media screen and (max-width: 700px)
@@ -231,6 +223,7 @@ text-decoration: none;
 
 #wrapper-third-home .top-news .news{
     float: left;
+    margin-top:10px;
 }
 
 .left{
@@ -238,7 +231,7 @@ text-decoration: none;
 }
 
 .news-title{
-    font-size: 24px;
+    font-size: 21px;
     font-family: 'museoSlab', Arial, sans-serif;
     line-height: 1.3em;
     color: #000;
@@ -247,8 +240,8 @@ text-decoration: none;
 
 #wrapper-third-home .top-news .news-text {
     color: #000;
-    line-height: 1.5;
-    word-spacing: 4px;
+    line-height: 1.65;
+    font-size: 16px;
 }
 
 /* DESTAQUES fourth-home*/
@@ -354,10 +347,9 @@ margin-top: 0;
 }
 
 #wrapper-third-home .bottom-news .news-text{
-  font-size: 15px;
+  font-size: 16px;
   color: #000;
-  line-height: 1.5;
-  word-spacing: 4px;
+  line-height: 1.65;
 }
 
 #wrapper-second-home a:hover,

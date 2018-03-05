@@ -115,16 +115,29 @@ function gu_register_and_load_styles_scripts(){
 add_action( 'wp_enqueue_scripts', 'gu_register_and_load_styles_scripts' );
 
 
-  /**
-   * SETUP THEME IMAGES SIZES
-   */
-  if ( function_exists( 'add_theme_support' ) ) {
-  add_theme_support( 'post-thumbnails' );
-    add_image_size( '170xX', 170, 0 );          // agenda
-    add_image_size( '233x132', 233, 132, true); // destaques e filmes
-    add_image_size( '365x195', 365, 195, true); // Checar onde está sendo usado
-    add_image_size( '470x267', 470, 267, true); // duas colunas
-  }
+/**
+ * SETUP THEME IMAGES SIZES
+ */
+if ( function_exists( 'add_theme_support' ) ) {
+add_theme_support( 'post-thumbnails' );
+  add_image_size( '170xX', 170, 0 );          // agenda
+  add_image_size( '233x132', 233, 132, true); // destaques e filmes
+  add_image_size( '365x195', 365, 195, true); // Checar onde está sendo usado
+  add_image_size( '470x267', 470, 267, true); // duas colunas
+}
+
+/**
+ * CÓDIGO DE OBRAS E EDIFICAÇÕES 
+ */
+function load_codigo_de_obras_assets_js() {
+    if( is_page( 'coe-texto-da-lei-ilustrado' ) ) {
+        wp_register_style('style-coe', get_template_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.css', array(), null, 'all');
+        wp_enqueue_script('coe-js', get_stylesheet_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.js', $in_footer = true);
+    } 
+}
+add_action('wp_enqueue_scripts', 'load_codigo_de_obras_assets_js');
+
+
 
 /**
  * SETUP MENUS

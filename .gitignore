@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 db_info.php
 .DS_Store
 *.log
@@ -10,5 +9,4 @@ wp-config.php
 /sitemap.xml.gz
 
 node_modules/
-codigo-de-obras/
 db_info.php

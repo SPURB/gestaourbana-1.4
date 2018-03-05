@@ -28,9 +28,13 @@
 
 	<?php // You can start editing here -- including this comment! ?>
 
+	<hr>
+	<br /><br />
+
+	<?php comment_form(); ?>
+
 	<?php if ( have_comments() ) : ?>
 	  <br /><br />
-		<hr>
 		<h3 style="margin-bottom:20px; margin-top:20px">Comentários</h3>
 		<h2 id="comments-title">
 			<?php
@@ -77,6 +81,5 @@
 
 	<?php endif; // have_comments() ?>
 
-	<?php comment_form(); ?>
 
 </div><!-- #comments -->

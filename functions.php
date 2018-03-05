@@ -1,57 +1,118 @@
 <?php
 
+add_action( 'init', 'gu_add_editor_styles' );
+function gu_add_editor_styles() {
   add_editor_style('style.css');
   add_editor_style('css/style-entenda-introducao.css');
   add_editor_style('css/style-entenda-etapas.css');
+}
 
   /**
-   * REGISTER STYLESHEETS
+   * REGISTER STYLESHEETS AND SCRIPTS
    */
-  function registerAndLoadStyles(){
-    wp_register_style('style', get_stylesheet_uri());
-    wp_register_style('style-menu-navbar', get_template_directory_uri() . '/css/style-menu-navbar.css', array(), null, 'all');
-    wp_register_style('style-agenda-interna', get_template_directory_uri() . '/css/style-agenda-interna.css', array(), null, 'all');
-    wp_register_style('style-agenda-sidebar', get_template_directory_uri() . '/css/style-agenda-sidebar.css', array(), null, 'all');
-    wp_register_style('style-agenda', get_template_directory_uri() . '/css/style-agenda.css', array(), null, 'all');
-    wp_register_style('style-biblioteca', get_template_directory_uri() . '/css/style-biblioteca.css', array(), null, 'all');
-    wp_register_style('style-contato', get_template_directory_uri() . '/css/style-contato.css', array(), null, 'all');
-    wp_register_style('style-entenda-introducao', get_template_directory_uri() . '/css/style-entenda-introducao.css', array(), null, 'all');
-    wp_register_style('style-entenda-perguntas', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
-    wp_register_style('style-entenda-equipe', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
-    wp_register_style('style-home', get_template_directory_uri() . '/css/style-home.css', array(), null, 'all');
-    wp_register_style('style-interna', get_template_directory_uri() . '/css/style-interna.css', array(), null, 'all');
-    wp_register_style('style-noticias-interna', get_template_directory_uri() . '/css/style-noticias-interna.css', array(), null, 'all');
-    wp_register_style('style-noticias-sidebar', get_template_directory_uri() . '/css/style-noticias-sidebar.css', array(), null, 'all');
-    wp_register_style('style-noticias', get_template_directory_uri() . '/css/style-noticias.css', array(), null, 'all');
-    wp_register_style('style-comments', get_template_directory_uri() . '/css/style-comments.css', array(), null, 'all');
-    wp_register_style('glDatePicker-flatwhite', get_template_directory_uri() . '/css/glDatePicker.flatwhite.css', array(), null, 'all');
-    wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
+function gu_register_and_load_styles_scripts(){
+  // CSS
+  wp_register_style('style', get_stylesheet_uri());
+  wp_register_style('style-menu-navbar', get_template_directory_uri() . '/css/style-menu-navbar.css', array(), null, 'all');
+  wp_register_style('style-home', get_template_directory_uri() . '/css/style-home.css', array(), null, 'all');
+  wp_register_style('style-agenda-interna', get_template_directory_uri() . '/css/style-agenda-interna.css', array(), null, 'all');
+  wp_register_style('style-agenda-sidebar', get_template_directory_uri() . '/css/style-agenda-sidebar.css', array(), null, 'all');
+  wp_register_style('style-agenda', get_template_directory_uri() . '/css/style-agenda.css', array(), null, 'all');
+  wp_register_style('style-biblioteca', get_template_directory_uri() . '/css/style-biblioteca.css', array(), null, 'all');
+  wp_register_style('style-contato', get_template_directory_uri() . '/css/style-contato.css', array(), null, 'all');
+  wp_register_style('style-entenda-introducao', get_template_directory_uri() . '/css/style-entenda-introducao.css', array(), null, 'all');
+  wp_register_style('style-entenda-perguntas', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
+  wp_register_style('style-entenda-equipe', get_template_directory_uri() . '/css/style-entenda-perguntas.css', array(), null, 'all');
+  wp_register_style('style-interna', get_template_directory_uri() . '/css/style-interna.css', array(), null, 'all');
+  wp_register_style('style-noticias-interna', get_template_directory_uri() . '/css/style-noticias-interna.css', array(), null, 'all');
+  wp_register_style('style-noticias-sidebar', get_template_directory_uri() . '/css/style-noticias-sidebar.css', array(), null, 'all');
+  wp_register_style('style-noticias', get_template_directory_uri() . '/css/style-noticias.css', array(), null, 'all');
+  wp_register_style('style-comments', get_template_directory_uri() . '/css/style-comments.css', array(), null, 'all');
+  wp_register_style('glDatePicker-flatwhite', get_template_directory_uri() . '/css/glDatePicker.flatwhite.css', array(), null, 'all');
+  wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
+  wp_register_style('style-videos', get_template_directory_uri() . '/css/style-videos.css', array(), null, 'all');
+  wp_register_style('style-piu-pacaembu', get_template_directory_uri() . '/css/style-piu-pacaembu.css', array(), null, 'all');
 
-    wp_enqueue_style('style');
-    wp_enqueue_style('style-menu-navbar');
-    wp_enqueue_style('style-agenda-interna');
-    wp_enqueue_style('style-agenda-sidebar');
-    wp_enqueue_style('style-agenda');
-    wp_enqueue_style('style-biblioteca');
-    wp_enqueue_style('style-contato');
-    wp_enqueue_style('style-entenda-introducao');
-    wp_enqueue_style('style-entenda-perguntas');
-    wp_enqueue_style('style-entenda-equipe');
+  // JS
+  wp_register_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array('jquery'), $in_footer = true );
+  wp_register_script('vanillaMasker', get_stylesheet_directory_uri() . '/js/vanilla-masker.min.js', array( 'jquery' ),$in_footer = true );
+  wp_register_script('vanillaMaskerValidations', get_stylesheet_directory_uri() . '/js/validationsFields.js', array( 'jquery', 'vanillaMasker' ),$in_footer = true );
+  wp_register_script('site-script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ),$in_footer = true );
+  wp_register_script('bjqs', get_stylesheet_directory_uri() . '/js/bjqs-1.3.js', array( 'jquery' ),$in_footer = true );
+  wp_register_script('glDatePicker', get_stylesheet_directory_uri() . '/js/glDatePicker.js', array( 'jquery' ),$in_footer = true );
+  wp_register_script('jquery.fancybox', get_stylesheet_directory_uri() . '/js/jquery.fancybox.js', array( 'jquery' ),$in_footer = true );
+  wp_register_script('header_menu', get_stylesheet_directory_uri() . '/js/header_menu.js', array( 'jquery' ),$in_footer = true );
+  wp_register_script('footer', get_stylesheet_directory_uri() . '/js/footer.js',array( 'jquery' ), $in_footer = true );
+
+  // APPLIED TO ALL PAGES
+  wp_enqueue_style('style');
+  wp_enqueue_style('style-menu-navbar');
+
+  //js
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('respond');
+  wp_enqueue_script('site-script');
+  wp_enqueue_script('bjqs');
+  wp_enqueue_script('jquery.fancybox');
+  wp_enqueue_script('header_menu');
+  wp_enqueue_script('footer');
+
+  
+  if (is_front_page()){
     wp_enqueue_style('style-home');
-    wp_enqueue_style('style-interna');
-    wp_enqueue_style('style-noticias-interna');
-    wp_enqueue_style('style-noticias-sidebar');
-    wp_enqueue_style('style-noticias');
+
+    //REMOVE ASSETS FROM PLUGINS UNNECESSARY AT FRONTPAGE
+    wp_deregister_style('contact-form-7');
+    wp_deregister_style('flexy-breadcrumb-font-awesome');
+    wp_deregister_style('qppr_frontend_style');
+    wp_deregister_style('wpdmp-front-styles');
+    wp_deregister_style('sdm-styles');
+
+    wp_deregister_script('contact-form-7');
+    wp_deregister_script('popup-maker');
+    wp_deregister_script('qppr_frontend_scripts');
+    wp_deregister_script('wpdmp-front-js3');
+    wp_deregister_script('wpdmp-front-js1');
+    wp_deregister_script('sdm-scripts');
+  }
+  if (!is_front_page()){
     wp_enqueue_style('style-comments');
+    wp_enqueue_style('style-interna');
     wp_enqueue_style('glDatePicker-flatwhite');
     wp_enqueue_style('jquery-fancybox');
 
-    if (is_page( 'videos' )):
-      wp_enqueue_style( 'style-videos', get_template_directory_uri() . '/css/style-videos.css',array(),null,'all');
-    endif;
+    wp_enqueue_script('vanillaMasker');
+    wp_enqueue_script('vanillaMaskerValidations');
+    wp_enqueue_script('glDatePicker');
 
+    switch ($page) {
+      case $page == is_page('biblioteca'):    wp_enqueue_style('style-biblioteca'); break;
+      case $page == is_page('contato'):       wp_enqueue_style('style-contato'); break;
+      case $page == is_page('videos'):        wp_enqueue_style('style-videos'); break;
+      case $page == is_page('piu-pacaembu'):  wp_enqueue_style('style-piu-pacaembu'); break;
+      case $page == is_page('entenda'):       wp_enqueue_style('style-entenda-introducao');
+                                              wp_enqueue_style('style-entenda-perguntas');
+                                              wp_enqueue_style('style-entenda-equipe'); break;
+    }
+
+    // load css custom pages
+    $query_noticias = new WP_Query( array('post_type' => 'noticias')); 
+    if (is_page( 'noticia' ) or $query_noticias->have_posts()) { // arrumar segunda condição
+        wp_enqueue_style('style-noticias');
+        wp_enqueue_style('style-noticias-interna');
+    }
+    wp_reset_postdata();
+
+    $query_agenda = new WP_Query( array('post_type' => 'agenda'));  
+    if (is_page( 'agenda' ) or $query_agenda->have_posts()) { // arrumar segunda condição
+    wp_enqueue_style('style-agenda-interna');
+    wp_enqueue_style('style-agenda-sidebar');
+    wp_enqueue_style('style-agenda');
+    }
+    wp_reset_postdata();
   }
-  add_action( 'wp_enqueue_scripts', 'registerAndLoadStyles' );
+}
+add_action( 'wp_enqueue_scripts', 'gu_register_and_load_styles_scripts' );
 
 
   /**
@@ -59,19 +120,15 @@
    */
   if ( function_exists( 'add_theme_support' ) ) {
   add_theme_support( 'post-thumbnails' );
-    add_image_size( '96xX', 96, 0 );
-    add_image_size( '150xX', 150, 0 );
-    add_image_size( '170xX', 170, 0 );
-    add_image_size( '657xX', 657, 0 );
-    add_image_size( '510xX', 510, 0 );
-    add_image_size( '233x132', 233, 132, true); // destaques home
-    add_image_size( '365x195', 365, 195, true); // largura incosistente. Alterado checar bugs. Original: ( '365x195', 664, 195, true)
-    add_image_size( '470x270', 470, 270, true); 
+    add_image_size( '170xX', 170, 0 );          // agenda
+    add_image_size( '233x132', 233, 132, true); // destaques e filmes
+    add_image_size( '365x195', 365, 195, true); // Checar onde está sendo usado
+    add_image_size( '470x267', 470, 267, true); // duas colunas
   }
 
-  /**
-   * SETUP MENUS
-   */
+/**
+ * SETUP MENUS
+ */
 function register_my_menus()
   {
       register_nav_menus(
@@ -83,9 +140,9 @@ function register_my_menus()
               'home_destaques' => __( 'Menu dos Destaques' ),
           )
       );
-  }
+}
 
-  add_action( 'init', 'register_my_menus' );
+add_action( 'init', 'register_my_menus' );
 
 
 /**
@@ -102,7 +159,6 @@ function add_filter_to_menus($args) {
     if( $args['theme_location'] == 'home_destaques') {
         add_filter( 'wp_setup_nav_menu_item', 'filter_menu_items' );
     }
-
     return $args;
 }
 
@@ -134,7 +190,7 @@ function filter_menu_items($item) {
         // Make the title just be the featured image.
         $item->title = wp_get_attachment_image( $thumb_id, '233x132') 
         . "<p class='news-text'>"
-        . get_the_title( $post_id )
+        . $item->title
         . "</p>";
     }
 
@@ -149,26 +205,25 @@ function remove_filter_from_menus( $nav, $args ) {
 }
 
 
-  /**
-   * SETUP PAGE NAVIGATION
-   */
+/**
+ * SETUP PAGE NAVIGATION
+ */
 
-  if ( ! function_exists( 'the_content_nav' ) ) :
-  /**
-   * Display navigation to next/previous pages when applicable
-   */
-  function the_content_nav() {
-    global $wp_query;
-
-    if ( $wp_query->max_num_pages > 1 ) :?>
-      <div class="pages">
-        <div class="prev"><?php echo previous_posts_link( 'Anterior' ); ?></div>
-        <div class="next"><?php echo next_posts_link( 'Próxima' ); ?></div>
-        <div class="clear"></div>
-      </div>
-    <?php endif;
-  }
-  endif; // twentyeleven_content_nav
+if ( ! function_exists( 'the_content_nav' ) ) :
+/**
+ * Display navigation to next/previous pages when applicable
+ */
+function the_content_nav() {
+  global $wp_query;
+  if ( $wp_query->max_num_pages > 1 ) :?>
+    <div class="pages">
+      <div class="prev"><?php echo previous_posts_link( 'Anterior' ); ?></div>
+      <div class="next"><?php echo next_posts_link( 'Próxima' ); ?></div>
+      <div class="clear"></div>
+    </div>
+  <?php endif;
+}
+endif; // twentyeleven_content_nav
 
   /**
    * SETUP COMMENTS
@@ -427,13 +482,13 @@ function remove_filter_from_menus( $nav, $args ) {
 
   add_action( 'style-admin.css', 'events_styles', 1000 );
 
-  add_action( 'init', 'add_agenda_rules' );
-  function add_agenda_rules() {
-      add_rewrite_rule(
-          "([^/]+)/data/?([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})/?$",
-          "index.php?name=$matches[1]&date=$matches[2]",
-          "top");
-  }
+  // add_action( 'init', 'add_agenda_rules' );
+  // function add_agenda_rules() {
+  //     add_rewrite_rule(
+  //         "([^/]+)/data/?([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})/?$",
+  //         "index.php?name=$matches[1]&date=$matches[2]",
+  //         "top");
+  // }
 
   /********************************************************************************/
   /**************** CUSTOM NOTÍCIAS                 *******************************/
@@ -3842,7 +3897,6 @@ function minhocao_status_aprovacao_ajax()
     $value = (string)$_POST['value'];
 
     //echo $id. ':' . $value. ':.:';
-    
 
     global $wpdb;
     $query = "update wp_cf7dbplugin_submits

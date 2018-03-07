@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="appcoe">
     <hello></hello>
   </div>
 </template>
@@ -8,7 +8,7 @@
 import Hello from './components/Hello.vue'
 
 export default {
-  name: 'app',
+  name: 'appcoe',
   components: {
     Hello
   }

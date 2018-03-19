@@ -129,23 +129,21 @@ add_theme_support( 'post-thumbnails' );
 /**
  * CÓDIGO DE OBRAS E EDIFICAÇÕES 
  */
-function load_codigo_de_obras_assets_js() {
-    if( is_page( 'coe-texto-da-lei-ilustrado' ) ) {
-        wp_register_script('coe-js', get_template_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.js', array( 'jquery' ), $in_footer = true );
-        wp_enqueue_script('coe-js');
-    } 
-}
-add_action('wp_enqueue_scripts', 'load_codigo_de_obras_assets_js');
+// function load_codigo_de_obras_assets_js() {
+//     if( is_page( 'coe-texto-da-lei-ilustrado' ) ) {
+//         wp_register_script('coe-js', get_template_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.js', array( 'jquery' ), $in_footer = true );
+//         wp_enqueue_script('coe-js');
+//     } 
+// }
+// add_action('wp_enqueue_scripts', 'load_codigo_de_obras_assets_js');
 
-function load_codigo_de_obras_assets_css() {
-    if( is_page( 'coe-texto-da-lei-ilustrado' ) ) {
-        wp_register_style('coe-css', get_template_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.css', array(), null, 'all');
-        wp_enqueue_style('coe-css');
-    } 
-}
-add_action('wp_enqueue_style', 'load_codigo_de_obras_assets_css');
-
-
+// function load_codigo_de_obras_assets_css() {
+//     if( is_page( 'coe-texto-da-lei-ilustrado' ) ) {
+//         wp_register_style('coe-css', get_template_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.css', array(), null, 'all');
+//         wp_enqueue_style('coe-css');
+//     } 
+// }
+// add_action('wp_enqueue_style', 'load_codigo_de_obras_assets_css');
 
 
 /**

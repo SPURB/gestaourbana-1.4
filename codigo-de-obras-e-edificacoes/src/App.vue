@@ -1,16 +1,16 @@
 <template>
-  <div id="appcoe">
-    <hello></hello>
+  <div id="app">
+    <router-view name="header"></router-view>
+    <router-view name="main"></router-view>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello.vue'
-
 export default {
-  name: 'appcoe',
-  components: {
-    Hello
-  }
+  name: 'app',
 }
 </script>
+
+<style>
+@import 
+</style>

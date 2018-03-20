@@ -1,17 +1,17 @@
 <template>
-    <div class="Apresentacao">
-        {{ teste }}
-    </div>
+  <div class="Apresentacao">
+    {{ teste }}
+  </div>
 </template>
 
 <script>
 export default{
-    name: "Apresentacao", 
-    data(){
-        return{
-            teste: "Apresentacamknmlknmjklno"
-        }
+  name: "Apresentacao", 
+  data(){
+    return{
+      teste: "Apresentacamknmlknmjklno"
     }
+  }
 }
 </script>
 

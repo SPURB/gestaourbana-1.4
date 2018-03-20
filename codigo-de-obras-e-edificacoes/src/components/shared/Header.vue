@@ -17,6 +17,7 @@ export default {
   }
 }
 </script>
+
 <style type="text/css">
 body{
 }
@@ -25,6 +26,7 @@ body{
 <style lang="scss" scoped>
     .header{
         h3{
+          font-size:15px;
         }
     }
 </style>

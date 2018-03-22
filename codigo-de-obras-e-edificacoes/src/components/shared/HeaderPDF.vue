@@ -11,7 +11,8 @@ export default {
 		return {
 			dlmsg: 'Baixar PDF do COE'
 		}
-	}
+	},
+  props:['navItems']
 }
 </script>
 

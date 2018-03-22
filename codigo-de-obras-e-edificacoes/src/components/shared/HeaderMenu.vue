@@ -8,11 +8,14 @@
 
     <div class="menu-exp" v-if="showMenu">
       <ul>
+        <!-- <li>a</li>
         <li>a</li>
         <li>a</li>
         <li>a</li>
-        <li>a</li>
-        <li>a</li>
+        <li>a</li> -->
+        <li v-for="navitem in navItems">
+          <router-link :to='navitem.path'>{{ navitem.name }}</router-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -26,7 +29,8 @@ export default {
       showMenu: false,
 			tituloMenu: 'Seções'
 		}
-	}
+	}, 
+  props:['navItems']
 }
 </script>
 

@@ -1,11 +1,8 @@
 <template>
   <div class="header">
     <h3>{{ sectionName }}</h3>
-
-    <HeaderPDF></HeaderPDF>
-
-    <HeaderMenu></HeaderMenu>
-
+    <HeaderPDF :navItems="navitems"></HeaderPDF>
+    <HeaderMenu :navItems="navitems"></HeaderMenu>
   </div>
 </template>
 
@@ -17,15 +14,28 @@ export default {
   name: 'header',
   data () {
     return {
-      showMenu: false
+      showMenu: false,
+      navitems: []
     }
   },
   computed: {
     sectionName() { return this.$route.name }
   },
-  components: {
-    HeaderPDF, HeaderMenu
-  }
+  created(){
+    this.createNavitems();
+  },
+  methods:{
+    createNavitems(){
+      const app = this;
+      const routes = this.$router.options.routes;
+      routes.filter(function(index) {
+        if('name' in index){
+          app.navitems.push(index)
+        }
+      })
+    }
+  },
+  components: { HeaderPDF, HeaderMenu }
 }
 </script>
 

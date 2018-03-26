@@ -8,13 +8,8 @@
 
     <div class="menu-exp" v-if="showMenu">
       <ul>
-        <!-- <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li>
-        <li>a</li> -->
-        <li v-for="navitem in navItems">
-          <router-link :to='navitem.path'>{{ navitem.name }}</router-link>
+        <li v-for="navitem in navItems" @click="showMenu = !showMenu">
+          <router-link :to='navitem.path' active-class="menuLi"><div>{{ navitem.name }}</div></router-link>
         </li>
       </ul>
     </div>
@@ -26,8 +21,8 @@ export default {
 	name: 'HeaderMenu',
 	data() {
 		return {
+      tituloMenu: "Seções",
       showMenu: false,
-			tituloMenu: 'Seções'
 		}
 	}, 
   props:['navItems']
@@ -57,29 +52,28 @@ export default {
 
   div.menu-exp {
     position: absolute;
-    width: 149px;
+    width: 173px;
     left: 785px;
     margin-top: 0px;
-    padding: 6px 24px 6px 0;
+    padding: 0 0 6px 0;
     text-align: left;
     font-size: 14px;
     text-transform: none;
     color: black;
+    background-color: #FAFAFA;
     line-height: 130%;
-    border-left: 1px solid #CCC;
-    border-right: 1px solid #CCC;
-    border-bottom: 1px solid #CCC;
-    border-radius: 2px;
+    border: 1px solid #BDBDBD;
+    border-radius: 0 0 2px 2px;
     box-shadow: 0 2px 2px rgba(0,0,0,0.12);
     ul {
       li {
-        width: 149px;
-        display: block;
-        line-height: 12px;
-        padding: 12px;
-      }
-      li:hover {
-        background-color: #DDD;
+        div {
+          line-height: 32px;
+          padding: 0 12px;
+        }
+        div:hover {
+          background-color: #EEE;
+        }
       }
     }
   }

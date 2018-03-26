@@ -28,16 +28,17 @@ export default {
   font-size: 16px;
   font-weight: 500;
   color: #333;
-  border-right: 1px solid #CCC;
+  border-right: 1px solid #BDBDBD;
   text-transform: uppercase;
   i {
     float: right;
-    margin-left: 24px;
+    margin-left: 1rem;
   }
 }
 .HeaderPDF:hover {
 	i {
 		color: #EB5757;
 	}
+  cursor: pointer;
 }
 </style>

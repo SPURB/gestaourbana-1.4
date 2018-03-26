@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss" scoped>
   .header {
+    z-index: 20;
     h3 {
       font-size: 31px;
       display: inline-block;
@@ -49,6 +50,6 @@ export default {
       max-width: 480px;
     }
     margin-bottom: 40px;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #BDBDBD;
   }
 </style>

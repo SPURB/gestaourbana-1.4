@@ -17,6 +17,7 @@
 		<p class="corpo_lei"><strong class="artigo-lei">1.4. </strong>Concluído o serviço de fachada ou paralisada a obra por período superior a 30 (trinta) dias, o tapume deve ser obrigatoriamente recuado para o alinhamento.</p>
 		<p class="corpo_decreto"><strong class="destaque-decreto">1.A.6. </strong>Concluído o serviço de fachada ou paralisada a obra por período superior a 30 (trinta) dias, o tapume deve ser obrigatoriamente recuado para o alinhamento. </p>
 		<p class="corpo_decreto"><strong class="destaque-decreto">1.A.7. </strong>As instalações de gruas deverão observar o gabarito estabelecido pelo Órgão Regional do DECEA e quando ultrapassarem o seu limite, deverão ser submetidas à nova deliberação deste Órgão. </p>
+		
 
 		<h2>2 - DA IMPLANTAÇÃO </h2>
 		<p class="corpo_lei"><strong class="artigo-lei">2.1. </strong>A implantação de qualquer edificação no lote deve atender às disposições previstas no PDE e LPUOS, em especial aos recuos em relação às divisas do lote.</p>

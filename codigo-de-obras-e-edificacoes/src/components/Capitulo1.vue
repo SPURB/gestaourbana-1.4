@@ -216,7 +216,7 @@ export default{
   name: "Capitulo1", 
   data(){
     return{
-      caminho: '../static/img/',
+      caminho: 'http://spurbcp13343:7080/gestaourbana/wp-content/uploads/2018/04/coe/',//alterar em produção
     }
   }
 }

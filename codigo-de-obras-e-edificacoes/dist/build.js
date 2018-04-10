@@ -1,1 +1,0 @@
-console.error("Error: Vue template compilation failed while parsing file: C:\\wamp64\\www\\gestaourbana\\wp-content\\themes\\gestaourbana-1.4\\codigo-de-obras-e-edificacoes\\src\\components\\shared\\Header.vue");

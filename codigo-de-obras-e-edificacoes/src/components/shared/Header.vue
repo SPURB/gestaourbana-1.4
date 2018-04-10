@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="Header">
     <h3>{{ sectionName }}</h3>
     <HeaderPDF :navItems="navitems"></HeaderPDF>
     <HeaderMenu :navItems="navitems"></HeaderMenu>
@@ -11,7 +11,7 @@ import HeaderMenu from '@/components/shared/HeaderMenu'
 import HeaderPDF from '@/components/shared/HeaderPDF'
 
 export default {
-  name: 'header',
+  name: 'Header',
   data () {
     return {
       showMenu: false,
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .header {
+  .Header {
     z-index: 20;
     h3 {
       font-size: 31px;

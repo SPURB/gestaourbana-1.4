@@ -10,3 +10,15 @@ wp-config.php
 
 node_modules/
 db_info.php
+
+/piu-monitoramento/.git
+/piu-monitoramento/dev
+/piu-monitoramento/node_modules
+/piu-monitoramento/node_modules
+/piu-monitoramento/.babelrc
+/piu-monitoramento/gulpfile.js
+/piu-monitoramento/index.html
+/piu-monitoramento/LICENSE
+/piu-monitoramento/package.json
+/piu-monitoramento/package-lock.json
+/piu-monitoramento/README.md

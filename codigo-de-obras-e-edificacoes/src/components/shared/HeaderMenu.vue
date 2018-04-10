@@ -1,19 +1,21 @@
 <template>
-  <div class="HeaderMenu">
-  	<div class="menu" @click="showMenu = !showMenu">
-      {{ tituloMenu }}
-      <i class="small material-icons" v-if="!showMenu">arrow_drop_down</i>
-      <i class="small material-icons" v-else>arrow_drop_up</i>
-    </div>
+  <div class="HeaderMenu"@click="showMenu = !showMenu">
 
-    <div class="menu-exp" v-if="showMenu">
-      <ul>
-        <li v-for="navitem in navItems" @click="showMenu = !showMenu">
-          <router-link :to='navitem.path' active-class="menuLi"><div>{{ navitem.name }}</div></router-link>
-        </li>
-      </ul>
-    </div>
+  	{{ tituloMenu }}
+    <i class="small material-icons" v-if="!showMenu">arrow_drop_down</i>
+    <i class="small material-icons" v-else>arrow_drop_up</i>
+
+      <div class="menu-exp" v-if="showMenu">
+        <ul>
+          <li v-for="navitem in navItems" @click="showMenu = !showMenu">
+            <router-link :to='navitem.path' active-class="menuLi"><div>{{ navitem.name }}</div></router-link>
+          </li>
+        </ul>
+      </div>
+
   </div>
+
+    
 </template>
 
 <script>
@@ -38,29 +40,24 @@ export default {
 }
 
 .HeaderMenu {
-  div.menu {
-    font-family: 'Museo';
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
+  font-family: 'Museo', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 48px;
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  padding: 0 0 0 12px;
+  color: #EB5757;
+  text-transform: uppercase;
+
+  i {
     float: right;
-    width: 162px;
-    margin-top: -48px;
-    padding: 12px 0 12px 12px;
-    color: #EB5757;
-    background-color: #FAFAFA;
-    cursor: pointer;
-    i {
-      float: right;
-      margin-left: 24px;
-    }
+    line-height: 48px;
+    color: #333333;
   }
 
   div.menu-exp {
-    position: absolute;
-    width: 173px;
-    left: 785px;
     margin-top: 0px;
     padding: 6px 0;
     color: black;
@@ -86,4 +83,6 @@ export default {
   }
 
 }
+
+.HeaderMenu:hover { cursor: pointer; }
 </style>

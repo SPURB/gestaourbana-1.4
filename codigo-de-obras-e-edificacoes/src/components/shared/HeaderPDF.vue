@@ -25,23 +25,23 @@ export default {
 }
 
 .HeaderPDF {
-  font-family: 'Museo';
+  font-family: 'Museo', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px;
-  text-align: right;
-  text-transform: uppercase;
+  line-height: 48px;
   display: inline-block;
-  float: right;
-  height: 24px;
-  margin-top: -48px;
-  margin-right: 174px;
-  padding: 12px;
-  color: #333;
+  width: 25%;
+  text-align: right;
+  vertical-align: top;
+  padding: 0 12px;
   border-right: 1px solid #BDBDBD;
+  color: #EB5757;
+  text-transform: uppercase;
   i {
     float: right;
-    margin-left: 1em;
+    line-height: 48px;
+    color: #333333;
+    margin-left: 12px;
   }
 }
 

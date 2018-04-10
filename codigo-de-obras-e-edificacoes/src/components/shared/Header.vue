@@ -1,14 +1,14 @@
 <template>
   <div class="header">
     <div class="titulo-secao">{{ sectionName }}</div>
-    <HeaderMenu :navItems="navitems"></HeaderMenu>
     <HeaderPDF :navItems="navitems"></HeaderPDF>
+    <HeaderMenu :navItems="navitems"></HeaderMenu>
   </div>
 </template>
 
 <script>
-import HeaderMenu from '@/components/shared/HeaderMenu'
 import HeaderPDF from '@/components/shared/HeaderPDF'
+import HeaderMenu from '@/components/shared/HeaderMenu'
 
 export default {
   name: 'header',
@@ -48,16 +48,19 @@ export default {
 }
 
 .header {
+  display: flex;
+  height: 48px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #BDBDBD;
+  padding: 0;
+
   div.titulo-secao {
     font-family: 'Museo';
     font-size: 2em;
     font-weight: 300;
+    line-height: 48px;
+    width: 50%;
     display: inline-block;
-    line-height: 24px;
-    padding: 12px 0;
-    max-width: 480px;
   }
-  margin-bottom: 40px;
-  border-bottom: 1px solid #BDBDBD;
 }
 </style>

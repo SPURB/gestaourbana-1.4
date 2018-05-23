@@ -32,6 +32,8 @@ function gu_register_and_load_styles_scripts(){
   wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
   wp_register_style('style-videos', get_template_directory_uri() . '/css/style-videos.css', array(), null, 'all');
   wp_register_style('style-piu-pacaembu', get_template_directory_uri() . '/css/style-piu-pacaembu.css', array(), null, 'all');
+  wp_register_style('style-ligue-os-pontos', get_template_directory_uri() . '/css/style-ligue-os-pontos.css', array(), null, 'all');
+
 
   // JS
   wp_register_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array('jquery'), $in_footer = true );
@@ -75,6 +77,12 @@ function gu_register_and_load_styles_scripts(){
     wp_deregister_script('wpdmp-front-js1');
     wp_deregister_script('sdm-scripts');
   }
+
+  if (is_page('ligue-os-pontos')){
+    wp_enqueue_style('style-home');
+    wp_enqueue_style('style-ligue-os-pontos');
+  }
+
   if (!is_front_page()){
     wp_enqueue_style('style-comments');
     wp_enqueue_style('style-interna');

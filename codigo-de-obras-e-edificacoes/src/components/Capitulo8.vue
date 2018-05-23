@@ -378,24 +378,18 @@
 		<p class="corpo_decreto"><strong class="destaque-decreto">ANDERSON POMINI</strong>, Secretário Municipal de Justiça </p>
 		<p class="corpo_decreto"><strong class="destaque-decreto">JULIO FRANCISCO SEMEGHINI NETO</strong>, Secretário do Governo Municipal </p>
 		<p class="corpo_decreto">Publicado na Secretaria do Governo Municipal, em 7 de julho de 2017.</p>
-
 	</div>
 </template>
 
 <script>
 export default{
-  name: "Capitulo8", 
-  data(){
-    return{
-      caminho: '../static/img/',
-    }
-  }
+	name: "Capitulo8", 
+	props:['caminho']
 }
 </script>
 
-<style>
-/* Estilo COE */
-@import '../../static/styles.css';
+<style lang="scss">
+@import '../assets/main.scss';
 
 /* 08_capitulo-VIII_d01.html */
 #g-08_capitulo-VIII_d01-box .g-artboard {

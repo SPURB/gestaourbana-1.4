@@ -1,6 +1,5 @@
 <template>
-  	<div class="Capitulo2">
-
+	<div class="Capitulo2">
 		<h1 class="cap_lei">CAPÍTULO II – DO CONTROLE DA ATIVIDADE EDILÍCIA</h1>
 		<h2 class="secao_lei">Seção I - DAS RESPONSABILIDADES E DIREITOS</h2>
 		<p class="corpo_lei"><strong class="artigo-lei">Art. 4º </strong>É direito e responsabilidade do proprietário ou possuidor do imóvel requerer perante a Prefeitura a emissão dos documentos de controle da atividade edilícia de que trata este Código, respeitados o direito de vizinhança, a função social da propriedade e a legislação municipal correlata.</p>
@@ -665,24 +664,18 @@
 			<p class="titulo-referencias"><span class="vermelho2">Portaria</span></p>
 			<p class="corpo_referencias1"><sup>16 </sup>Ver documentação na Portaria, cap. 3, seção 3.K.</p>
 		</div>
-
 	</div>
 </template>
 
 <script>
 export default{
-  name: "Capitulo2", 
-  data(){
-    return{
-      caminho: '../static/img/',
-    }
+	name: "Capitulo2", 
+	props:['caminho']
   }
-}
 </script>
 
-<style>
-/* Estilo COE */
-@import '../../static/styles.css';
+<style lang="scss">
+@import '../assets/main.scss';
 
 /* 02_capitulo-II_d01.html */
 #g-02_capitulo-II_d01-box .g-artboard {

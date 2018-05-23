@@ -152,16 +152,11 @@
 
 <script>
 export default{
-  name: "Capitulo6", 
-  data(){
-    return{
-      caminho: '../static/img/',
-    }
-  }
+	name: "Capitulo6", 
+	props:['caminho']
 }
 </script>
 
-<style>
-/* Estilo COE */
-@import '../../static/styles.css';
+<style lang="scss">
+@import '../assets/main.scss';
 </style>

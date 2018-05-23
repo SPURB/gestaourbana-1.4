@@ -1,6 +1,5 @@
 <template>
 	<div class="Anexo1">
-
 		<h2 class="secao_lei">ANEXO I - DISPOSIÇÕES TÉCNICAS</h2>
 		<p class="corpo_decreto">Este Anexo estabelece critérios e parâmetros técnicos a serem observados pelos Responsáveis Técnicos pelo projeto e pela obra, quando da elaboração do projeto de construção, execução de obras, instalação de equipamentos e adaptação das edificações de diferentes usos, mesmo não havendo previsão de representação gráfica no projeto simplificado. </p>
 		<h3 class="subsecao_lei">1 - DO CANTEIRO DE OBRAS </h3>
@@ -1201,17 +1200,12 @@
 <script>
 export default{
   name: "Anexo1", 
-  data(){
-    return{
-      caminho: '../static/img/',
-    }
-  }
+  props:['caminho']
 }
 </script>
 
-<style>
-/* Estilo COE */
-@import '../../static/styles.css';
+<style lang="scss">
+@import '../assets/main.scss';
 
 /* 09_anexo-I_d01.html */
 #g-09_anexo-I_d01-box .g-artboard {

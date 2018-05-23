@@ -1,6 +1,6 @@
 <template>
   <div class="HeaderMenu">
-  	<div class="menu" @click="showMenu = !showMenu">
+    <div class="menu" @click="showMenu = !showMenu">
       {{ tituloMenu }}
       <i class="small material-icons" v-if="!showMenu">arrow_drop_down</i>
       <i class="small material-icons" v-else>arrow_drop_up</i>
@@ -18,13 +18,13 @@
 
 <script>
 export default {
-	name: 'HeaderMenu',
-	data() {
-		return {
+  name: 'HeaderMenu',
+  data() {
+    return {
       tituloMenu: "Seções",
       showMenu: false,
-		}
-	}, 
+    }
+  }, 
   props:['navItems']
 }
 </script>
@@ -49,7 +49,6 @@ export default {
       margin-left: 24px;
     }
   }
-
   div.menu-exp {
     position: absolute;
     width: 173px;
@@ -77,6 +76,5 @@ export default {
       }
     }
   }
-
 }
 </style>

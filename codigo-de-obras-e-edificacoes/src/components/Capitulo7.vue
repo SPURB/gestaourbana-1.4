@@ -176,18 +176,13 @@
 
 <script>
 export default{
-  name: "Capitulo7", 
-  data(){
-    return{
-      caminho: '../static/img/',
-    }
-  }
+	name: "Capitulo7", 
+	props:['caminho']
 }
 </script>
 
-<style>
-/* Estilo COE */
-@import '../../static/styles.css';
+<style lang="scss">
+@import '../assets/main.scss';
 
 /* 07_capitulo-VII_d01.html */
 #g-07_capitulo-VII_d01-box .g-artboard {

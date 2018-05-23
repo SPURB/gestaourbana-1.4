@@ -213,16 +213,14 @@
 
 <script>
 export default{
-  name: "Capitulo1", 
-  data(){
-    return{
-      caminho: 'http://spurbcp13343:7080/gestaourbana/wp-content/uploads/2018/04/coe/',//alterar em produção
-    }
-  }
+  	name: "Capitulo1", 
+	props:['caminho']
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../assets/main.scss';
+
 /* Estilo 01_capitulo-I_d01.html */
 #g-01_capitulo-I_d01-box .g-artboard {
 	margin:0 auto;

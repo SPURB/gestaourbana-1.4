@@ -1,17 +1,17 @@
 <template>
-	<div class="HeaderPDF">
-		{{ dlmsg }} <i class="small material-icons">file_download</i>
-	</div>
+  <div class="HeaderPDF">
+    {{ dlmsg }} <i class="small material-icons">file_download</i>
+  </div>
 </template>
 
 <script>
 export default {
-	name: 'HeaderPDF',
-	data() {
-		return {
-			dlmsg: 'Baixar PDF do COE'
-		}
-	},
+  name: 'HeaderPDF',
+  data() {
+    return {
+      dlmsg: 'Baixar PDF do COE'
+    }
+  },
   props:['navItems']
 }
 </script>
@@ -36,9 +36,9 @@ export default {
   }
 }
 .HeaderPDF:hover {
-	i {
-		color: #EB5757;
-	}
+  i {
+    color: #EB5757;
+  }
   cursor: pointer;
 }
 </style>

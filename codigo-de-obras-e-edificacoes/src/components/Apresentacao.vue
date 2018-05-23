@@ -1,8 +1,7 @@
 <template>
   <div class="Apresentacao">
-
-    <h1 class="cap_lei">Simplificando o Licenciamento em São Paulo</h1>
-    <p>O Código de Obras e Edificações – COE, sancionado pelo Prefeito João Dória em maio de 2017 e em vigor desde julho de 2017, apresenta um novo modelo de licenciamento de edificações. O COE vem para resolver entraves que perduram por anos e dificultam a transformação de São Paulo em sua vocação de cidade dinâmica e global.</p>
+	<h1 class="cap_lei">Simplificando o Licenciamento em São Paulo</h1>
+	<p>O Código de Obras e Edificações – COE, sancionado pelo Prefeito João Dória em maio de 2017 e em vigor desde julho de 2017, apresenta um novo modelo de licenciamento de edificações. O COE vem para resolver entraves que perduram por anos e dificultam a transformação de São Paulo em sua vocação de cidade dinâmica e global.</p>
 	<p>A primeira conquista deste Código é a simplificação. Com base na experiência administrativa da SMUL em liberar edificações, o texto da lei também detalhou procedimentos internos para facilitar e desburocratizar a análise dos projetos pelos técnicos. A nova lei está menos burocrática e em consonância com as diretrizes do Plano Diretor Estratégico e da Lei de Parcelamento, Uso e Ocupação do Solo.  Visa, assim, deixar os procedimentos e o processo de licenciamento mais simples, tanto para o cidadão, quanto para os técnicos, além de contribuir para o crescimento e desenvolvimento da cidade.</p>
 	<p>Com este COE, os detalhes internos das edificações ficam a critério do proprietário e do autor do projeto, que agora possuem responsabilidades explícitas. Deste modo, a Prefeitura poderá se focar nos aspectos urbanísticos, ambientais, de sustentabilidade, acessibilidade e segurança dos empreendimentos.</p>
 	<p>Hoje, na administração pública, perseguimos o princípio da transparência. Com os regramentos administrativos mais claros, existem poucas exigências técnicas complementares, o que dá agilidade ao processo. Em relação aos códigos anteriores, este não legisla quando já existem normas técnicas, evitando sobreposições de normas, além de possibilitar que o profissional habilitado exerça seu oficio com responsabilidade.</p>
@@ -200,17 +199,12 @@
 <script>
 export default {
 	name: "Apresentacao",
-	data() {
-		return {
-			caminho: '../static/img/',
-		}
-	}
+	props:['caminho']
 }
 </script>
 
-<style>
-/* Estilo COE */
-@import '../../static/styles.css';
+<style lang="scss">
+@import '../assets/main.scss';
 
 /* Estilo apresentacao_d01.html */
 #g-00_apresentacao_d01-box .g-artboard {
@@ -230,7 +224,7 @@ export default {
 #g-00_apresentacao_d01-01 {
 	position:relative;
 	overflow:hidden;
-	width:960px;
+	width:100%;
 }
 #g-00_apresentacao_d01-01 p {
 	font-family:arial,helvetica,sans-serif;

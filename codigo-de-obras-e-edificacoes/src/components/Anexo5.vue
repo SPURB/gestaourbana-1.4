@@ -11,7 +11,8 @@ export default{
     return{
       title: "Anexo 5"
     }
-  }
+  },
+  	props:['caminho']
 }
 </script>
 

@@ -1,17 +1,18 @@
 <template>
-  <div class="Portaria">
-    {{ title }}
-  </div>
+	<div class="Portaria">
+		{{ title }}
+	</div>
 </template>
 
 <script>
 export default{
-  name: "Portaria", 
-  data(){
-    return{
-      title: "Portaria"
-    }
-  }
+	name: "Portaria", 
+		data(){
+		return{
+			title: "Portaria"
+		}
+	 },
+	props:['caminho']
 }
 </script>
 

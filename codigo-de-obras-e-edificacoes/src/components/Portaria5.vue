@@ -11,7 +11,8 @@ export default{
     return{
       title: "Portaria - Capítulo 5"
     }
-  }
+  },
+	props:['caminho']
 }
 </script>
 

@@ -10,3 +10,9 @@ wp-config.php
 
 node_modules/
 db_info.php
+
+SPA/piu-monitoramento/
+!SPA/piu-monitoramento/dist/
+
+SPA/codigo-de-obras-e-edificacoes/
+!SPA/codigo-de-obras-e-edificacoes/dist/

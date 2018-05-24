@@ -1,3 +1,9 @@
+<?php 
+/*
+Template Name: Vídeos
+*/
+?>
+
 <?php get_header(); ?>
 <div class="wrapper">
       <ul id="video-list">

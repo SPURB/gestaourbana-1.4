@@ -11,14 +11,8 @@ wp-config.php
 node_modules/
 db_info.php
 
-/piu-monitoramento/.git
-/piu-monitoramento/dev
-/piu-monitoramento/node_modules
-/piu-monitoramento/node_modules
-/piu-monitoramento/.babelrc
-/piu-monitoramento/gulpfile.js
-/piu-monitoramento/index.html
-/piu-monitoramento/LICENSE
-/piu-monitoramento/package.json
-/piu-monitoramento/package-lock.json
-/piu-monitoramento/README.md
+SPA/piu-monitoramento/
+!SPA/piu-monitoramento/dist/
+
+SPA/codigo-de-obras-e-edificacoes/
+!SPA/codigo-de-obras-e-edificacoes/dist/

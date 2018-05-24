@@ -32,6 +32,8 @@ function gu_register_and_load_styles_scripts(){
   wp_register_style('jquery-fancybox', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), null, 'all');
   wp_register_style('style-videos', get_template_directory_uri() . '/css/style-videos.css', array(), null, 'all');
   wp_register_style('style-piu-pacaembu', get_template_directory_uri() . '/css/style-piu-pacaembu.css', array(), null, 'all');
+  wp_register_style('style-ligue-os-pontos', get_template_directory_uri() . '/css/style-ligue-os-pontos.css', array(), null, 'all');
+
 
   // JS
   wp_register_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array('jquery'), $in_footer = true );
@@ -75,6 +77,12 @@ function gu_register_and_load_styles_scripts(){
     wp_deregister_script('wpdmp-front-js1');
     wp_deregister_script('sdm-scripts');
   }
+
+  if (is_page('ligue-os-pontos')){
+    wp_enqueue_style('style-home');
+    wp_enqueue_style('style-ligue-os-pontos');
+  }
+
   if (!is_front_page()){
     wp_enqueue_style('style-comments');
     wp_enqueue_style('style-interna');
@@ -114,37 +122,16 @@ function gu_register_and_load_styles_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'gu_register_and_load_styles_scripts' );
 
-
-/**
- * SETUP THEME IMAGES SIZES
- */
-if ( function_exists( 'add_theme_support' ) ) {
-add_theme_support( 'post-thumbnails' );
-  add_image_size( '170xX', 170, 0 );          // agenda
-  add_image_size( '233x132', 233, 132, true); // destaques e filmes
-  add_image_size( '365x195', 365, 195, true); // Checar onde está sendo usado
-  add_image_size( '470x267', 470, 267, true); // duas colunas
-}
-
-/**
- * CÓDIGO DE OBRAS E EDIFICAÇÕES 
- */
-// function load_codigo_de_obras_assets_js() {
-//     if( is_page( 'coe-texto-da-lei-ilustrado' ) ) {
-//         wp_register_script('coe-js', get_template_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.js', array( 'jquery' ), $in_footer = true );
-//         wp_enqueue_script('coe-js');
-//     } 
-// }
-// add_action('wp_enqueue_scripts', 'load_codigo_de_obras_assets_js');
-
-// function load_codigo_de_obras_assets_css() {
-//     if( is_page( 'coe-texto-da-lei-ilustrado' ) ) {
-//         wp_register_style('coe-css', get_template_directory_uri() . '/codigo-de-obras-e-edificacoes/dist/build.css', array(), null, 'all');
-//         wp_enqueue_style('coe-css');
-//     } 
-// }
-// add_action('wp_enqueue_style', 'load_codigo_de_obras_assets_css');
-
+  /**
+   * SETUP THEME IMAGES SIZES
+   */
+  if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails' );
+    add_image_size( '170xX', 170, 0 );          // agenda
+    add_image_size( '233x132', 233, 132, true); // destaques e filmes
+    add_image_size( '365x195', 365, 195, true); // Checar onde está sendo usado
+    add_image_size( '470x267', 470, 267, true); // duas colunas
+  }
 
 /**
  * SETUP MENUS

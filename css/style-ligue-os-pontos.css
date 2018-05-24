@@ -1,0 +1,85 @@
+h3:first-child {
+	margin-bottom: 10px;
+}
+
+#wrapper-fifth-home {
+    max-width: 960px;
+    margin: 0 auto;
+}
+div#section-agenda {
+	width: 100%;
+	float: left;
+	max-width: 470px;
+}
+div.news-text p {
+	margin: 0;
+}
+div.news-text p.agenda-titulo {
+	font-weight: 700;
+}
+
+div#section-destaques {
+	width: 100%;
+	float: right;
+	max-width: 470px;
+}
+li.destaques-ligue-os-pontos {
+	padding: 1.5em 0;
+	border-top: 1px solid #999999;
+	display: table;
+	max-width: 470px;
+	min-width: 100%;
+}
+li.destaques-ligue-os-pontos a {
+	color: #333333;
+	font-weight: 700;
+	display: block;
+	position: relative;
+}
+li.destaques-ligue-os-pontos a img {
+	width: 100%;
+	max-width: 470px;
+}
+div.video-play {
+	position: absolute;
+	width: 100%;
+	max-width: 470px;
+	top: 0;
+	height: 100%;
+	vertical-align: middle;
+	background: url('../images/play.png') no-repeat center center;
+}
+li.destaques-ligue-os-pontos a img.imagem-destaque {
+	float: left;
+	margin-right: 12px;
+	margin-bottom: .4em;
+	width: 50%;
+}
+li.destaques-ligue-os-pontos a p {
+	margin: 0;
+}
+li.destaques-ligue-os-pontos a span {
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 20px;
+}
+#section-destaques .section-title {
+	margin-bottom: 12px;
+}
+
+@media screen and (max-width: 960px) {
+	#wrapper-fifth-home {
+		min-width: 94%;
+		padding: 0 3%;
+	}
+	div#section-agenda, div#section-destaques {
+		min-width: 100%;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	li.destaques-ligue-os-pontos a img.imagem-destaque { 
+		float: none; 
+		width: 100%;
+	}
+}

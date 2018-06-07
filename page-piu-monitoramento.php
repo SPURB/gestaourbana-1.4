@@ -12,9 +12,9 @@ Template Name: coe-texto-da-lei-ilustrado
     <div class="wrapper">
             <div class="inner">
 				<div id="app">
-					<mapa :clicked-id="projectId" @clicked="receiveId"></mapa>
-					<sumario @clicked="receiveId"></sumario>
-					<ficha :clicked-id="projectId" @clicked="receiveId"></ficha>
+					<mapa 	 	v-show="display.mapa"		@clicked="receiveId"	:clicked-id="projectId"></mapa>
+					<sumario 	v-show="display.sumario"	@clicked="receiveId"></sumario>
+					<ficha 		v-show="display.ficha" 		@clicked="receiveId"	:clicked-id="projectId"></ficha>
 				</div>
             </div>
         <div class="clear"></div>
@@ -24,7 +24,7 @@ Template Name: coe-texto-da-lei-ilustrado
 <?php get_footer(); ?>
 
 <script type="text/javascript">
-	var dist_folder = "<?php echo get_template_directory_uri(); ?>" + "/piu-monitoramento/dist/";
+	var dist_folder = "<?php echo get_template_directory_uri(); ?>" + "./SPA/piu-monitoramento/dist/";
 </script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/vue.v2.5.16.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/ol.4.2.0.js"></script>

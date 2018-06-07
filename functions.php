@@ -83,6 +83,21 @@ function gu_register_and_load_styles_scripts(){
     wp_enqueue_style('style-ligue-os-pontos');
   }
 
+  if('page-coe-texto-da-lei-ilustrado'){
+    wp_deregister_style('contact-form-7');
+    wp_deregister_style('flexy-breadcrumb-font-awesome');
+    wp_deregister_style('qppr_frontend_style');
+    wp_deregister_style('wpdmp-front-styles');
+    wp_deregister_style('sdm-styles');
+
+    wp_deregister_script('contact-form-7');
+    wp_deregister_script('popup-maker');
+    wp_deregister_script('qppr_frontend_scripts');
+    wp_deregister_script('wpdmp-front-js3');
+    wp_deregister_script('wpdmp-front-js1');
+    wp_deregister_script('sdm-scripts');
+  }
+
   if (!is_front_page()){
     wp_enqueue_style('style-comments');
     wp_enqueue_style('style-interna');
@@ -102,7 +117,6 @@ function gu_register_and_load_styles_scripts(){
                                               wp_enqueue_style('style-entenda-perguntas');
                                               wp_enqueue_style('style-entenda-equipe'); break;
     }
-
     // load css custom pages
     $query_noticias = new WP_Query( array('post_type' => 'noticias')); 
     if (is_page( 'noticia' ) or $query_noticias->have_posts()) { // arrumar segunda condição
@@ -113,10 +127,11 @@ function gu_register_and_load_styles_scripts(){
 
     $query_agenda = new WP_Query( array('post_type' => 'agenda'));  
     if (is_page( 'agenda' ) or $query_agenda->have_posts()) { // arrumar segunda condição
-    wp_enqueue_style('style-agenda-interna');
-    wp_enqueue_style('style-agenda-sidebar');
-    wp_enqueue_style('style-agenda');
+      wp_enqueue_style('style-agenda-interna');
+      wp_enqueue_style('style-agenda-sidebar');
+      wp_enqueue_style('style-agenda');
     }
+
     wp_reset_postdata();
   }
 }

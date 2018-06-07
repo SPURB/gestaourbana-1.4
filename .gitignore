@@ -12,9 +12,7 @@ node_modules/
 db_info.php
 
 SPA/piu-monitoramento/.git
-SPA/piu-monitoramento/*
-!SPA/piu-monitoramento/dist/**/*
+SPA/piu-monitoramento/**/*
 
 SPA/codigo-de-obras-e-edificacoes/.git
-SPA/codigo-de-obras-e-edificacoes/*
-!SPA/codigo-de-obras-e-edificacoes/dist/**/*
+SPA/codigo-de-obras-e-edificacoes/**/*

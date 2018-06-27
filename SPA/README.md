@@ -7,9 +7,13 @@ Os arquivos de SPA's (Single Page Application) deste tema serão transferidos pa
 	* [https://github.com/SPURB/codigo-de-obras-e-edificacoes/](https://github.com/SPURB/codigo-de-obras-e-edificacoes/) (  repositório)
 	* `../page-coe-texto-da-lei-ilustrado.php` (página da aplicação)
 
-*   PIU Monitoramento
+*  PIU Monitoramento
 	* [https://github.com/SPURB/piu-monitoramento](https://github.com/SPURB/piu-monitoramento)
 	* `../page-piu-monitoramento.php` 
+
+* Inforgráficos
+	* `../page-infografico-oucae.php` 
+
 
 ### Desenvolvimento e atualizações
 Faça um clone do repositório siga as instruções especificadas no repositório e trabalhe localmente.

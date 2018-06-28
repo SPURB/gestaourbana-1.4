@@ -241,15 +241,20 @@
 	}
 </style>
 
-<div id="g-Opera_esUrbanas_AguaEspraiada-box" class="ai2html ai2html-box-v5">
 
+<!-- <div id="app">
+	<um></um>
+</div> -->
+
+<div id="g-Opera_esUrbanas_AguaEspraiada-box" class="ai2html ai2html-box-v5">
 	<!-- Artboard: Prancheta_1 -->
 	<div id="g-Opera_esUrbanas_AguaEspraiada-Prancheta_1" class="g-artboard" data-aspect-ratio="0.196" data-min-width="960">
 		<img id="g-Opera_esUrbanas_AguaEspraiada-Prancheta_1-img" class="g-aiImg" src="<?php echo $infograficoImgPath;?>"/>
-		<div id="g-ai0-1" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:1.9944%;margin-top:-8.6px;left:50.4316%;width:118px;">
+
+		<div id="g-ai0-1" class="app g-Camada_1 g-aiAbs g-aiPointText" style="top:1.9944%;margin-top:-8.6px;left:50.4316%;width:118px;">
 			<p class="g-pstyle0">SETOR BERRINI</p>
 		</div>
-		<div id="g-ai0-2" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:3.4049%;margin-top:-8.6px;left:4.8372%;width:209px;">
+		<div id="g-ai0-2" class="app g-Camada_1 g-aiAbs g-aiPointText" style="top:3.4049%;margin-top:-8.6px;left:4.8372%;width:209px;">
 			<p class="g-pstyle0">SETOR MARGINAL PINHEIROS</p>
 		</div>
 		<div id="g-ai0-3" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:4.8358%;margin-top:-8.6px;left:65.9958%;width:134px;">
@@ -744,7 +749,6 @@
 			<p class="g-pstyle30">Perímetro OUC Água Espraiada</p>
 		</div>
 	</div>
-
 </div>
-
 <!-- End ai2html - 2018-06-26 11:15 -->
+

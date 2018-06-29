@@ -4,7 +4,7 @@ Template Name: infografico-oucae
 */
 ?>
 <?php get_header(); ?>
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/SPA/infograficos/oucae/oucae.css">
+<link rel="stylesheet" type="text/css" href="<?php  echo get_template_directory_uri(); ?>/SPA/infograficos/dist/oucae.min.css">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div id="default-inner">
@@ -14,16 +14,7 @@ Template Name: infografico-oucae
 					<h3><?php echo the_title(); ?></h3>
 					<div class="inner-text">
 						<p><?php echo the_content(); ?></p>
-
-							<div id="app">
-								<um></um>
-							</div>
-
-							<?php 
-								$infograficoImgPath = get_template_directory_uri() .'/SPA/infograficos/oucae/oucae.jpg';
-								include get_template_directory() . '/SPA/infograficos/oucae/oucae.php';
-							?>
-
+						<div id="app"></div>
 					</div>
 				</div>
 			</div>

@@ -12,8 +12,8 @@ Os arquivos de SPA's (Single Page Application) deste tema serão transferidos pa
 	* `../page-piu-monitoramento.php` 
 
 * Inforgráficos
+	* `./infograficos` 
 	* `../page-infografico-oucae.php` 
-
 
 ### Desenvolvimento e atualizações
 Faça um clone do repositório siga as instruções especificadas no repositório e trabalhe localmente.

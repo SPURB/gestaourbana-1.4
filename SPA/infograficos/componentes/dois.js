@@ -1,1 +1,0 @@
-console.log('olar from dois.js');

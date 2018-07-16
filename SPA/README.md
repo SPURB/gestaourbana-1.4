@@ -4,11 +4,11 @@ Os arquivos de SPA's (Single Page Application) deste tema serão transferidos pa
 ### Aplicações:
 
 * Código de obras e edificações  
-	* [https://github.com/SPURB/codigo-de-obras-e-edificacoes/](https://github.com/SPURB/codigo-de-obras-e-edificacoes/) (  repositório)
+	* `./codigo-de-obras-e-edificacoes` 
 	* `../page-coe-texto-da-lei-ilustrado.php` (página da aplicação)
 
 *  PIU Monitoramento
-	* [https://github.com/SPURB/piu-monitoramento](https://github.com/SPURB/piu-monitoramento)
+	* `./piu-monitoramento` 
 	* `../page-piu-monitoramento.php` 
 
 * Inforgráficos
@@ -16,10 +16,10 @@ Os arquivos de SPA's (Single Page Application) deste tema serão transferidos pa
 	* `../page-infografico-oucae.php` 
 
 ### Desenvolvimento e atualizações
-Faça um clone do repositório siga as instruções especificadas no repositório e trabalhe localmente.
+Crie uma branch com o no padrão `dev-nome-do-projeto`. Para desenvolver em uma aplicação já existente Siga as instruções especificadas em cada projeto.
 
 ### Publicação
-Faça o build no seu ambiente local (`npm run build`, `gulp build` etc) e inclua apenas os arquivos necessários nos subdiretórios aqui especificados. Atualize o arquivo php faça a vinculação dos recursos desta pasta.
+Faça o build no seu ambiente local (`npm run build`, `gulp build` etc) faça um merge mantendo apenas os arquivos necessários para que a aplicação funcione. Atualize o arquivo php faça a vinculação dos recursos desta pasta.
 
 ### Documentação
-Ao criar um SPA neste tema atualize este `README.me` incluindo a url do repositório e a página alterada seguindo o padrão da lista acima.
+Ao criar um SPA neste tema atualize este `README.me` incluindo a url do diretório e a página php seguindo o padrão da lista acima.

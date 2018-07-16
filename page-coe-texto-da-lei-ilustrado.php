@@ -6,7 +6,7 @@ Template Name: coe-texto-da-lei-ilustrado
 <?php get_header(); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style-loader.css">
 <noscript>
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras-e-edificacoes/dist/static/css/app.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras/dist/static/css/app.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </noscript>
 
@@ -21,16 +21,16 @@ Template Name: coe-texto-da-lei-ilustrado
 </div>
 <?php get_footer(); ?>
 
-<script src="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras-e-edificacoes/dist/static/js/manifest.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras-e-edificacoes/dist/static/js/vendor.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras-e-edificacoes/dist/static/js/app.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras/dist/static/js/manifest.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras/dist/static/js/vendor.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/SPA/codigo-de-obras/dist/static/js/app.js"></script>
 
 <script type="text/javascript">
 (function (){
 	/* Defer app.css para performance */
 	var link = document.createElement('link');
 	link.rel = 'stylesheet';
-	link.href = template_url + "/SPA/codigo-de-obras-e-edificacoes/dist/static/css/app.css";
+	link.href = template_url + "/SPA/codigo-de-obras/dist/static/css/app.css";
 	link.type = 'text/css';
 	var godefer = document.getElementsByTagName('link')[0];
 	godefer.parentNode.insertBefore(link, godefer);

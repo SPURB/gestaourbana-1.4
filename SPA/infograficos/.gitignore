@@ -1,4 +1,6 @@
 .DS_Store
 node_modules/
-dist/**/*.js
-dist/**/*.css
+dev/
+gulpfile.js
+package-lock.json
+package.json

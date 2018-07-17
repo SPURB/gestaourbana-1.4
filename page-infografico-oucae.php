@@ -22,11 +22,8 @@ Template Name: infografico-oucae
 	</div>
 <?php endwhile; ?>
 
-<!-- desenvolvimento -->
-<script src="<?php echo get_template_directory_uri() .'/SPA/infograficos/node_modules/vue/dist/vue.js';?>"></script>
-
 <!-- producao -->
-<!-- <script src="<?php //echo get_template_directory_uri() .'/js/vue.v2.5.16.js';?>"></script> -->
+<script src="<?php echo get_template_directory_uri() .'/js/vue.v2.5.16.js';?>"></script>
 <script src="<?php echo get_template_directory_uri() .'/SPA/infograficos/dist/oucae.min.js';?>" defer></script>
 
 <?php get_footer(); ?>

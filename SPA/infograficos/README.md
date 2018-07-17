@@ -1,5 +1,7 @@
 # Infográficos
 
+## Importante! Desenvolva apenas a partir da branch dev
+
 ## Instruções
 
 1. Construa seu infográfico utilizando adobe illustrator. 
@@ -76,3 +78,21 @@ gulp.task('default', [
 })
 ```
 Para visualizar as alterações você deve reiniciar url-do-tema/infografico-meuprojeto
+
+### Ignore em branch dev
+``` gitignore
+.DS_Store
+node_modules/
+dist/**/*.js
+dist/**/*.css
+```
+
+### Ignore em branch master
+``` gitignore
+.DS_Store
+node_modules/
+dev/
+gulpfile.js
+package-lock.json
+package.json
+```

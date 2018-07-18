@@ -1,16 +1,48 @@
 new Vue({
 	el: '#app',
-	components: {
-		// um,
-		// dois
-		tooltipBox
+	data: {
+		tootltipsData:[
+			{ 	// 0
+				title: "CA", 
+				text: 'Coeficiente de Aproveitamento',
+				style: {
+					left: undefined,
+					top: undefined
+				}, 
+				clicked: false
+			},
+			{	// 1
+				title: "TO", 
+				text: 'Taxa de Ocupação',
+				style: {
+					left: undefined,
+					top: undefined
+				},
+				clicked: false
+			},
+			{	// 2
+				title: "Gabarito", 
+				text: 'É a dimensão vertical medida desde a cota de soleira até ao ponto mais alto do edifício.',
+				style: {
+					left: undefined,
+					top: undefined
+				},
+				clicked: false
+			}
+
+		]
 	},
+	components: { tooltipbox },
+	mixins: 	[ tooltipbox_event_methods ],
 	computed:{
-		imgUrl(){ return template_url + '/SPA/infograficos/dist/oucae.jpg' }
+		imgUrl(){ return template_url + '/SPA/infograficos/dist/images/oucae.jpg' }
 	},
 	template:`
 		<div id="g-Opera_esUrbanas_AguaEspraiada-box" class="ai2html ai2html-box-v5">
-			<tooltipBox :attr='olar'></tooltipBox>
+		<tooltipbox :attr="tootltipsData[0]" @reset="tipReset"></tooltipbox>
+		<tooltipbox :attr="tootltipsData[1]" @reset="tipReset"></tooltipbox>
+		<tooltipbox :attr="tootltipsData[2]" @reset="tipReset"></tooltipbox>
+
 			<div id="g-Opera_esUrbanas_AguaEspraiada-Prancheta_1" class="g-artboard" data-aspect-ratio="0.196" data-min-width="960">
 				<img id="g-Opera_esUrbanas_AguaEspraiada-Prancheta_1-img" class="g-aiImg" :src="imgUrl"/>
 				<div id="g-ai0-1" class="app g-Camada_1 g-aiAbs g-aiPointText" style="top:1.9944%;margin-top:-8.6px;left:50.4316%;width:118px;">
@@ -298,13 +330,13 @@ new Vue({
 					<p class="g-pstyle14">RECUOS</p>
 				</div>
 				<div id="g-ai0-87" class="g-Camada_1 g-aiAbs" style="top:46.9542%;left:35.2237%;margin-left:-53px;width:11.0417%;">
-					<p class="g-pstyle13">Gabarito</p>
+					<p class="g-pstyle13"><a @click="tip(2, $event)">Gabarito</a></p>
 				</div>
 				<div id="g-ai0-88" class="g-Camada_1 g-aiAbs" style="top:47.036%;left:5.7313%;margin-left:-53.5px;width:11.1458%;">
-					<p class="g-pstyle13">CA = 4*</p>
+					<p class="g-pstyle13"><a @click="tip(0, $event)">CA = 4*</a></p>
 				</div>
 				<div id="g-ai0-89" class="g-Camada_1 g-aiAbs" style="top:47.036%;left:20.5437%;margin-left:-55px;width:11.4583%;">
-					<p class="g-pstyle13"><span class="g-cstyle9">T</span>O = <span class="g-cstyle10">0</span>,5*</p>
+					<p class="g-pstyle13"><a @click="tip(1, $event)"><span class="g-cstyle9">T</span>O = <span class="g-cstyle10">0</span>,5*</a></p>
 				</div>
 				<div id="g-ai0-90" class="g-Camada_1 g-aiAbs" style="top:49.2437%;left:64.4844%;margin-left:-46px;width:9.5833%;">
 					<p class="g-pstyle15">1000m&sup2; ou </p>

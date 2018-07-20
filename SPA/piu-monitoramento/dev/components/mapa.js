@@ -326,13 +326,13 @@ let mapa = {
 			if (id != undefined) {
 				for (let i = 0; i <= this.kmls.length; i++) {
 					if (this.kmls[i].id == id) {
-						let url = dist_folder+'shp/'+this.kmls[i].fileName.slice(0,this.kmls[i].fileName.lastIndexOf('.'))+'.shp';
+						let url = dist_folder+'shp/'+this.kmls[i].fileName.slice(0,this.kmls[i].fileName.lastIndexOf('.'))+'.rar';
 						console.log(url);
 						return url;
 					}
 				}
 			} else if (id == undefined) {
-				let url = dist_folder+'shp/'+'0_PIUs_gestao_urbana.shp';
+				let url = dist_folder+'shp/'+'0_PIUs_gestao_urbana.rar';
 				return url;
 			} else { return '' }
 		},

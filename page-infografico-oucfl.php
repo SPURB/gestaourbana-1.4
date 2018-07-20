@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: infografico-oucae
+Template Name: infografico-oucfl
 */
 ?>
 <?php get_header(); ?>
-<link rel="stylesheet" type="text/css" href="<?php  echo get_template_directory_uri(); ?>/SPA/infograficos/dist/oucae.min.css">
+<link rel="stylesheet" type="text/css" href="<?php  echo get_template_directory_uri(); ?>/SPA/infograficos/dist/oucfl.min.css">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div id="default-inner">
@@ -23,6 +23,6 @@ Template Name: infografico-oucae
 <?php endwhile; ?>
 
 <script src="<?php echo get_template_directory_uri() .'/js/vue.v2.5.16.js';?>"></script>
-<script src="<?php echo get_template_directory_uri() .'/SPA/infograficos/dist/oucae.min.js';?>" defer></script>
+<script src="<?php echo get_template_directory_uri() .'/SPA/infograficos/dist/oucfl.min.js';?>" defer></script>
 
 <?php get_footer(); ?>

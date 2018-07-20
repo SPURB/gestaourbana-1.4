@@ -22,7 +22,7 @@ new Vue({
 			},
 			{	// 2
 				title: "Gabarito", 
-				text: 'É a dimensão vertical medida desde a cota de soleira até ao ponto mais alto do edifício.',
+				text: 'É a dimensão vertical medida desde a cota de soleira até ao ponto mais alto do edifício',
 				style: {
 					left: undefined,
 					top: undefined

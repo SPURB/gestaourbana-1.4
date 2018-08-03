@@ -26,7 +26,7 @@ let mapa = {
 				"top": "0",
 				"position": "absolute"
 			},
-			data: monitoramento,
+			// data: monitoramento,
 			projeto: undefined,
 			layers: undefined,
 			breadcrumb: false,
@@ -34,7 +34,7 @@ let mapa = {
 			zoom: view.getZoom() 			//
 		}
 	},
-	props: ['clicked-id'],
+	props: ['clicked-id', 'data'],
 	computed:{
 		myMap(){
 			return new ol.Map({
@@ -76,13 +76,15 @@ let mapa = {
 				// new ol.layer.Tile({ 
 				// 	source: new ol.source.OSM()
 				// })
-				new ol.layer.Tile({
-					source: new ol.source.BingMaps({
-						imagerySet: 'CanvasGray',
-						culture: 'pt-BR',
-						key: 'efIeX8pQ5PTC2IcEjuVT~s7zLBU5z6I20qWhPhkAy3w~AlgB9eABTaOsOC8LVDJEQhyb4ik0B0mWBpIfDgrVwNYVqgfnxOsXFN3_8XKZlP1d'
-					})
-				})
+
+				// new ol.layer.Tile({
+				// 	source: new ol.source.BingMaps({
+				// 		imagerySet: 'CanvasGray',
+				// 		culture: 'pt-BR',
+				// 		key: 'efIeX8pQ5PTC2IcEjuVT~s7zLBU5z6I20qWhPhkAy3w~AlgB9eABTaOsOC8LVDJEQhyb4ik0B0mWBpIfDgrVwNYVqgfnxOsXFN3_8XKZlP1d'
+				// 	})
+				// })
+
 			]
 			this.kmls.map(function(object) {
 				let layer = new ol.layer.Vector({ 
@@ -103,14 +105,6 @@ let mapa = {
 			return output
 		}
 	},
-	mounted(){
-		this.layers = this.myMap.getLayers();
-		this.highlightSettings();
-		let app = this;
-		this.myMap.on('click', function(evt){
-			app.getFeatureLayerInfo(evt.pixel, evt);
-		});
-	},
 	watch:{
 		clickedId(newprop, oldprop){
 			const app = this
@@ -120,6 +114,14 @@ let mapa = {
 					app.fitToLayer(newprop)
 					app.breadcrumb = true
 				};
+			});
+		},
+		data(){
+			this.layers = this.myMap.getLayers();
+			this.highlightSettings();
+			let app = this;
+			this.myMap.on('click', function(evt){
+				app.getFeatureLayerInfo(evt.pixel, evt);
 			});
 		}
 	},
@@ -246,7 +248,7 @@ let mapa = {
 				fill: undefined
 			}
 
-			monitoramento.map(function(index) {
+			this.data.map(function(index) {
 				if(index.ID_rev == id) {
 					id_projeto = id;
 					etapa = index.etapas_NUM

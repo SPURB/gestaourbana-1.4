@@ -2,7 +2,7 @@ let ficha = {
 	name:'ficha',
 	data (){
 		return {
-			data: monitoramento,
+			// data: monitoramento,
 			hiperlinks: hiperlinks,
 			projeto: '',
 			menuClickedId: '',
@@ -11,7 +11,11 @@ let ficha = {
 			E05: false, E06: false, E07: false, E08: false,
 		}
 	},
-	props: ['clicked-id'],
+	props: [
+		'clicked-id', 
+		'data', 
+		// 'hiperlinks'
+	],
 	methods: {
 		atribuiEtapaClass(etp) {
 			if (etp <= 3) { return 'proposicao' };
@@ -167,7 +171,7 @@ let ficha = {
 					app.abreTramitacao(index);
 				};
 			});
-		}
+		},
 	},
 
 	template: `

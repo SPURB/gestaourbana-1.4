@@ -40,7 +40,7 @@ gulp.task('css-loader', function() {
 
 gulp.task('scripts-production', function() {
     gulp.src([
-      './dev/data/monitoramento.js',
+      // './dev/data/monitoramento.js',
       './dev/data/hiperlinks.js', 
       './dev/data/kmls.js',
       './dev/components/mapa.js',

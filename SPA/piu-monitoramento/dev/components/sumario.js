@@ -2,12 +2,11 @@ let sumario = {
 	name:'sumario',
 	data (){
 		return {
-			data: monitoramento,
-			hiperlinks: hiperlinks,
+			// hiperlinks: hiperlinks,
 			clickedId: undefined
 		}
 	},
-
+	props: ['data', 'hiperlinks'],
 	components: { sumario_linha },
 
 	methods: {
@@ -249,7 +248,7 @@ let sumario = {
 
 		</div>
 
-		<sumario_linha></sumario_linha>
+		<sumario_linha :data='data'></sumario_linha>
 
 	</div>
 	`

@@ -19,11 +19,7 @@ npm install
 # Serve com 'hot reload' em localhost:3000
 gulp
 
-# constrói para produção e minificação 
-gulp build
-
 ```
 
-> Nota1 : O arquivo ``data_src/monitoramento.xlsx``  e ``data/src/hiperlinks`` simula a futura base de dados. Neste projeto os dados estão sendo compilados em `dist/main.min.js`.
-> Nota2: Os kmls a serem colocados em `dist/kml` devem ter a nomenclatura numérica da coluna `rev_id` do `monitoramento.xlsx`. 
+> Esta aplicação consome os dados da api do monitoramento disponível em [api.gestaourbana.prefeitura.sp.gov.br/piu-monitoramento](api.gestaourbana.prefeitura.sp.gov.br/piu-monitoramento)
 

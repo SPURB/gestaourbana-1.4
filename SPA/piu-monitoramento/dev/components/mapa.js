@@ -76,15 +76,13 @@ let mapa = {
 				// new ol.layer.Tile({ 
 				// 	source: new ol.source.OSM()
 				// })
-
-				// new ol.layer.Tile({
-				// 	source: new ol.source.BingMaps({
-				// 		imagerySet: 'CanvasGray',
-				// 		culture: 'pt-BR',
-				// 		key: 'efIeX8pQ5PTC2IcEjuVT~s7zLBU5z6I20qWhPhkAy3w~AlgB9eABTaOsOC8LVDJEQhyb4ik0B0mWBpIfDgrVwNYVqgfnxOsXFN3_8XKZlP1d'
-				// 	})
-				// })
-
+				new ol.layer.Tile({
+					source: new ol.source.BingMaps({
+						imagerySet: 'CanvasGray',
+						culture: 'pt-BR',
+						key: 'efIeX8pQ5PTC2IcEjuVT~s7zLBU5z6I20qWhPhkAy3w~AlgB9eABTaOsOC8LVDJEQhyb4ik0B0mWBpIfDgrVwNYVqgfnxOsXFN3_8XKZlP1d'
+					})
+				})
 			]
 			this.kmls.map(function(object) {
 				let layer = new ol.layer.Vector({ 
@@ -329,7 +327,6 @@ let mapa = {
 				for (let i = 0; i <= this.kmls.length; i++) {
 					if (this.kmls[i].id == id) {
 						let url = dist_folder+'shp/'+this.kmls[i].fileName.slice(0,this.kmls[i].fileName.lastIndexOf('.'))+'.rar';
-						console.log(url);
 						return url;
 					}
 				}

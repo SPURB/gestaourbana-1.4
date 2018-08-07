@@ -9,9 +9,22 @@ let vm = new Vue({
 			ficha: false,
 		},
 		monitoramento: undefined,
-		hiperlinks: false
-
+		hiperlinks: undefined
 	}, 
+	computed:{
+		apiPath() {
+			if( 
+				location.port == '3000'	||
+				location.port == '8080' || 
+				location.port == '8082' ||
+				location.port == '7080'){
+				return 'http://spurbsp163:7080/piu-monitoramento-backend/' 
+			}
+			else{
+				return 'http://api.gestaourbana.prefeitura.sp.gov.br//piu-monitoramento'
+			}
+		}
+	},
 	components: {
 		mapa,
 		sumario,
@@ -19,21 +32,17 @@ let vm = new Vue({
 	},
 	created(){
 		let app = this;
-		axios.get('http://spurbsp163:7080/piu-monitoramento-backend/')
-		.then(function (response) {
-			// handle success
-			// console.log(response.data.monitoramento);
-			app.monitoramento = response.data.monitoramento;
-			app.hiperlinks = response.data.hiperlinks
-		})
-		.catch(function (error) {
-			// handle error
-			console.log(error);
-		})
-		// .then(function () {
-		// 	// always executed
-		// });
-	}, 
+		var ajax = new XMLHttpRequest();
+		ajax.open("GET", this.apiPath, true);
+		ajax.send();
+		ajax.onreadystatechange = function() {
+			if (ajax.readyState == 4 && ajax.status == 200) {
+				var data = JSON.parse(ajax.responseText);
+				app.monitoramento = data.monitoramento
+				app.hiperlinks = data.hiperlinks
+			}
+		}
+	},
 	watch:{
 		projectId(newprop, oldprop){
 			if(this.projectId != undefined) {

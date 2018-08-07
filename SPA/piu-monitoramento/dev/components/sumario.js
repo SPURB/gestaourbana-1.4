@@ -2,7 +2,6 @@ let sumario = {
 	name:'sumario',
 	data (){
 		return {
-			// hiperlinks: hiperlinks,
 			clickedId: undefined
 		}
 	},

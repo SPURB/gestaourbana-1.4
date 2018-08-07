@@ -15,9 +15,9 @@ Template Name: piu-monitoramento
 	<div class="wrapper">
 			<div class="inner">
 				<div id="app">
-					<mapa		v-show="display.mapa"		@clicked="receiveId"	:clicked-id="projectId">    </mapa>
-					<sumario	v-show="display.sumario"	@clicked="receiveId"></sumario>
-					<ficha		v-show="display.ficha"		@clicked="receiveId"	:clicked-id="projectId">    </ficha>
+					<mapa 	 	v-show="display.mapa"		@clicked="receiveId"	:clicked-id="projectId" 	:data='monitoramento'></mapa>
+					<sumario 	v-show="display.sumario"	@clicked="receiveId" 								:data='monitoramento' 	:hiperlinks='hiperlinks'></sumario>
+					<ficha 		v-show="display.ficha" 		@clicked="receiveId"	:clicked-id="projectId" 	:data='monitoramento' 	:hiperlinks='hiperlinks'></ficha>
 				</div>
 			</div>
 		<div class="clear"></div>

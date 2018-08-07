@@ -2,8 +2,6 @@ let ficha = {
 	name:'ficha',
 	data (){
 		return {
-			// data: monitoramento,
-			hiperlinks: hiperlinks,
 			projeto: '',
 			menuClickedId: '',
 			menu: false,
@@ -14,7 +12,7 @@ let ficha = {
 	props: [
 		'clicked-id', 
 		'data', 
-		// 'hiperlinks'
+		'hiperlinks'
 	],
 	methods: {
 		atribuiEtapaClass(etp) {
@@ -120,8 +118,10 @@ let ficha = {
 
 		arquivosDiscussao(etapa, arquivoCat) {
 			var output = '';
-			for (var i = 0; i < hiperlinks.length; i++) {
-				if (hiperlinks[i].ID == this.projeto.ID_rev && hiperlinks[i].ID_etapa == etapa && hiperlinks[i].Idp == arquivoCat) {
+			for (var i = 0; i < this.hiperlinks.length; i++) {
+				if (this.hiperlinks[i].ID == this.projeto.ID_rev && 
+					this.hiperlinks[i].ID_etapa == etapa && 
+					this.hiperlinks[i].Idp == arquivoCat) {
 					switch (arquivoCat) {
 						case 1: output = 'Consulta Instâncias'; break;
 						case 2: output = 'Consulta Caderno'; break;

@@ -117,7 +117,7 @@ let ficha = {
 		},
 
 		fConsultaAberta(par) {
-			if (par.b_status == 'aberta' || par.e_status_consulta_internet_minuta == 'aberta') { 
+			if (par.b_status == 'aberta' || par.e_status_consulta_internet_minuta == 'aberta' || par.e_status_consulta_internet_caderno == 'aberta') { 
 				return 'consultaAberta'
 			};
 		},
@@ -483,10 +483,23 @@ let ficha = {
 							<template v-if="testeVazio(projeto.e_status_consulta_internet_minuta) != false && projeto.e_status_consulta_internet_minuta != 'NA'">
 								<p v-if="projeto.e_status_consulta_internet_minuta == 'aberta'">
 									Consulta online <span>aberta</span> ({{ dataExcelJS(projeto.e_data_inicio_consulta_minuta) }}—{{ dataExcelJS(projeto.e_data_final_consulta_minuta) }})<br>
-									<button class="linkConsulta" href="#" title="Participe da consulta pública">Participe da consulta pública</button>
+									<template v-for="hiperlink in hiperlinks" v-if="hiperlink.ID == clickedId && hiperlink.ID_etapa == 5 && hiperlink.Idp == 50">
+										<a class="linkConsulta" :href="hiperlink.arquivo" title="Participe da consulta pública" target="_blank">Participe da consulta pública <i class="material-icons">launch</i></a>
+									</template>
 								</p>
 								<p v-else>
 									Consulta online <span>encerrada</span> ({{ dataExcelJS(projeto.e_data_inicio_consulta_minuta) }}—{{ dataExcelJS(projeto.e_data_final_consulta_minuta) }})
+								</p>
+							</template>
+							<template v-if="testeVazio(projeto.e_status_consulta_internet_caderno) != false && projeto.e_status_consulta_internet_caderno != 'NA'">
+								<p v-if="projeto.e_status_consulta_internet_caderno == 'aberta'">
+									Consulta online <span>aberta</span> ({{ dataExcelJS(projeto.e_data_inicio_consulta_caderno) }}—{{ dataExcelJS(projeto.e_data_final_consulta_caderno) }})<br>
+									<template v-for="hiperlink in hiperlinks" v-if="hiperlink.ID == clickedId && hiperlink.ID_etapa == 5 && hiperlink.Idp == 55">
+										<a class="linkConsulta" :href="hiperlink.arquivo" title="Participe da consulta pública" target="_blank">Participe da consulta pública <i class="material-icons">launch</i></a>
+									</template>
+								</p>
+								<p v-else>
+									Consulta online <span>encerrada</span> ({{ dataExcelJS(projeto.e_data_inicio_consulta_caderno) }}—{{ dataExcelJS(projeto.e_data_final_consulta_caderno) }})
 								</p>
 							</template>
 							<template v-if="testeVazio(projeto.e_instancias_consultadas) != false && projeto.e_instancias_consultadas != 'NA'">

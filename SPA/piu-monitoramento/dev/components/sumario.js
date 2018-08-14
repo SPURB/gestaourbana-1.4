@@ -20,7 +20,7 @@ let sumario = {
 			this.$emit('clicked', id)
 		},
 		fConsultaAberta(par) {
-			if (par.b_status == 'aberta' || par.e_status_consulta_internet_minuta == 'aberta') { 
+			if (par.b_status == 'aberta' || par.e_status_consulta_internet_minuta == 'aberta' || par.e_status_consulta_internet_caderno == 'aberta') { 
 				return 'consultaAberta'
 			};
 		},

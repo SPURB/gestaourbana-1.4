@@ -11,7 +11,16 @@
     <?php  
         echo do_shortcode("[metaslider id=27063]"); //local
         // echo do_shortcode("[metaslider id=27484]"); //producao
-    ?>  
+    ?>
+</div>
+<div class="wrapper">
+    <div class="inner">
+        <div class="text">
+            <div class="inner-text">
+                <?php echo the_content(); ?>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="wrapper" id="wrapper-third-home">

@@ -59,14 +59,14 @@ let ficha = {
 
 		dataExcelJS(data) {
 			if (data != null && data != '-' && data != 'NA') {
-				if (data.length == 5) {
+				if (data.toString().length == 5) {
 					let d = new Date((Math.floor(data - 25568))*86400000);
 					let string = ('0' + d.getDate()).slice(-2)+'/'+('0' + (d.getMonth()+1)).slice(-2)+'/'+d.getFullYear();
 					return string;
 				} else if (data.replace('/','').length > 5 && data.replace('/','').length <= 8) {
 					return data;
-				} else { return '' };
-			}
+				} else { return data };
+			} else { return '' }
 		},
 
 		encontraProjeto(newClickedId) {
@@ -292,7 +292,7 @@ let ficha = {
 			</div>
 
 			<div class="tramitacao">
-				<h4>Tramitação</h4>
+				<h4>Tramitação <span>Última atualização <strong>{{ dataExcelJS(projeto.ultima_atualizacao) }}</strong></span></h4>
 						
 				<div class="etapa">
 					<div v-show="testeVazio(projeto.a_data_protocolo)" class="periodoEtapaTramit">

@@ -181,6 +181,21 @@
 			line-height: 32px;
 			margin: 0 0 12px 0;
 			padding: 0;
+
+			span {
+				font-size: xx-small;
+				text-transform: uppercase;
+				color: #BCBCBC;
+				font-weight: normal;
+				float: right;
+
+				strong {
+					font-size: small;
+					font-weight: bold;
+					text-transform: none;
+					vertical-align: -1px;
+				}
+			}
 		}
 
 		div.aspectos {

@@ -21,7 +21,7 @@ let vm = new Vue({
 				return 'http://spurbsp163:7080/piu-monitoramento-backend/' 
 			}
 			else{
-				return 'http://api.gestaourbana.prefeitura.sp.gov.br//piu-monitoramento'
+				return 'https://api.gestaourbana.prefeitura.sp.gov.br/piu-monitoramento'
 			}
 		}
 	},

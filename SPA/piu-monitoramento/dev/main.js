@@ -18,10 +18,10 @@ let vm = new Vue({
 				location.port == '8080' || 
 				location.port == '8082' ||
 				location.port == '7080'){
-				return 'http://spurbsp163:7080/piu-monitoramento-backend/' 
+				return 'http://spurbsp163:7080/piu-monitoramento-backend/'
 			}
 			else{
-				return 'https://api.gestaourbana.prefeitura.sp.gov.br/piu-monitoramento'
+				return 'https://api.gestaourbana.prefeitura.sp.gov.br/piu-monitoramento/'
 			}
 		}
 	},
@@ -31,17 +31,7 @@ let vm = new Vue({
 		ficha
 	},
 	created(){
-		let app = this;
-		var ajax = new XMLHttpRequest();
-		ajax.open("GET", this.apiPath, true);
-		ajax.send();
-		ajax.onreadystatechange = function() {
-			if (ajax.readyState == 4 && ajax.status == 200) {
-				var data = JSON.parse(ajax.responseText);
-				app.monitoramento = data.monitoramento
-				app.hiperlinks = data.hiperlinks
-			}
-		}
+		this.fetchAPI(this.apiPath)
 	},
 	watch:{
 		projectId(newprop, oldprop){
@@ -59,6 +49,19 @@ let vm = new Vue({
 		}
 	},
 	methods:{
+		fetchAPI(path){
+			let app = this;
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", path, true);
+			ajax.send();
+			ajax.onreadystatechange = function() {
+				if (ajax.readyState == 4 && ajax.status == 200) {
+					var data = JSON.parse(ajax.responseText);
+					app.monitoramento = data.monitoramento
+					app.hiperlinks = data.hiperlinks
+				}
+			}
+		},
 		receiveId(id){
 			this.projectId = id
 			if (id == undefined){

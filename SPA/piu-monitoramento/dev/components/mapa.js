@@ -35,11 +35,6 @@ let mapa = {
 		}
 	},
 	props: ['clicked-id', 'data'],
-	mounted() {
-		window.addEventListener('load', function() {
-			document.getElementsByTagName('canvas')[0].getContext('2d').globalCompositeOperation = 'multiply'
-		});
-	},
 	computed:{
 		myMap(){
 			return new ol.Map({
